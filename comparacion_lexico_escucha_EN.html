@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexicon of Musical Listening: ONDAS vs El Sol</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Crimson Text', serif; background: #faf9f6; color: #1a1a1a; line-height: 1.6; }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white; text-align: center; padding: 50px 20px;
+        }
+        .header h1 { font-family: 'EB Garamond', serif; font-size: 2.5rem; margin-bottom: 10px; }
+        .header p { font-size: 1.1rem; opacity: 0.85; max-width: 750px; margin: 0 auto; }
+        nav {
+            background: #1a1a2e; padding: 10px 20px; text-align: center;
+            position: sticky; top: 0; z-index: 100; flex-wrap: wrap;
+        }
+        nav a {
+            color: #d4a373; text-decoration: none; margin: 4px 10px;
+            font-size: 0.9rem; font-weight: 600; display: inline-block;
+        }
+        nav a:hover { color: white; }
+        .section { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        .section h2 {
+            font-family: 'EB Garamond', serif; font-size: 1.8rem;
+            color: #1a1a2e; border-bottom: 2px solid #d4a373;
+            padding-bottom: 10px; margin-bottom: 25px;
+        }
+        .section h3 { font-family: 'EB Garamond', serif; font-size: 1.3rem; color: #333; margin: 25px 0 15px; }
+        .stat-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px; margin-bottom: 25px;
+        }
+        .stat-card {
+            background: white; border-radius: 10px; padding: 18px;
+            text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .stat-card .number { font-size: 1.8rem; font-weight: 700; }
+        .stat-card .label { font-size: 0.82rem; color: #666; margin-top: 4px; }
+        .ondas-color { color: #800020; }
+        .elsol-color { color: #1a5276; }
+        .chart-container { background: white; border-radius: 10px; padding: 20px; margin: 15px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); min-height: 350px; }
+        .chart-container-wide { background: white; border-radius: 10px; padding: 20px; margin: 15px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); min-height: 380px; }
+        .chart-container-radar { background: white; border-radius: 10px; padding: 20px; margin: 15px auto; box-shadow: 0 2px 8px rgba(0,0,0,0.08); max-width: 600px; min-height: 420px; }
+        .charts-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        @media (max-width: 900px) { .charts-duo { grid-template-columns: 1fr; } }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; font-size: 0.85rem; }
+        td { padding: 7px 12px; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+        td.num, th.num { text-align: right; }
+        td.vars { font-size: 0.8em; color: #888; }
+        tr:hover { background: #fdf6ec; }
+        tr.total-row { font-weight: bold; background: #f5f5f5; }
+        .nota { background: #fff8e7; border-left: 4px solid #d4a373; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem; }
+        .conc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 10px; }
+        @media (max-width: 768px) { .conc-grid { grid-template-columns: 1fr; } }
+        .conc-panel { background: white; border-radius: 10px; padding: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); font-size: 0.88rem; }
+        .conc-panel ul { line-height: 1.7; padding-left: 18px; }
+        .conc-panel li { margin-bottom: 6px; }
+        .conc-term { font-weight: 600; margin: 12px 0 4px; }
+        .legend-box { display: inline-block; width: 14px; height: 14px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+        footer { background: #1a1a2e; color: white; text-align: center; padding: 25px; font-size: 0.85rem; opacity: 0.8; }
+        .tabla-resumen { border: 2px solid #1a1a2e; }
+        .tabla-resumen th { font-size: 0.9rem; }
+        .tabla-resumen td { font-size: 0.95rem; }
+        .tabla-resumen .domina-ondas { background: #fdf0f2; color: #800020; font-weight: 600; }
+        .tabla-resumen .domina-elsol { background: #edf4f8; color: #1a5276; font-weight: 600; }
+        .tabla-resumen .domina-igual { background: #f5f5f0; color: #555; }
+        .hallazgo { background: white; border-radius: 10px; padding: 20px 25px; margin: 15px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .hallazgo h4 { font-family: 'EB Garamond', serif; font-size: 1.15rem; margin-bottom: 8px; }
+        .hallazgo p { font-size: 0.95rem; line-height: 1.7; }
+    </style>
+</head>
+<body>
+<div style="background:#0d0d1a; padding:8px 20px; display:flex; justify-content:flex-end; gap:10px; font-family:'Crimson Text',serif; flex-wrap:wrap;">
+    <a href="analisis_discurso_ondas_EN.html" style="color:#d4a373; text-decoration:none; padding:5px 14px; border:1px solid #d4a373; border-radius:20px; font-size:0.85rem; transition:all 0.2s;">ONDAS Analysis</a>
+    <a href="comparacion_lexico_escucha.html" style="color:#fff; text-decoration:none; padding:5px 14px; border:1px solid #fff; border-radius:20px; font-size:0.85rem; transition:all 0.2s;">Versi&oacute;n en espa&ntilde;ol</a>
+</div>
+
+<div class="header">
+    <h1>Lexicon of Musical Listening</h1>
+    <p>Comparison of 7 semantic categories across two Spanish press corpora: <em>ONDAS</em> (radio magazine, 1925-1935) and <em>El Sol</em> (generalist newspaper, 1918-1932)</p>
+</div>
+
+<nav>
+    <a href="#corpus">Corpus</a>
+    <a href="#panorama">Overview</a>
+    <a href="#percepcion">PERCEPTION</a><a href="#acto">ACT</a><a href="#dispositivos">DEVICES</a><a href="#emociones">EMOTIONS</a><a href="#valoracion">EVALUATION</a><a href="#respuesta">RESPONSE</a><a href="#cualidades">QUALITIES</a>
+    <a href="#conclusiones">Conclusions</a>
+</nav>
+
+<!-- 1. CORPUS -->
+<section class="section" id="corpus">
+    <h2>1. The Two Corpora</h2>
+    <div class="stat-grid">
+        <div class="stat-card"><div class="number ondas-color">472</div><div class="label"><span class="legend-box" style="background:#800020"></span>ONDAS — files</div></div>
+        <div class="stat-card"><div class="number ondas-color">1,743,435</div><div class="label">ONDAS — words</div></div>
+        <div class="stat-card"><div class="number elsol-color">1427</div><div class="label"><span class="legend-box" style="background:#1a5276"></span>El Sol — files</div></div>
+        <div class="stat-card"><div class="number elsol-color">1,333,902</div><div class="label">El Sol — words</div></div>
+    </div>
+    <div class="nota">
+        <strong>ONDAS</strong> (Madrid, 1925-1935): weekly magazine dedicated to broadcasting and radio music. 472 transcribed issues, 1,743,435 words.<br>
+        <strong>El Sol</strong> (Madrid, 1918-1932): generalist daily newspaper with a regular music section. 1,427 transcribed texts, 1,333,902 words.<br><br>
+        Both corpora share the period 1925-1932. The same 84 lemmas grouped into 7 semantic categories are applied. Relative frequencies are expressed per 10,000 words (‱) to compensate for the difference in size.
+    </div>
+</section>
+
+<!-- 2. PANORAMA -->
+<section class="section" id="panorama">
+    <h2>2. General Overview: The 7 Categories</h2>
+    <div class="stat-grid">
+        <div class="stat-card"><div class="number ondas-color">46,239</div><div class="label">ONDAS — total listening lexicon</div></div>
+        <div class="stat-card"><div class="number elsol-color">26,437</div><div class="label">El Sol — total listening lexicon</div></div>
+        <div class="stat-card"><div class="number ondas-color">265.2‱</div><div class="label">ONDAS — relative density</div></div>
+        <div class="stat-card"><div class="number elsol-color">198.2‱</div><div class="label">El Sol — relative density</div></div>
+    </div>
+    <div class="chart-container-radar"><canvas id="chartRadar"></canvas></div>
+    <div class="charts-duo">
+        <div class="chart-container"><canvas id="chartCatAbs"></canvas></div>
+        <div class="chart-container"><canvas id="chartCatRel"></canvas></div>
+    </div>
+    <h3>Global Temporal Evolution</h3>
+    <div class="chart-container-wide"><canvas id="chartEvolGlobal"></canvas></div>
+</section>
+
+<!-- SECCIONES POR CATEGORÍA -->
+
+<section class="section" id="percepcion">
+    <h2>3. AUDITORY PERCEPTION</h2>
+    <div class="stat-grid">
+        <div class="stat-card"><div class="number ondas-color">2,976</div><div class="label">ONDAS</div></div>
+        <div class="stat-card"><div class="number elsol-color">2,380</div><div class="label">El Sol</div></div>
+        <div class="stat-card"><div class="number ondas-color">17.1‱</div><div class="label">ONDAS relative</div></div>
+        <div class="stat-card"><div class="number elsol-color">17.8‱</div><div class="label">El Sol relative</div></div>
+    </div>
+    <div class="charts-duo">
+        <div class="chart-container"><canvas id="chart_percepcion_abs"></canvas></div>
+        <div class="chart-container"><canvas id="chart_percepcion_rel"></canvas></div>
+    </div>
+    <table>
+        <tr><th>Lemma</th><th>Variants</th><th class="num">ONDAS</th><th class="num">El Sol</th></tr>
+        <tr><td><strong>escuchar</strong></td><td class="vars">escuchar, escuchando, escucharon, escuchaba, escuchamos, escuchó, escucha, escuchas, escucharse, escuchado</td><td class="num">259</td><td class="num">338</td></tr>
+<tr><td><strong>oír</strong></td><td class="vars">oír, oyen, oyendo, oyeron, oímos, oyó, oído, oiga, oigan</td><td class="num">455</td><td class="num">619</td></tr>
+<tr><td><strong>oyente/s</strong></td><td class="vars">oyente, oyentes</td><td class="num">410</td><td class="num">29</td></tr>
+<tr><td><strong>audición/es</strong></td><td class="vars">audición, audiciones</td><td class="num">379</td><td class="num">639</td></tr>
+<tr><td><strong>auditor/es</strong></td><td class="vars">auditor, auditores</td><td class="num">178</td><td class="num">455</td></tr>
+<tr><td><strong>auditorio</strong></td><td class="vars">auditorio</td><td class="num">25</td><td class="num">201</td></tr>
+<tr><td><strong>radioyente/s</strong></td><td class="vars">radioyente, radioyentes</td><td class="num">1,101</td><td class="num">13</td></tr>
+<tr><td><strong>radioescucha/s</strong></td><td class="vars">radioescucha, radioescuchas</td><td class="num">100</td><td class="num">1</td></tr>
+<tr><td><strong>percibir</strong></td><td class="vars">percibir, percibe, percibido</td><td class="num">69</td><td class="num">85</td></tr>
+
+        <tr class="total-row"><td>TOTAL</td><td></td><td class="num">2,976</td><td class="num">2,380</td></tr>
+    </table>
+    <h3>Concordances</h3>
+    <div class="conc-grid">
+<div class="conc-panel">
+<h4 class="ondas-color">ONDAS</h4>
+<p class="conc-term">«escuchar» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...alejado y lejos de la ciudad, al terminar la cena enciende tu receptor, ponte a <strong class="ondas-color">escuchar</strong> y, volviendo los mandos de la sintonía de tu aparato, aguarda hasta entrada la...</li>
+<li><em>[1925]</em> ..."aquello" mató a "esto", y quizá para siempre. pero hoy día volvemos a <strong class="ondas-color">escuchar</strong> con placer una melodía de bellini, una "cavatina" de rossini, una "cabaletta" d...</li>
+<li><em>[1925]</em> ...ante todo, y en vista de este nuevo medio de <strong class="ondas-color">escuchar</strong> música a distancia, convendría determinar qué clase o clases de música resultan...</li>
+<li><em>[1926]</em> ...os desagradables, que a menudo guardan semejanza con los que uno experimenta al <strong class="ondas-color">escuchar</strong> la música de una banda que pasa, mientras las filtraciones de otra distante ape...</li>
+<li><em>[1926]</em> ...o en lo que oye. porque, a pesar de lo que corrientemente se dice y se cree, el <strong class="ondas-color">escuchar</strong> constituye, a su vez, un arte, una disciplina. el <strong class="ondas-color">escuchar</strong> no es una posición i...</li>
+</ul>
+<p class="conc-term">«oír» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...ientras la "festgesang" se cantaba en la plaza pública, la "lobgesang" se hacía <strong class="ondas-color">oír</strong> en la iglesia de santo tomás, en la que durante tantos años juan sebastián bach...</li>
+<li><em>[1925]</em> ...esa emisión nos ha hecho concebir la esperanza de <strong class="ondas-color">oír</strong> algún día óperas de músicos españoles, que las empresas del teatro real no quie...</li>
+<li><em>[1925]</em> ...ñor damián estaba concurridísimo. los transeúntes desocupados hacían corro para <strong class="ondas-color">oír</strong> las peroraciones del «maestro» sobre el progreso de la radiotelefonía. a fuerza...</li>
+<li><em>[1925]</em> ...res de personas se congregaron alrededor de los potentes altavoces western para <strong class="ondas-color">oír</strong> el concierto de union radio, que en su afán de que la radiodifusión alcance su...</li>
+<li><em>[1925]</em> ...ido, la radiotelefonía española ha disfrutado de excepcionales condiciones para <strong class="ondas-color">oír</strong> vía éter una temporada entera de gran ópera, una de los grandes conciertos sinf...</li>
+</ul>
+<p class="conc-term">«oyente» (12 ex.)</p><ul>
+<li><em>[1926]</em> ...tanto la del cisne como la del teatro de novedades consiguieron que el público <strong class="ondas-color">oyente</strong> se interesara por dichas obras líricas y acudiera a las representaciones para g...</li>
+<li><em>[1926]</em> ...ente vivas simpatías por la citada entidad, representativa de los intereses del <strong class="ondas-color">oyente</strong>, presta siempre toda clase de facilidades para que su notable agrupación artíst...</li>
+<li><em>[1926]</em> ...para el <strong class="ondas-color">oyente</strong> directo, vale decir, para el que se halla en un mismo recinto con los artistas,...</li>
+<li><em>[1926]</em> ...tanto la del cisne como la del teatro de novedades consiguieron que el público <strong class="ondas-color">oyente</strong> se interesara por dichas obras líricas y acudiera a las representaciones para g...</li>
+<li><em>[1929]</em> ...s, que suponen para unión radio un motivo de satisfacción al ofrecer al público <strong class="ondas-color">oyente</strong> un servicio de tan elevada categoría lírica....</li>
+</ul>
+<p class="conc-term">«audición» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...creemos útil, complementar esa <strong class="ondas-color">audición</strong> con algunas notas explicativas acerca de las obras que van a escucharse, por el...</li>
+<li><em>[1925]</em> ...música seria, una <strong class="ondas-color">audición</strong> semanal; música ligera, una <strong class="ondas-color">audición</strong> semanal; selecciones literarias, una <strong class="ondas-color">audición</strong> semanal; conferencias, cursos de...</li>
+<li><em>[1925]</em> ...idioma, charlas, etc., una <strong class="ondas-color">audición</strong> breve por semana....</li>
+<li><em>[1925]</em> ...las que union radio transmitirá en su <strong class="ondas-color">audición</strong> del lunes 28 están basadas en poemas del poeta indio rabindranath tagore, a tra...</li>
+<li><em>[1925]</em> ...4." <strong class="ondas-color">audición</strong> de gala ante s. m. el rey, con el concurso de prestigiosos artistas....</li>
+</ul>
+</div>
+<div class="conc-panel">
+<h4 class="elsol-color">El Sol</h4>
+<p class="conc-term">«escuchar» (12 ex.)</p><ul>
+<li><em>[1930]</em> ...después de <strong class="elsol-color">escuchar</strong> generales...</li>
+<li><em>[1935]</em> ...e comprende, una cierta reciprocidad de interés por parte de la nación que va a <strong class="elsol-color">escuchar</strong> esas obras y a ello españa está obligada, por fueros de cultura. barcelona y ma...</li>
+<li><em>[1919]</em> ...por ello es de la mentar que sólo en una sociedad co mo la nacional sea posible <strong class="elsol-color">escuchar</strong>...</li>
+<li><em>[1919]</em> ...hay grandísimo interés por <strong class="elsol-color">escuchar</strong>...</li>
+<li><em>[1919]</em> ...ruso se le desconoce totalmente en españa. los más afortunados sólo han pedido <strong class="elsol-color">escuchar</strong> una imperfecta ejecución del "boris", en barcelona. los entusiastas de mussorgs...</li>
+</ul>
+<p class="conc-term">«oír» (12 ex.)</p><ul>
+<li><em>[1931]</em> ...no es fácil, sin embargo, <strong class="elsol-color">oír</strong>...</li>
+<li><em>[1933]</em> ...ucho valor, sino porque será difícil que vuelva a presentarse la oportunidad de <strong class="elsol-color">oír</strong> a ese gran artista francés. por lo demás, existen en españa organistas como gur...</li>
+<li><em>[1935]</em> ...cuarteto checo", bien conocido de nuestros auditores más cultos— se ha hecho ya <strong class="elsol-color">oír</strong> en el teatro del liceo, de barcelona, donde acaba de estrenar "la novia vendida...</li>
+<li><em>[1919]</em> ...amos a ver! como ver, vimos mucho: a un actor excelente (no es raro), pero como <strong class="elsol-color">oír</strong> oímos más aún: un tercer acto de rigoletto, admirable y creemos no haber abusad...</li>
+<li><em>[1919]</em> ...cíamos el "poema en forma de canciones" del sr. turina, por habérnoslo hecho ya <strong class="elsol-color">oír</strong> en un recital de heder la señora lahowska. el interés de esta artista por los m...</li>
+</ul>
+<p class="conc-term">«oyente» (12 ex.)</p><ul>
+<li><em>[1921]</em> ...no hablemos de la impresión puramente subjetiva que el órgano produce en el <strong class="elsol-color">oyente</strong> a causa de su prestigio tradicional y de las ideas de pompa y magnificencia que...</li>
+<li><em>[1928]</em> ...tenía que consistir en una interpretación de sus propias obras en las cuales el <strong class="elsol-color">oyente</strong>/lector siente mayor aliciente y recreo....</li>
+<li><em>[1918]</em> ...�ltimo tiempo que se admiran m�s, dice el programa, cuanto m�s se identifica el <strong class="elsol-color">oyente</strong> con el estilo del compositor hamburgu�s. nunca, en nuestra modestia, nos hemos...</li>
+<li><em>[1931]</em> ...programa del <strong class="elsol-color">oyente</strong>. (este programa se compondrá de discos solicitados por los socios de la unión d...</li>
+<li><em>[1931]</em> ...programa del <strong class="elsol-color">oyente</strong>. (este programa se compondrá de discos solicitados por los socios de la unión d...</li>
+</ul>
+<p class="conc-term">«audición» (12 ex.)</p><ul>
+<li><em>[1933]</em> ...primer recital (<strong class="elsol-color">audición</strong> dedicada a chopin).—seis preludios, cuatro baladas, doce estudios, dos mazurcas...</li>
+<li><em>[1919]</em> ...el de.seo de que la primera fiesta del año en la sociedad nacional fue-se la <strong class="elsol-color">audición</strong> prometida de esa deli-ciosa obra maestra de pergolese "la serva padrona", ha re...</li>
+<li><em>[1919]</em> ...fesores de la orquesta filarmó-nica). "sonata en fa menor", para piano (primera <strong class="elsol-color">audición</strong>); vicente arregui. "32 v.ariacioncs", beetho-ven. "berceuse" (preludio), chopin...</li>
+<li><em>[1919]</em> ...as que, a fuer de primaveriles, hacían pensar en el 15 de mayo. ninguna primera <strong class="elsol-color">audición</strong>, y como máxima novedad un trozo de un ejercicio escolar de debussy y unas canci...</li>
+<li><em>[1919]</em> ...en la tercera parte de su concierto, y que varios de ellos figuraban en primera <strong class="elsol-color">audición</strong>. en todos, portea obtuvo abundante aplauso....</li>
+</ul>
+</div>
+</div>
+
+</section>
+
+<section class="section" id="acto">
+    <h2>4. ACT OF LISTENING</h2>
+    <div class="stat-grid">
+        <div class="stat-card"><div class="number ondas-color">13,979</div><div class="label">ONDAS</div></div>
+        <div class="stat-card"><div class="number elsol-color">7,269</div><div class="label">El Sol</div></div>
+        <div class="stat-card"><div class="number ondas-color">80.2‱</div><div class="label">ONDAS relative</div></div>
+        <div class="stat-card"><div class="number elsol-color">54.5‱</div><div class="label">El Sol relative</div></div>
+    </div>
+    <div class="charts-duo">
+        <div class="chart-container"><canvas id="chart_acto_abs"></canvas></div>
+        <div class="chart-container"><canvas id="chart_acto_rel"></canvas></div>
+    </div>
+    <table>
+        <tr><th>Lemma</th><th>Variants</th><th class="num">ONDAS</th><th class="num">El Sol</th></tr>
+        <tr><td><strong>concierto/s</strong></td><td class="vars">concierto, conciertos</td><td class="num">4,040</td><td class="num">3,934</td></tr>
+<tr><td><strong>recital/es</strong></td><td class="vars">recital, recitales</td><td class="num">902</td><td class="num">556</td></tr>
+<tr><td><strong>sesión/es</strong></td><td class="vars">sesión, sesiones</td><td class="num">431</td><td class="num">169</td></tr>
+<tr><td><strong>emisión/es</strong></td><td class="vars">emisión, emisiones</td><td class="num">3,474</td><td class="num">49</td></tr>
+<tr><td><strong>transmisión/es</strong></td><td class="vars">transmisión, transmisiones</td><td class="num">1,202</td><td class="num">5</td></tr>
+<tr><td><strong>retransmisión/es</strong></td><td class="vars">retransmisión, retransmisiones</td><td class="num">809</td><td class="num">3</td></tr>
+<tr><td><strong>programa/s</strong></td><td class="vars">programa, programas</td><td class="num">2,907</td><td class="num">2,520</td></tr>
+<tr><td><strong>programación</strong></td><td class="vars">programación</td><td class="num">157</td><td class="num">0</td></tr>
+<tr><td><strong>velada/s</strong></td><td class="vars">velada, veladas</td><td class="num">57</td><td class="num">33</td></tr>
+
+        <tr class="total-row"><td>TOTAL</td><td></td><td class="num">13,979</td><td class="num">7,269</td></tr>
+    </table>
+    <h3>Concordances</h3>
+    <div class="conc-grid">
+<div class="conc-panel">
+<h4 class="ondas-color">ONDAS</h4>
+<p class="conc-term">«concierto» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...rganizado para el día primero de septiembre, a las 10 de la noche, un magnífico <strong class="ondas-color">concierto</strong> de música religiosa para orquesta y coros, cuya ejecución ha encomendado al mae...</li>
+<li><em>[1925]</em> ...19.0. a 21.0.—<strong class="ondas-color">concierto</strong> por los artistas señorita maría darnis (tiple), sr. antonio amiel (tenor), sr....</li>
+<li><em>[1925]</em> ...21.05.—<strong class="ondas-color">concierto</strong> vocal e instrumental por el barítono josé domingo y la orquesta radio-catalana....</li>
+<li><em>[1925]</em> ...el <strong class="ondas-color">concierto</strong> que el notable violinista fermín fernández ortiz dio ante el micrófono de union...</li>
+<li><em>[1925]</em> ...n gran aplauso, pues franco cultiva con análogo éxito la música teatral y la de <strong class="ondas-color">concierto</strong>. pianista muy notable, ha testimoniado su excelente labor como partícipe del "q...</li>
+</ul>
+<p class="conc-term">«recital» (12 ex.)</p><ul>
+<li><em>[1925]</em> .... conferencia religiosa por el rdo. p. otaño.—"la walkyria" (fantasía), wagner. <strong class="ondas-color">recital</strong> de órgano por por el rdo. p. otaño, transmitido de la residencia de los rr. pp....</li>
+<li><em>[1925]</em> ...9.0.—<strong class="ondas-color">recital</strong> de armónium, por el reverendo doctor josé noguer, organista de la parroquia de...</li>
+<li><em>[1925]</em> ...22.0.—charla deportiva por el sr. zúñiga. <strong class="ondas-color">recital</strong> de piano y concierto por el quinteto de la estación....</li>
+<li><em>[1925]</em> ...13.0.—señales de greenwich y <strong class="ondas-color">recital</strong> de órgano.—15.15. transmisión para las escuelas,—16.0. "modas y variedades", po...</li>
+<li><em>[1925]</em> ...22.0.—lectura de poesías. <strong class="ondas-color">recital</strong> de piano.—22.30. música de baile....</li>
+</ul>
+<p class="conc-term">«programa» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...vor por todas las sensibilidades. un grupo de obras como las que constituyen el <strong class="ondas-color">programa</strong> que el maestro benedito presenta, y que pertenecen a las creaciones más altas d...</li>
+<li><em>[1925]</em> ...s explicativas acerca de las obras que van a escucharse, por el orden mismo del <strong class="ondas-color">programa</strong>:...</li>
+<li><em>[1925]</em> ...23.30.—<strong class="ondas-color">programa</strong> de bailables por la orquestina radio-catalana....</li>
+<li><em>[1925]</em> ...os propósitos que inspiran nuestra acción artística, comienza union radio en su <strong class="ondas-color">programa</strong> del lunes 28 a dar a conocer a nuestros músicos más valiosos, de toda época y d...</li>
+<li><em>[1925]</em> ...autores nuevos figuran en este <strong class="ondas-color">programa</strong>, al lado de nombres consagrados. nuestro deseo más ferviente es que a los de ma...</li>
+</ul>
+<p class="conc-term">«emisión» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...martes: <strong class="ondas-color">emisión</strong> radio-madrid. — blanca jiménez, alberto romea, nicolás jiménez, adolfo lluchs,...</li>
+<li><em>[1925]</em> ...r en lo más posible; así la union radio, para hermanar la perfectibilidad de la <strong class="ondas-color">emisión</strong> con la posibilidad de que el ejecutante se dé cuenta de lo que realiza, para qu...</li>
+<li><em>[1925]</em> ...la <strong class="ondas-color">emisión</strong> de la ópera "carmen"...</li>
+<li><em>[1925]</em> ...tenemos el gusto de manifestarle que fué interesantísima por todos conceptos la <strong class="ondas-color">emisión</strong> de la ópera carmen. admirable todo: la preparación y dicción de la parte explic...</li>
+<li><em>[1925]</em> ...y ejecución de la parte musical; la actuación de los cantantes y, mejor aún, la <strong class="ondas-color">emisión</strong>, clara y fina....</li>
+</ul>
+</div>
+<div class="conc-panel">
+<h4 class="elsol-color">El Sol</h4>
+<p class="conc-term">«concierto» (12 ex.)</p><ul>
+<li><em>[1930]</em> ...xvii—, las damas de la corte celebran un <strong class="elsol-color">concierto</strong> íntimo." los...</li>
+<li><em>[1931]</em> ...celona 12 (9 m.). — el maestro lamote de grignon dio el domingo por la tarde un <strong class="elsol-color">concierto</strong> de música de autores nacionales, en el teatro del liceo. figuraban obras de con...</li>
+<li><em>[1931]</em> ...un <strong class="elsol-color">concierto</strong> de la sinfónica de...</li>
+<li><em>[1931]</em> ...bilbao 12 (11 m.),—con lleno completo y gran éxito ha dado ayer, domingo, un <strong class="elsol-color">concierto</strong> popular en el teatro arriaga, a beneficio de las instituciones protectoras de l...</li>
+<li><em>[1931]</em> ...**<strong class="elsol-color">concierto</strong> benéfico**...</li>
+</ul>
+<p class="conc-term">«recital» (12 ex.)</p><ul>
+<li><em>[1933]</em> ...<strong class="elsol-color">recital</strong> de órgano, por gurldi, en el palacio de la música...</li>
+<li><em>[1933]</em> ...primer <strong class="elsol-color">recital</strong> (audición dedicada a chopin).—seis preludios, cuatro baladas, doce estudios, do...</li>
+<li><em>[1933]</em> ...segundo <strong class="elsol-color">recital</strong>.—preludio y fuga en re mayor. dos corales para órgano, bach. dos sonatas, capri...</li>
+<li><em>[1919]</em> ...<strong class="elsol-color">recital</strong> de guitarra...</li>
+<li><em>[1919]</em> ...el <strong class="elsol-color">recital</strong> comenzó con el concierto...</li>
+</ul>
+<p class="conc-term">«programa» (12 ex.)</p><ul>
+<li><em>[1933]</em> ...s que la pompa bizantina del "gran juego" y de los "plenos". seguramente, en el <strong class="elsol-color">programa</strong>, muy bien combinado, que guridi ofreció el domingo, lo que los auditores prefir...</li>
+<li><em>[1919]</em> ...<strong class="elsol-color">programa</strong> se nos comunica, la razón de...</li>
+<li><em>[1919]</em> ...el teatro de la comedia (seis tarde) el primer concierto de este violinista. el <strong class="elsol-color">programa</strong> es el siguiente: tartini, sonata llamada del trino del diablo; mendelssohn, «co...</li>
+<li><em>[1919]</em> ...a serie tomarán parte la cantante maría gay y el vio linista quiroga. el primer <strong class="elsol-color">programa</strong> se compone así: rimsky-korsakoff, «la gran pascua rusa»; c. franck, «las eólida...</li>
+<li><em>[1919]</em> ..."el <strong class="elsol-color">programa</strong> de hoy de concierto...</li>
+</ul>
+<p class="conc-term">«emisión» (12 ex.)</p><ul>
+<li><em>[1926]</em> ...o positivo en el racconto y la romanza, por su excelente voz y buen gusto en la <strong class="elsol-color">emisión</strong>. las señoras cerrillo, galindo y mantilla, y los sres. palacios, romero, ardot...</li>
+<li><em>[1926]</em> ...**una <strong class="elsol-color">emisión</strong> dedicada a zaragoza**...</li>
+<li><em>[1926]</em> ...alpitaciones de la actualidad y a dar satisfacción a los radioyentes, dedicó su <strong class="elsol-color">emisión</strong> del domingo a zaragoza, a su música, a sus artes, a sus desenvolvimientos moral...</li>
+<li><em>[1921]</em> ...cos instrumentales, mientras que el órgano, por su procedimiento fundamental de <strong class="elsol-color">emisión</strong> del sonido, apenas era susceptible más que de perfeccionamientos accesorios, no...</li>
+<li><em>[1921]</em> ...s empleados por los organistas—, y, además, la imprecisión característica de su <strong class="elsol-color">emisión</strong> y la ligera rudeza en el ataque de la nota, si carece de la emoción del soplo h...</li>
+</ul>
+</div>
+</div>
+
+</section>
+
+<section class="section" id="dispositivos">
+    <h2>5. LISTENING DEVICES</h2>
+    <div class="stat-grid">
+        <div class="stat-card"><div class="number ondas-color">13,103</div><div class="label">ONDAS</div></div>
+        <div class="stat-card"><div class="number elsol-color">1,682</div><div class="label">El Sol</div></div>
+        <div class="stat-card"><div class="number ondas-color">75.2‱</div><div class="label">ONDAS relative</div></div>
+        <div class="stat-card"><div class="number elsol-color">12.6‱</div><div class="label">El Sol relative</div></div>
+    </div>
+    <div class="charts-duo">
+        <div class="chart-container"><canvas id="chart_dispositivos_abs"></canvas></div>
+        <div class="chart-container"><canvas id="chart_dispositivos_rel"></canvas></div>
+    </div>
+    <table>
+        <tr><th>Lemma</th><th>Variants</th><th class="num">ONDAS</th><th class="num">El Sol</th></tr>
+        <tr><td><strong>radio</strong></td><td class="vars">radio</td><td class="num">8,283</td><td class="num">214</td></tr>
+<tr><td><strong>radiodifusión</strong></td><td class="vars">radiodifusión</td><td class="num">202</td><td class="num">4</td></tr>
+<tr><td><strong>radiotelefonía</strong></td><td class="vars">radiotelefonía</td><td class="num">207</td><td class="num">12</td></tr>
+<tr><td><strong>radiofonía</strong></td><td class="vars">radiofonía</td><td class="num">66</td><td class="num">1</td></tr>
+<tr><td><strong>altavoz/ces</strong></td><td class="vars">altavoz, altavoces</td><td class="num">88</td><td class="num">5</td></tr>
+<tr><td><strong>auricular/es</strong></td><td class="vars">auricular, auriculares</td><td class="num">22</td><td class="num">4</td></tr>
+<tr><td><strong>cascos</strong></td><td class="vars">cascos</td><td class="num">2</td><td class="num">0</td></tr>
+<tr><td><strong>micrófono/s</strong></td><td class="vars">micrófono, micrófonos</td><td class="num">722</td><td class="num">17</td></tr>
+<tr><td><strong>aparato/s</strong></td><td class="vars">aparato, aparatos</td><td class="num">195</td><td class="num">55</td></tr>
+<tr><td><strong>receptor/es</strong></td><td class="vars">receptor, receptores</td><td class="num">74</td><td class="num">0</td></tr>
+<tr><td><strong>antena/s</strong></td><td class="vars">antena, antenas</td><td class="num">77</td><td class="num">3</td></tr>
+<tr><td><strong>válvula/s</strong></td><td class="vars">válvula, válvulas</td><td class="num">29</td><td class="num">1</td></tr>
+<tr><td><strong>galena</strong></td><td class="vars">galena</td><td class="num">15</td><td class="num">0</td></tr>
+<tr><td><strong>gramófono/s</strong></td><td class="vars">gramófono, gramófonos</td><td class="num">93</td><td class="num">61</td></tr>
+<tr><td><strong>fonógrafo/s</strong></td><td class="vars">fonógrafo, fonógrafos</td><td class="num">13</td><td class="num">2</td></tr>
+<tr><td><strong>disco/s</strong></td><td class="vars">disco, discos</td><td class="num">1,181</td><td class="num">602</td></tr>
+<tr><td><strong>estudio/s</strong></td><td class="vars">estudio, estudios</td><td class="num">785</td><td class="num">664</td></tr>
+<tr><td><strong>emisora/s</strong></td><td class="vars">emisora, emisoras</td><td class="num">1,049</td><td class="num">37</td></tr>
+
+        <tr class="total-row"><td>TOTAL</td><td></td><td class="num">13,103</td><td class="num">1,682</td></tr>
+    </table>
+    <h3>Concordances</h3>
+    <div class="conc-grid">
+<div class="conc-panel">
+<h4 class="ondas-color">ONDAS</h4>
+<p class="conc-term">«radio» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...los flamencos en la <strong class="ondas-color">radio</strong>....</li>
+<li><em>[1925]</em> ...do un bastón! sin embargo no estamos del todo satisfechos del "cante jondo" por <strong class="ondas-color">radio</strong>. le falta algo, le falta lo principal que tiene el cante flamenco, lo más salie...</li>
+<li><em>[1925]</em> ...nte. porque por <strong class="ondas-color">radio</strong> se oye cantar estupendamente, es cierto..., pero, pero, no se ve escupir por el...</li>
+<li><em>[1925]</em> ...en bélgica la única emisora fija y regular es <strong class="ondas-color">radio</strong>-belgique. esta emisora encarna en bruselas el deseo de los belgas por sostener...</li>
+<li><em>[1925]</em> ...lmente se organizan conciertos de gala, que son dedicados a los suscriptores de <strong class="ondas-color">radio</strong>-belgique....</li>
+</ul>
+<p class="conc-term">«disco» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...ileños; y como el programa de las fiestas de otoño le he visto yo impreso en el <strong class="ondas-color">disco</strong> de papel donde el speaker grabó su voz; y como las noticias musicales que tanto...</li>
+<li><em>[1925]</em> ...con la lengüecilla de su aguja que lame ávidamente el plato lleno de música del <strong class="ondas-color">disco</strong>, con su voz reumática o estridente, el gramófono es el padre venerable de la ra...</li>
+<li><em>[1925]</em> ...ones con las fermatas de caruso y los cuplés de la fornarina. viajaban ya en el <strong class="ondas-color">disco</strong> los paisajes eróticos, las intrigas novelescas y los lances extraordinarios, y...</li>
+<li><em>[1926]</em> ...«los remeros del volga» (popular) (<strong class="ondas-color">disco</strong> por chaliapine)....</li>
+<li><em>[1926]</em> ...canto del invitado viking, de la ópera «sadko» (<strong class="ondas-color">disco</strong> por chaliapine). rimsky-korsakoff....</li>
+</ul>
+<p class="conc-term">«gramófono» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...13.0.—señales de greenwich y concierto de discos de <strong class="ondas-color">gramófono</strong>.—15.15. transmisión para las escuelas.—16.0. "libros para leer", por ann spice....</li>
+<li><em>[1925]</em> ...del <strong class="ondas-color">gramófono</strong> a la galena...</li>
+<li><em>[1925]</em> ...no menospreciemos demasiado el <strong class="ondas-color">gramófono</strong>, compañeros teleoyentes. con su bocina a modo de falda gitana, con la lengüecil...</li>
+<li><em>[1925]</em> ...mente el plato lleno de música del disco, con su voz reumática o estridente, el <strong class="ondas-color">gramófono</strong> es el padre venerable de la radiotelefonía artística. ya sé que antes el viejo...</li>
+<li><em>[1926]</em> ...y de sus canciones. en sus ratos de descanso se dedica a impresionar discos de <strong class="ondas-color">gramófono</strong>, para que lleven a todas partes el arte español, tan necesitado de que lo prote...</li>
+</ul>
+<p class="conc-term">«emisora» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...en bélgica la única <strong class="ondas-color">emisora</strong> fija y regular es radio-belgique. esta <strong class="ondas-color">emisora</strong> encarna en bruselas el deseo de los belgas por sostener esta obra de propagació...</li>
+<li><em>[1925]</em> ...de los suscriptores a radio-belgique y la acertada dirección artística de esta <strong class="ondas-color">emisora</strong>, la obra radiodifusora en bélgica va tomando cada vez más interés y más amplio...</li>
+<li><em>[1925]</em> ...la <strong class="ondas-color">emisora</strong> radio-belgique ha organizado entre los radioyentes belgas un plebiscito para co...</li>
+<li><em>[1925]</em> ...ferencias en las principales poblaciones de la región donde alcanza la estación <strong class="ondas-color">emisora</strong>, haciendo sesiones públicas demostrativas, explicando las ventajas inmensas de...</li>
+<li><em>[1925]</em> ...e (radiola); mr. svoboda, ingeniero administrador, y m. sourek, ingeniero de la <strong class="ondas-color">emisora</strong> radio-journal de praga (checoslovaquia); mr. rambert, de radio-geneve; m. spoer...</li>
+</ul>
+</div>
+<div class="conc-panel">
+<h4 class="elsol-color">El Sol</h4>
+<p class="conc-term">«radio» (12 ex.)</p><ul>
+<li><em>[1926]</em> ...madrid (<strong class="elsol-color">radio</strong> castilla, eaj-1) 310 metros....</li>
+<li><em>[1926]</em> ...madrid (<strong class="elsol-color">radio</strong> ibérica, eaj6) 392 metros....</li>
+<li><em>[1926]</em> ...madrid (unión <strong class="elsol-color">radio</strong>, eaj7) 375 metros....</li>
+<li><em>[1926]</em> ...de su cosecha, limitándose simplemente a un trabajo técnico en el citado dúo. (<strong class="elsol-color">radio</strong>.)...</li>
+<li><em>[1926]</em> ...írculo estrecho de los primeros años y a causar enojo en los situados fuera del <strong class="elsol-color">radio</strong> de la simpatía....</li>
+</ul>
+<p class="conc-term">«disco» (12 ex.)</p><ul>
+<li><em>[1928]</em> ..."jazz" gordo que pese poco, y los conciertos sinfónicos cuestan algo más que un <strong class="elsol-color">disco</strong> de gramófono o un rollo de piano mecánica; y si los auditores no se deciden a c...</li>
+<li><em>[1928]</em> ...ntos, mientras que la masa tiene claridad y excelente calidad. quizá el segundo <strong class="elsol-color">disco</strong> supere aún al primero; pero ambos son notables. karl muck, por añadidura, dirig...</li>
+<li><em>[1929]</em> ...la música religiosa de schubert, tan poco conocida, halla un excelente <strong class="elsol-color">disco</strong> en la versión cantada por el coro filarmónico londinense de la "misa en sol"....</li>
+<li><em>[1929]</em> ...un buen <strong class="elsol-color">disco</strong> de beethoven es el "aria" de "leonora", que frida leider acaba de registrar en...</li>
+<li><em>[1929]</em> ...société du gramophone.—un <strong class="elsol-color">disco</strong> notable, el de marcelle gérard interpretando la "shéhérezade", de maurice ravel...</li>
+</ul>
+<p class="conc-term">«gramófono» (12 ex.)</p><ul>
+<li><em>[1926]</em> ...compañía del <strong class="elsol-color">gramófono</strong>...</li>
+<li><em>[1921]</em> ..."<strong class="elsol-color">gramófono</strong>"...</li>
+<li><em>[1921]</em> ...compañía del <strong class="elsol-color">gramófono</strong>,...</li>
+<li><em>[1928]</em> ...dentro de muy poco, el <strong class="elsol-color">gramófono</strong> podrá presentar singulares sorpresas, cuando los auditores de dentro de quince...</li>
+<li><em>[1928]</em> ...dentro de muy poco, el <strong class="elsol-color">gramófono</strong> podrá presentar singulares sorpresas, cuando los auditores de dentro de quince...</li>
+</ul>
+<p class="conc-term">«emisora» (12 ex.)</p><ul>
+<li><em>[1926]</em> ...os programas de nuestras más selectas sociedades puedan competir con los de una <strong class="elsol-color">emisora</strong> de música sin hilos....</li>
+<li><em>[1928]</em> ...la orquesta de unión radio la popular <strong class="elsol-color">emisora</strong> madrileña cogió ayer el pecho afuera, y reforzando considerablemente su orquest...</li>
+<li><em>[1928]</em> ...a modestia de lo que se pide a un radioyente, será menester quitar el banco. la <strong class="elsol-color">emisora</strong> unión radio ha encontrado un medio, que podría calificarse de "neo-esquino", pa...</li>
+<li><em>[1928]</em> ...ale nada o deben regalarse las entradas. ni una cosa ni otra. la orquesta de la <strong class="elsol-color">emisora</strong> madrileña constaba ayer de casi todos los profesores de la sinfónica, y estuvo...</li>
+<li><em>[1928]</em> ...ya mucho más público al lindo teatro de la calle de alcalá, y la orquesta de la <strong class="elsol-color">emisora</strong> madrileña, con su refuerzo sinfónico y la batuta de josé maría franco, tuvieron...</li>
+</ul>
+</div>
+</div>
+
+</section>
+
+<section class="section" id="emociones">
+    <h2>6. EMOTIONS AND SENSATIONS</h2>
+    <div class="stat-grid">
+        <div class="stat-card"><div class="number ondas-color">3,310</div><div class="label">ONDAS</div></div>
+        <div class="stat-card"><div class="number elsol-color">3,475</div><div class="label">El Sol</div></div>
+        <div class="stat-card"><div class="number ondas-color">19.0‱</div><div class="label">ONDAS relative</div></div>
+        <div class="stat-card"><div class="number elsol-color">26.1‱</div><div class="label">El Sol relative</div></div>
+    </div>
+    <div class="charts-duo">
+        <div class="chart-container"><canvas id="chart_emociones_abs"></canvas></div>
+        <div class="chart-container"><canvas id="chart_emociones_rel"></canvas></div>
+    </div>
+    <table>
+        <tr><th>Lemma</th><th>Variants</th><th class="num">ONDAS</th><th class="num">El Sol</th></tr>
+        <tr><td><strong>emoción</strong></td><td class="vars">emoción, emociones, emocionante, emocionado, emocionar</td><td class="num">303</td><td class="num">318</td></tr>
+<tr><td><strong>sentir</strong></td><td class="vars">sentir, sentimiento, sentimientos, sentido</td><td class="num">1,251</td><td class="num">1,380</td></tr>
+<tr><td><strong>impresión</strong></td><td class="vars">impresión, impresiones, impresionante, impresionar</td><td class="num">229</td><td class="num">245</td></tr>
+<tr><td><strong>conmover</strong></td><td class="vars">conmover, conmovedor, conmovido, conmoción</td><td class="num">26</td><td class="num">33</td></tr>
+<tr><td><strong>entusiasmo</strong></td><td class="vars">entusiasmo, entusiasta, entusiasmado, entusiasmar</td><td class="num">322</td><td class="num">619</td></tr>
+<tr><td><strong>admiración</strong></td><td class="vars">admiración, admirar, admirable, admirado</td><td class="num">659</td><td class="num">536</td></tr>
+<tr><td><strong>deleite</strong></td><td class="vars">deleite, deleitar, deleitarse</td><td class="num">31</td><td class="num">30</td></tr>
+<tr><td><strong>goce/gozo</strong></td><td class="vars">goce, gozar, gozo</td><td class="num">56</td><td class="num">54</td></tr>
+<tr><td><strong>placer</strong></td><td class="vars">placer</td><td class="num">55</td><td class="num">117</td></tr>
+<tr><td><strong>encanto</strong></td><td class="vars">encanto, encantador, encantar</td><td class="num">338</td><td class="num">122</td></tr>
+<tr><td><strong>fascinación</strong></td><td class="vars">fascinación, fascinante, fascinar</td><td class="num">2</td><td class="num">4</td></tr>
+<tr><td><strong>éxtasis</strong></td><td class="vars">éxtasis, extasis</td><td class="num">38</td><td class="num">17</td></tr>
+
+        <tr class="total-row"><td>TOTAL</td><td></td><td class="num">3,310</td><td class="num">3,475</td></tr>
+    </table>
+    <h3>Concordances</h3>
+    <div class="conc-grid">
+<div class="conc-panel">
+<h4 class="ondas-color">ONDAS</h4>
+<p class="conc-term">«emoción» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...o profana conservan todavía su maravillosa frescura y belleza, su intensidad de <strong class="ondas-color">emoción</strong>....</li>
+<li><em>[1925]</em> ...algo de la radiodifusión. explíqueme, si es posible, qué semejanza hay entre la <strong class="ondas-color">emoción</strong> de su amor más temprano y la que experimentó la primera vez que cantó ante el m...</li>
+<li><em>[1925]</em> ...la cual cualquiera de nuestras sensaciones sirve de llamador para convocar a la <strong class="ondas-color">emoción</strong> otra porción de ellas no directamente solicitadas, pero que con ello se solidar...</li>
+<li><em>[1925]</em> ...o de unos personajes que están observados y transcritos con una fidelidad y una <strong class="ondas-color">emoción</strong> que son la mejor garantía para la eficacia de una obra y para que ésta pase a l...</li>
+<li><em>[1925]</em> ...me place la imagen del teleoyente humilde, al cual le trae su receptor la doble <strong class="ondas-color">emoción</strong> de la distancia vencida y del espectáculo entrevisto. el árbol del ocio ofrecía...</li>
+</ul>
+<p class="conc-term">«sentir» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...multitud de óperas, y trasladado a inglaterra, su patria de adopción, vuelve a <strong class="ondas-color">sentir</strong> que su temperamento de alemán desea abrirse paso ante la contemplación de la mú...</li>
+<li><em>[1925]</em> ...a bella molinera", que se inspira en un ciclo de poesías de müller, que dejaron <strong class="ondas-color">sentir</strong> a schúbert todo su encanto, fué asimismo una obra favorita del público que frec...</li>
+<li><em>[1925]</em> ...a la del siglo xviii parece, generalmente, inocente y candorosa. mas discernir, <strong class="ondas-color">sentir</strong> el profundo dramatismo de la música de mozart es una exigencia elemental y prim...</li>
+<li><em>[1925]</em> ...nitud y su mayor fortaleza. un genio leonino, que desde las primeras notas deja <strong class="ondas-color">sentir</strong> su poderosa garra. cántico jamás entonado con mayor valentía de quien se lanza...</li>
+<li><em>[1925]</em> ...lar, adquiere cada día mayor ascendiente en españa, en donde su influjo se deja <strong class="ondas-color">sentir</strong> con gran intensidad, precisamente en aquellos compositores que más vivamente si...</li>
+</ul>
+<p class="conc-term">«entusiasmo» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...no así a nuestro compañero, que seguía con evidente <strong class="ondas-color">entusiasmo</strong> los "jipíos" de los "cantaores" y los "punteaos" de la guitarra, y que mientras...</li>
+<li><em>[1925]</em> ...s por aquel público tan crítico, y d. tomás de iriarte, gran poeta, celebra con <strong class="ondas-color">entusiasmo</strong> a haydn en su poema la música, publicado en madrid en 1779....</li>
+<li><em>[1925]</em> ...egan a ella capaces como amantes, no con los prejuicios de un oficio, sí con el <strong class="ondas-color">entusiasmo</strong> de una afición para la que reservaban sus más pródigas y felices horas; no iban...</li>
+<li><em>[1925]</em> ...ya existentes, que si bien son un nuevo aliciente para despertar el adormecido <strong class="ondas-color">entusiasmo</strong> de los radioescuchas y constituyen un incentivo para engrosar las filas de los...</li>
+<li><em>[1925]</em> ...bimos estas pruebas directas de simpatía popular renace con más energía nuestro <strong class="ondas-color">entusiasmo</strong> y nos proporciona una gran dosis de optimismo, afianzando nuestra labor futura,...</li>
+</ul>
+<p class="conc-term">«admiración» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...en sus primeros años, verdi, hacía ya muchos años que estaba en posesión de la <strong class="ondas-color">admiración</strong> universal. cuando murió era ya —y nadie le ha substituido en ese puesto— el pri...</li>
+<li><em>[1925]</em> ...labra, no tuvieron el privilegio que hoy tienen ni inspiraban el mismo grado de <strong class="ondas-color">admiración</strong> que hoy nos inspiran. se ponderaba, se admiraba esa originalidad, esa invención...</li>
+<li><em>[1925]</em> ...alianos nunca fué menospreciado. ricardo wagner mismo confesó reiteradamente su <strong class="ondas-color">admiración</strong> por el verbo melódico de bellini, un poco convertido en charla excesiva y trivi...</li>
+<li><em>[1925]</em> ...na de sus ramas, obras singularmente favorecidas por el genio tanto como por la <strong class="ondas-color">admiración</strong> de los contempladores: la venus de milo, el apolo de belvedere, la gioconda, el...</li>
+<li><em>[1925]</em> ...scutido en nuestros conciertos. sin embargo, la pequeña suite goza de universal <strong class="ondas-color">admiración</strong> y tiene el privilegio de acordar todos los gustos. en realidad, esa serie de pe...</li>
+</ul>
+</div>
+<div class="conc-panel">
+<h4 class="elsol-color">El Sol</h4>
+<p class="conc-term">«emoción» (12 ex.)</p><ul>
+<li><em>[1919]</em> ...ingenua vaciedad—hasta la descarga de fusilería del último acto, trozo de gran <strong class="elsol-color">emoción</strong> dramática, la ópera entera es un álbum en el que se han condensado todas las em...</li>
+<li><em>[1919]</em> ...como ciertas estampas antiguas, reserva su <strong class="elsol-color">emoción</strong>, algo monótona e insisten te, para algunos escasos conocedores....</li>
+<li><em>[1919]</em> ...serio, profundamente clásico, nos causó una <strong class="elsol-color">emoción</strong> intensa en ese trozo y...</li>
+<li><em>[1919]</em> ...sivo. pocas veces hemos oído cantar este acto con un respeto, una seriedad, una <strong class="elsol-color">emoción</strong> semejante, y por añadidura, una maestría y unos medios vocales de tal excelenci...</li>
+<li><em>[1919]</em> ...claro y gracioso equilibrio, la <strong class="elsol-color">emoción</strong>...</li>
+</ul>
+<p class="conc-term">«sentir» (12 ex.)</p><ul>
+<li><em>[1930]</em> ...obligación, contemplar, que cuando llega el instante de <strong class="elsol-color">sentir</strong> lo...</li>
+<li><em>[1919]</em> ...de piano y de orquesta, sus obras vocales serían el mejor motivo y ayudarían a <strong class="elsol-color">sentir</strong> como también existen en aquéllas. esta intensidad de expresión llega a un momen...</li>
+<li><em>[1919]</em> ...franck, están exentos de la influencia "directa" de éste, mientras que se deja <strong class="elsol-color">sentir</strong> por completo en los elementos generación....</li>
+<li><em>[1919]</em> ...acuden a la memoria; para <strong class="elsol-color">sentir</strong>...</li>
+<li><em>[1919]</em> ...para nuestro modo de <strong class="elsol-color">sentir</strong> y de...</li>
+</ul>
+<p class="conc-term">«entusiasmo» (12 ex.)</p><ul>
+<li><em>[1930]</em> ...mano de un poeta admirado y querido, que, por su amor para españa y por su <strong class="elsol-color">entusiasmo</strong> hacia la...</li>
+<li><em>[1933]</em> ...os sinfónicos en la zarzuela. que el público del monumental le otorgue ahora su <strong class="elsol-color">entusiasmo</strong> y su asistencia en estos otros conciertos, donde pone toda su voluntad y su sab...</li>
+<li><em>[1935]</em> ...de brujo", de dukás. el público "monumental" recibió la espléndida obra con un <strong class="elsol-color">entusiasmo</strong> y una alegría de corazón, que nos produjeron la más viva satisfacción. merece,...</li>
+<li><em>[1919]</em> ...s asistentes prometieron transportes y estos les arrojaron nuevos caminos; este <strong class="elsol-color">entusiasmo</strong> con esos compradores intermedia notablemente con la indiferencia del p�blico en...</li>
+<li><em>[1919]</em> ...apreciamos cuanto vale su fe y su <strong class="elsol-color">entusiasmo</strong>), los tirones de aquí y allá hubieran terminado con el buen paño. y...</li>
+</ul>
+<p class="conc-term">«admiración» (12 ex.)</p><ul>
+<li><em>[1930]</em> ...resumen toda la <strong class="elsol-color">admiración</strong> de que...</li>
+<li><em>[1919]</em> ...se deshace en <strong class="elsol-color">admiración</strong> ante este...</li>
+<li><em>[1919]</em> ...debussy y de ravel no nos agradan tanto. nos consta que rubinstein siente gran <strong class="elsol-color">admiración</strong> por estos músicos y que pone al tocarlos su mejor talento; además, sus programa...</li>
+<li><em>[1926]</em> ...plazas una perezosa inacción, un triste silencio, que no se pueden advertir sin <strong class="elsol-color">admiración</strong> ni lástima. si algunas personas salen de sus casas, no parece sino que el tedio...</li>
+<li><em>[1926]</em> ...n interés por la música y quiere conocer al violinista en quién tiene puesta su <strong class="elsol-color">admiración</strong> el público mundial, reserve inmediatamente su localidad en "daniel", los madraz...</li>
+</ul>
+</div>
+</div>
+
+</section>
+
+<section class="section" id="valoracion">
+    <h2>7. AESTHETIC EVALUATION</h2>
+    <div class="stat-grid">
+        <div class="stat-card"><div class="number ondas-color">4,075</div><div class="label">ONDAS</div></div>
+        <div class="stat-card"><div class="number elsol-color">3,118</div><div class="label">El Sol</div></div>
+        <div class="stat-card"><div class="number ondas-color">23.4‱</div><div class="label">ONDAS relative</div></div>
+        <div class="stat-card"><div class="number elsol-color">23.4‱</div><div class="label">El Sol relative</div></div>
+    </div>
+    <div class="charts-duo">
+        <div class="chart-container"><canvas id="chart_valoracion_abs"></canvas></div>
+        <div class="chart-container"><canvas id="chart_valoracion_rel"></canvas></div>
+    </div>
+    <table>
+        <tr><th>Lemma</th><th>Variants</th><th class="num">ONDAS</th><th class="num">El Sol</th></tr>
+        <tr><td><strong>belleza</strong></td><td class="vars">belleza, bello, bella, bellas, bellos, bellísimo, bellísima</td><td class="num">1,526</td><td class="num">1,166</td></tr>
+<tr><td><strong>hermosura</strong></td><td class="vars">hermoso, hermosa, hermosura, hermosísimo</td><td class="num">275</td><td class="num">154</td></tr>
+<tr><td><strong>sublime</strong></td><td class="vars">sublime, sublimidad</td><td class="num">84</td><td class="num">57</td></tr>
+<tr><td><strong>grandioso/a</strong></td><td class="vars">grandioso, grandiosa, grandiosidad</td><td class="num">60</td><td class="num">57</td></tr>
+<tr><td><strong>exquisito/a</strong></td><td class="vars">exquisito, exquisita, exquisitez</td><td class="num">170</td><td class="num">182</td></tr>
+<tr><td><strong>magnífico/a</strong></td><td class="vars">magnífico, magnífica, magnificencia</td><td class="num">231</td><td class="num">276</td></tr>
+<tr><td><strong>espléndido/a</strong></td><td class="vars">espléndido, espléndida, esplendor</td><td class="num">116</td><td class="num">183</td></tr>
+<tr><td><strong>maravilla</strong></td><td class="vars">maravilloso, maravillosa, maravilla</td><td class="num">252</td><td class="num">180</td></tr>
+<tr><td><strong>prodigio</strong></td><td class="vars">prodigioso, prodigiosa, prodigio</td><td class="num">128</td><td class="num">87</td></tr>
+<tr><td><strong>genio</strong></td><td class="vars">genial, genio, genialidad</td><td class="num">820</td><td class="num">433</td></tr>
+<tr><td><strong>soberbio/a</strong></td><td class="vars">soberbio, soberbia</td><td class="num">45</td><td class="num">110</td></tr>
+<tr><td><strong>extraordinario/a</strong></td><td class="vars">extraordinario, extraordinaria</td><td class="num">368</td><td class="num">233</td></tr>
+
+        <tr class="total-row"><td>TOTAL</td><td></td><td class="num">4,075</td><td class="num">3,118</td></tr>
+    </table>
+    <h3>Concordances</h3>
+    <div class="conc-grid">
+<div class="conc-panel">
+<h4 class="ondas-color">ONDAS</h4>
+<p class="conc-term">«belleza» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...la verdadera <strong class="ondas-color">belleza</strong> llama por igual a las puertas y es acogida con el mismo fervor por todas las se...</li>
+<li><em>[1925]</em> ...puros goces espirituales para todos los oyentes. la radio sirve de mensajera de <strong class="ondas-color">belleza</strong> para todos los hogares, ricos o humildes, que quieran abrirle sus puertas....</li>
+<li><em>[1925]</em> ..., su música vocal sagrada o profana conservan todavía su maravillosa frescura y <strong class="ondas-color">belleza</strong>, su intensidad de emoción....</li>
+<li><em>[1925]</em> ...s daba los toques finales a su última composición, turandot, obra de juventud y <strong class="ondas-color">belleza</strong> sorprendente, según las escasas personas que conocen la partitura inédita. pucc...</li>
+<li><em>[1925]</em> ...rables: la escena de la nieve en la bohème, el amanecer de tosca son páginas de <strong class="ondas-color">belleza</strong> positiva, a la vez que de un valor intrínseco innegable. la versatilidad e inco...</li>
+</ul>
+<p class="conc-term">«sublime» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...ás fiel reflejo. una inspiración seráfica, una bienaventurada dictan esa música <strong class="ondas-color">sublime</strong>, cuyas obras maestras son la sinfonía, los corales de órgano, las variaciones s...</li>
+<li><em>[1925]</em> ...dominar sobre esta obra admirable. es en ella donde ya se vislumbra esa máxima <strong class="ondas-color">sublime</strong> de beethoven: a la alegría por el camino del dolor....</li>
+<li><em>[1925]</em> ...n las que su genio se remonta a alturas jamás escaladas por músico alguno: algo <strong class="ondas-color">sublime</strong> que es como un paisaje puro y sereno contemplado desde una cumbre inaccesible d...</li>
+<li><em>[1925]</em> ...ner en esta página de "los encantos del viernes santo", de un modo en tal grado <strong class="ondas-color">sublime</strong>, que merece contar entre los momentos más felices y generosos que haya tenido m...</li>
+<li><em>[1926]</em> ...manifiesta como una gran ventana por la que me asomo al mundo, ofreciéndome el <strong class="ondas-color">sublime</strong> espectáculo de sus diversos países, con sus miles de ciudades, montañas, llanos...</li>
+</ul>
+<p class="conc-term">«genio» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...cádiz guarda reconocimiento a esa dádiva singular del <strong class="ondas-color">genio</strong> de haydn, y desde aquel año de 1785 hasta el presente hace cantar el día de vie...</li>
+<li><em>[1925]</em> ...amacho", inspirada en el pasaje bien conocido de "don quijote de la mancha". el <strong class="ondas-color">genio</strong> claro, alegre, todo transparencia y elegancia de mendelssohn puede en cierto mo...</li>
+<li><em>[1925]</em> ...labanza, imbuido de un profundo espíritu religioso, que celebra la grandeza del <strong class="ondas-color">genio</strong> del hombre, inspirado por la divinidad....</li>
+<li><em>[1925]</em> ...la suerte o las casualidades de su <strong class="ondas-color">genio</strong> hicieron que lo que bretón realizó en este sentido popular—sus saínetes— espont...</li>
+<li><em>[1925]</em> ...ideración artística. se le miraba como un arte secundario, privado de rango. el <strong class="ondas-color">genio</strong> poderoso de ese músico se lo dio, y ese rango fué de los de mayor altura....</li>
+</ul>
+<p class="conc-term">«maravilla» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...; pero yo, que soy un poco mal genio y mal educado, he de decir que me producen <strong class="ondas-color">maravilla</strong> y asombro esos múltiples diablillos que, no bien surgidos, arrebatan las palabr...</li>
+<li><em>[1925]</em> ...az y el trabajo y reciben el impulso cultural de las naciones unidas hoy por la <strong class="ondas-color">maravilla</strong> de las ondas....</li>
+<li><em>[1926]</em> ...sionado ante la grandiosidad y deliciosos juegos de luz que se disfrutan en esa <strong class="ondas-color">maravilla</strong> natural que es la gruta de fingal, en la "calzada de los gigantes", en escocia,...</li>
+<li><em>[1926]</em> ..."la <strong class="ondas-color">maravilla</strong> del cielo", charla de actualidad astronómica, por el astrónomo del observatorio...</li>
+<li><em>[1926]</em> ...rayano en la <strong class="ondas-color">maravilla</strong>, no sólo por la portentosa calidad de su obra, sino...</li>
+</ul>
+</div>
+<div class="conc-panel">
+<h4 class="elsol-color">El Sol</h4>
+<p class="conc-term">«belleza» (12 ex.)</p><ul>
+<li><em>[1930]</em> ...esplendor del mediodía. la música exalta la <strong class="elsol-color">belleza</strong> de la luz, la...</li>
+<li><em>[1931]</em> ...aplomo, seguridad, dominio, para mostrarse con tanta intensidad dramática como <strong class="elsol-color">belleza</strong> de timbre, potencia y claridad en el acto tercero....</li>
+<li><em>[1933]</em> ...volverá a ser selectivo, eligiendo esta vez las "calidades" instrumentales, la <strong class="elsol-color">belleza</strong> y limpidez del tono....</li>
+<li><em>[1933]</em> ...prefirieron fué el exquisito "andantino" de franck, y no sólo por su intrínseca <strong class="elsol-color">belleza</strong>, sino porque ésta presenta una mayor idoneidad a la educación actual del audito...</li>
+<li><em>[1919]</em> ...gala de la <strong class="elsol-color">belleza</strong> y transparencia de...</li>
+</ul>
+<p class="conc-term">«sublime» (12 ex.)</p><ul>
+<li><em>[1919]</em> ...scena de la vi�a en la que fausto se encuentra por segunda vez con margarita es <strong class="elsol-color">sublime</strong>. si la primera tiene algo de ingenuo en la forma de presentar las emociones, si...</li>
+<li><em>[1926]</em> ...de las walkyrias, inaccesible "desiderátum" para aquel genio atormentado, <strong class="elsol-color">sublime</strong> en sus aciertos y sus...</li>
+<li><em>[1926]</em> ...te mismo, con su frase sosegada y generosa, como una voz de ultratumba... ;obra <strong class="elsol-color">sublime</strong>, catedral en el arte del cuarteto!......</li>
+<li><em>[1921]</em> ...que a veces parezca—con un arte al que se quiere que sea, si no pedantescamente <strong class="elsol-color">sublime</strong>, a lo menos limpiamente decoroso. esto, en resumen, era un progreso, un avance...</li>
+<li><em>[1921]</em> ...el último; pero en éste, ¡qué belleza <strong class="elsol-color">sublime</strong> la pintura...</li>
+</ul>
+<p class="conc-term">«genio» (12 ex.)</p><ul>
+<li><em>[1930]</em> ...años en que se cuajaba el <strong class="elsol-color">genio</strong>...</li>
+<li><em>[1919]</em> ...no existiría. era necesaria esa fuerza de convicción y ese amor por la obra del <strong class="elsol-color">genio</strong> que palpita en ricardo viñes. debió renunciar a la popularidad segura que le ac...</li>
+<li><em>[1919]</em> ...ntimiento por la patria humillada y lejana. la música de polonia, al través del <strong class="elsol-color">genio</strong> maravilloso del artista, nacía a una vida nueva, envuelta en unos velos de hond...</li>
+<li><em>[1919]</em> ...improperios de nuestro <strong class="elsol-color">genio</strong> del polifonismo, tuvieron también una interpretación...</li>
+<li><em>[1919]</em> ...apenas se realizará con suficiente claridad la importancia "fundamental" de su <strong class="elsol-color">genio</strong> en el arte musical moderno. si todo esto carece de importancia para quienes la...</li>
+</ul>
+<p class="conc-term">«maravilla» (12 ex.)</p><ul>
+<li><em>[1926]</em> ...tan fogosa dinamicidad y potencia que cubiles ha llegado a adquirir sirvieron a <strong class="elsol-color">maravilla</strong> para la versión de esa obra. con mucha fantasía y libertad tocó después los "es...</li>
+<li><em>[1926]</em> ...chopin; pero la suprema sonata en re menor es la perla del siglo xviii. ¡y qué <strong class="elsol-color">maravilla</strong> oírla a través de los dedos de hada de wanda landowska!...</li>
+<li><em>[1926]</em> ...pagables, tal, por ejemplo, el de los "tambourines", cuyo tema es una verdadera <strong class="elsol-color">maravilla</strong>. podrían hacerse algunas preguntas, respecto a qué es lo que ganan o lo que pie...</li>
+<li><em>[1926]</em> ...a, titulada "sit down!", cuya protagonista es una pobre vieja negra, que es una <strong class="elsol-color">maravilla</strong> de expresión, de condensación del cansancio de toda una raza, acumulado desde h...</li>
+<li><em>[1921]</em> ...con la orquesta moderna, mientras que, por el contrario, el órgano se fundía a <strong class="elsol-color">maravilla</strong> con las viejas orquestas, ricas en instrumentos de viento y madera, al paso que...</li>
+</ul>
+</div>
+</div>
+
+</section>
+
+<section class="section" id="respuesta">
+    <h2>8. AUDIENCE RESPONSE</h2>
+    <div class="stat-grid">
+        <div class="stat-card"><div class="number ondas-color">2,710</div><div class="label">ONDAS</div></div>
+        <div class="stat-card"><div class="number elsol-color">4,340</div><div class="label">El Sol</div></div>
+        <div class="stat-card"><div class="number ondas-color">15.5‱</div><div class="label">ONDAS relative</div></div>
+        <div class="stat-card"><div class="number elsol-color">32.5‱</div><div class="label">El Sol relative</div></div>
+    </div>
+    <div class="charts-duo">
+        <div class="chart-container"><canvas id="chart_respuesta_abs"></canvas></div>
+        <div class="chart-container"><canvas id="chart_respuesta_rel"></canvas></div>
+    </div>
+    <table>
+        <tr><th>Lemma</th><th>Variants</th><th class="num">ONDAS</th><th class="num">El Sol</th></tr>
+        <tr><td><strong>aplauso/s</strong></td><td class="vars">aplauso, aplausos, aplaudir, aplaudido, aplaudieron</td><td class="num">157</td><td class="num">881</td></tr>
+<tr><td><strong>ovación/es</strong></td><td class="vars">ovación, ovaciones, ovacionado, ovacionar</td><td class="num">12</td><td class="num">117</td></tr>
+<tr><td><strong>éxito/s</strong></td><td class="vars">éxito, éxitos, exitoso</td><td class="num">1,015</td><td class="num">939</td></tr>
+<tr><td><strong>triunfo/s</strong></td><td class="vars">triunfo, triunfos, triunfal, triunfar</td><td class="num">450</td><td class="num">279</td></tr>
+<tr><td><strong>aclamación</strong></td><td class="vars">aclamación, aclamar, aclamado</td><td class="num">3</td><td class="num">12</td></tr>
+<tr><td><strong>público/s</strong></td><td class="vars">público, públicos</td><td class="num">1,018</td><td class="num">1,908</td></tr>
+<tr><td><strong>audiencia</strong></td><td class="vars">audiencia</td><td class="num">2</td><td class="num">4</td></tr>
+<tr><td><strong>estruendoso/a</strong></td><td class="vars">estruendoso, estruendosa</td><td class="num">0</td><td class="num">1</td></tr>
+<tr><td><strong>clamor</strong></td><td class="vars">clamoroso, clamorosa, clamor</td><td class="num">16</td><td class="num">75</td></tr>
+<tr><td><strong>bis</strong></td><td class="vars">bis</td><td class="num">3</td><td class="num">30</td></tr>
+<tr><td><strong>repetición</strong></td><td class="vars">repetición</td><td class="num">34</td><td class="num">94</td></tr>
+
+        <tr class="total-row"><td>TOTAL</td><td></td><td class="num">2,710</td><td class="num">4,340</td></tr>
+    </table>
+    <h3>Concordances</h3>
+    <div class="conc-grid">
+<div class="conc-panel">
+<h4 class="ondas-color">ONDAS</h4>
+<p class="conc-term">«aplauso» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...es autor de "el emigrante" y "1830", obras teatrales estrenadas con gran <strong class="ondas-color">aplauso</strong>, pues franco cultiva con análogo éxito la música teatral y la de concierto. pia...</li>
+<li><em>[1925]</em> ...fué el fallo del público, al que modestamente hubimos de sumar nosotros nuestro <strong class="ondas-color">aplauso</strong> de oyentes, que no tienen la autoridad más leve para meterse en honduras de téc...</li>
+<li><em>[1925]</em> ...on su doña isabel de solís no acertó a conquistar muchos laureles. más digno de <strong class="ondas-color">aplauso</strong> es en su preciosa e interesante narración histórica sobre la vida de hernán pér...</li>
+<li><em>[1925]</em> ...las más aplaudidas y las más merecedoras de <strong class="ondas-color">aplauso</strong> son: el trovador, el paje, el rey monje, el encubierto de valencia, simón bocan...</li>
+<li><em>[1926]</em> ...re nuestros compositores contemporáneos que practican el arte sinfónico con más <strong class="ondas-color">aplauso</strong> figura el del culto bibliotecario del real conservatorio, d. julio gómez. sabe...</li>
+</ul>
+<p class="conc-term">«ovación» (2 ex.)</p><ul>
+<li><em>[1925]</em> ...blemente cantado por rosario leonis y el bajo meana, valió al maestro una larga <strong class="ondas-color">ovación</strong>, y hay en él una frase fácil, pero de singular fuerza melódica:...</li>
+<li><em>[1932]</em> ...en el segundo acto, con el número de la feria, comenzó la primera <strong class="ondas-color">ovación</strong>. hubo de repetirse. y empezó el triunfo. uno de esos triunfos de madrid, apoteó...</li>
+</ul>
+<p class="conc-term">«éxito» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...la obra radiodifusora ha encontrado siempre el ambiente favorable para su mayor <strong class="ondas-color">éxito</strong>, siempre que como radio-belgique presente en sus programas el interés y la cali...</li>
+<li><em>[1925]</em> ...rmín fernández ortiz dio ante el micrófono de union radio alcanzó el más franco <strong class="ondas-color">éxito</strong> artístico. este «virtuoso» del violín posee el gran premio extraordinario saras...</li>
+<li><em>[1925]</em> ...", obras teatrales estrenadas con gran aplauso, pues franco cultiva con análogo <strong class="ondas-color">éxito</strong> la música teatral y la de concierto. pianista muy notable, ha testimoniado su e...</li>
+<li><em>[1925]</em> ...agistralmente interpretado por la señorita fuentes, se determinó y se afirmó el <strong class="ondas-color">éxito</strong> grande que logró el primer acto. en el segundo, de menos consistencia en el lib...</li>
+<li><em>[1925]</em> ...ima; la fuentes, que con su admirable baile determina el momento culminante del <strong class="ondas-color">éxito</strong>, y es la atracción más bella de la obra; la señorita castrillo, muy linda y muy...</li>
+</ul>
+<p class="conc-term">«triunfo» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...he enorme de gracia en el gesto, en la frase y en la indumentaria, y alcanzó un <strong class="ondas-color">triunfo</strong> personal grandísimo....</li>
+<li><em>[1925]</em> ...us saínetes— espontáneamente, ligeramente, casi como jugando, haya alcanzado un <strong class="ondas-color">triunfo</strong> cuya permanencia supera a los éxitos brillantes, pero efímeros, que obtuvieron...</li>
+<li><em>[1925]</em> ...ués se estrenaba con un éxito delirante. no tardó en recorrer españa entera. el <strong class="ondas-color">triunfo</strong> repercutió hasta américa misma. en buenos aires se representaba por aquella épo...</li>
+<li><em>[1925]</em> ...ido nacional de los italianos, que nunca había flaqueado, sentía el acicate del <strong class="ondas-color">triunfo</strong> de la ópera alemana. todas las miradas se fijaron en verdi como el salvador del...</li>
+<li><em>[1925]</em> .... si el primer tiempo es la lucha contra el destino, y el último es un canto de <strong class="ondas-color">triunfo</strong>, el andante es el mensaje celestial que reconforta nuestros corazones....</li>
+</ul>
+</div>
+<div class="conc-panel">
+<h4 class="elsol-color">El Sol</h4>
+<p class="conc-term">«aplauso» (12 ex.)</p><ul>
+<li><em>[1931]</em> ...uarto, fué acreedora, con los artistas mencionados y los sres. vela y ferré, al <strong class="elsol-color">aplauso</strong> general, cálido y abundante. no regatearemos el que merece la bellísima señorit...</li>
+<li><em>[1919]</em> ...rosario pino fué la actriz de siempre, y su labor merece un <strong class="elsol-color">aplauso</strong> sincero, que no puede extenderse al trabajo de los otros artistas. pero como la...</li>
+<li><em>[1919]</em> ...conjuntos como el indicado, una de mayor jugosidad y flexibilidad de juego. el <strong class="elsol-color">aplauso</strong> recibido debería...</li>
+<li><em>[1919]</em> ...no habríamos de regatear el <strong class="elsol-color">aplauso</strong>....</li>
+<li><em>[1919]</em> ...merece el <strong class="elsol-color">aplauso</strong> agradecido....</li>
+</ul>
+<p class="conc-term">«ovación» (12 ex.)</p><ul>
+<li><em>[1919]</em> ...és albéniz, debussy (hay algo más que ese vals "bruma") y liszt, que arrancó la <strong class="elsol-color">ovación</strong> final....</li>
+<li><em>[1919]</em> ...mayol fué acogido con una <strong class="elsol-color">ovación</strong>, y ha sido aclamado al terminar cada una de sus canciones....</li>
+<li><em>[1919]</em> ...recitó un poema titulado "el cortejo por los campos eliseoses que mereció una <strong class="elsol-color">ovación</strong> del público....</li>
+<li><em>[1919]</em> ...los artistas, y al final de la representación les hizo objeto de una verdadera <strong class="elsol-color">ovación</strong>....</li>
+<li><em>[1919]</em> ...al final de la representación, el público, puesto en pie, tributó una gran <strong class="elsol-color">ovación</strong> a los artistas y al maestro director....</li>
+</ul>
+<p class="conc-term">«éxito» (12 ex.)</p><ul>
+<li><em>[1930]</em> ...uno de los números que más <strong class="elsol-color">éxito</strong> alcanzó fué el desfile de aquéllas...</li>
+<li><em>[1930]</em> ...<strong class="elsol-color">éxito</strong>....</li>
+<li><em>[1931]</em> ...un gran <strong class="elsol-color">éxito</strong> de...</li>
+<li><em>[1931]</em> ...bilbao 12 (11 m.),—con lleno completo y gran <strong class="elsol-color">éxito</strong> ha dado ayer, domingo, un concierto popular en el teatro arriaga, a beneficio d...</li>
+<li><em>[1931]</em> ...onjunto excelente, las funciones de pascua serán otros tantos llenos, y su buen <strong class="elsol-color">éxito</strong> suele ser pronóstico de buen agüero para el resto de la temporada. mucho lo cel...</li>
+</ul>
+<p class="conc-term">«triunfo» (12 ex.)</p><ul>
+<li><em>[1931]</em> ...s. el estreno en barcelona de la "sinfonietta", de ernesto halffter, resultó un <strong class="elsol-color">triunfo</strong> para el joven compositor, que se hallaba en el teatro, siendo obligado, a petic...</li>
+<li><em>[1919]</em> ...barcelona 4 (3 t.).—para celebrar el <strong class="elsol-color">triunfo</strong> alcanzado por el maestro compositor jaime pahissa con su drama histórico "la mo...</li>
+<li><em>[1919]</em> ...la representación fué un nuevo <strong class="elsol-color">triunfo</strong> para el arte salzburgués, que ha sabido conservar las más puras tradiciones moz...</li>
+<li><em>[1919]</em> ...la representación fué un nuevo <strong class="elsol-color">triunfo</strong> para los artistas, que estuvieron todos admirables....</li>
+<li><em>[1919]</em> ...<strong class="elsol-color">triunfo</strong> del-arte español...</li>
+</ul>
+</div>
+</div>
+
+</section>
+
+<section class="section" id="cualidades">
+    <h2>9. SOUND QUALITIES</h2>
+    <div class="stat-grid">
+        <div class="stat-card"><div class="number ondas-color">6,086</div><div class="label">ONDAS</div></div>
+        <div class="stat-card"><div class="number elsol-color">4,173</div><div class="label">El Sol</div></div>
+        <div class="stat-card"><div class="number ondas-color">34.9‱</div><div class="label">ONDAS relative</div></div>
+        <div class="stat-card"><div class="number elsol-color">31.3‱</div><div class="label">El Sol relative</div></div>
+    </div>
+    <div class="charts-duo">
+        <div class="chart-container"><canvas id="chart_cualidades_abs"></canvas></div>
+        <div class="chart-container"><canvas id="chart_cualidades_rel"></canvas></div>
+    </div>
+    <table>
+        <tr><th>Lemma</th><th>Variants</th><th class="num">ONDAS</th><th class="num">El Sol</th></tr>
+        <tr><td><strong>sonido/s</strong></td><td class="vars">sonido, sonidos, sonar, sonoro, sonora, sonoridad</td><td class="num">504</td><td class="num">747</td></tr>
+<tr><td><strong>voz/voces</strong></td><td class="vars">voz, voces</td><td class="num">785</td><td class="num">604</td></tr>
+<tr><td><strong>timbre/s</strong></td><td class="vars">timbre, timbres</td><td class="num">105</td><td class="num">206</td></tr>
+<tr><td><strong>tono/s</strong></td><td class="vars">tono, tonos, tonal, tonalidad</td><td class="num">312</td><td class="num">489</td></tr>
+<tr><td><strong>armonía</strong></td><td class="vars">armonía, armónico, armónica, armonioso</td><td class="num">253</td><td class="num">256</td></tr>
+<tr><td><strong>melodía</strong></td><td class="vars">melodía, melódico, melódica, melodioso</td><td class="num">1,062</td><td class="num">337</td></tr>
+<tr><td><strong>ritmo</strong></td><td class="vars">ritmo, rítmico, rítmica</td><td class="num">277</td><td class="num">319</td></tr>
+<tr><td><strong>acorde/s</strong></td><td class="vars">acorde, acordes</td><td class="num">90</td><td class="num">81</td></tr>
+<tr><td><strong>nota/s</strong></td><td class="vars">nota, notas</td><td class="num">1,967</td><td class="num">342</td></tr>
+<tr><td><strong>frase/s</strong></td><td class="vars">frase, frases</td><td class="num">130</td><td class="num">224</td></tr>
+<tr><td><strong>acento/s</strong></td><td class="vars">acento, acentos</td><td class="num">284</td><td class="num">155</td></tr>
+<tr><td><strong>matiz/matices</strong></td><td class="vars">matiz, matices</td><td class="num">229</td><td class="num">324</td></tr>
+<tr><td><strong>vibración/es</strong></td><td class="vars">vibración, vibraciones, vibrar, vibrante</td><td class="num">88</td><td class="num">89</td></tr>
+
+        <tr class="total-row"><td>TOTAL</td><td></td><td class="num">6,086</td><td class="num">4,173</td></tr>
+    </table>
+    <h3>Concordances</h3>
+    <div class="conc-grid">
+<div class="conc-panel">
+<h4 class="ondas-color">ONDAS</h4>
+<p class="conc-term">«melodía» (12 ex.)</p><ul>
+<li><em>[1925]</em> ..."una <strong class="ondas-color">melodía</strong> italiana"....</li>
+<li><em>[1925]</em> ..."sogno" (<strong class="ondas-color">melodía</strong>) tosti....</li>
+<li><em>[1925]</em> ..."sogno" (<strong class="ondas-color">melodía</strong>) tosti....</li>
+<li><em>[1925]</em> ...adas por los grandes maestros clásicos, se acogieron al elemento rítmico y a la <strong class="ondas-color">melodía</strong> popular, fecundando con tan rica savia las nuevas creaciones. grieg, sinding, t...</li>
+<li><em>[1925]</em> ...eñales horarias.—21.10. concierto por el quinteto de la estación: tchaikovsky, "<strong class="ondas-color">melodía</strong>". soprano valentina bartolomasi; meyerbeer, "la africana" (figlio del sol). ten...</li>
+</ul>
+<p class="conc-term">«ritmo» (12 ex.)</p><ul>
+<li><em>[1925]</em> .... un scherzo delicioso forma el tercer tiempo, vivo, nervioso; escrito sobre el <strong class="ondas-color">ritmo</strong> del "zapateado", no pierde ni un momento el sentimiento de animación y el inten...</li>
+<li><em>[1925]</em> ...el tiempo final, animado y vigoroso, y en el cual parece haber penetrado algún <strong class="ondas-color">ritmo</strong> lleno de encanto y sugestión de la música húngara....</li>
+<li><em>[1925]</em> ..., mi confesión de peso del ultramodernismo en música. mientras éste destruye el <strong class="ondas-color">ritmo</strong>, aborrece la cuadratura tradicional y hace tabla rasa de la sacrosanta melodía—...</li>
+<li><em>[1925]</em> ...alido en la nariz con este jazz, que se constituye en paladín y conservador del <strong class="ondas-color">ritmo</strong> y de la cuadratura. no morirán estos atributos del clasicismo mientras por otro...</li>
+<li><em>[1925]</em> ...majestad. "el caballero del caballo de cartón", que la sigue, contrasta por su <strong class="ondas-color">ritmo</strong> gracioso, al que a su vez siguen otras páginas adorables. al final de ellas el...</li>
+</ul>
+<p class="conc-term">«armonía» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...años la doctrina de ese maestro. salvador bacarisse obtuvo un primer premio de <strong class="ondas-color">armonía</strong> en el conservatorio de madrid, y en el año 1923 fué premiado en el concurso nac...</li>
+<li><em>[1925]</em> ...el teatralismo legítimo, en las truculencias del gran guiñol, mientras melodía, <strong class="ondas-color">armonía</strong> y orquestación se convertían en una especie de liga cazamoscas, de cuya adheren...</li>
+<li><em>[1925]</em> ...o que incumbe a sus obligaciones con relación a un servicio público trabajar en <strong class="ondas-color">armonía</strong> con las organizaciones de la industria de diversión, la b. b. c. ha decidido de...</li>
+<li><em>[1925]</em> ...s los ciudadanos debíamos abolirlas. el hombre ha nacido para vivir en completa <strong class="ondas-color">armonía</strong>, y el más pequeño arañazo debía estar penado con diez años de presidio......</li>
+<li><em>[1925]</em> ...admitir que la idea alemana de expresar esos sentimientos con complejidades de <strong class="ondas-color">armonía</strong> y combinaciones de timbres orquestales....</li>
+</ul>
+<p class="conc-term">«voz» (12 ex.)</p><ul>
+<li><em>[1925]</em> ...y nosotros, con <strong class="ondas-color">voz</strong> de pito, le contestamos:...</li>
+<li><em>[1925]</em> ...—lo que necesitan de todos: su <strong class="ondas-color">voz</strong> en forma de opinión acerca de ellas, y singularmente la quiero para las que des...</li>
+<li><em>[1925]</em> ...nar el oficio con tos lius que pelos y señales y dedicarte a radiokilometrar tu <strong class="ondas-color">voz</strong>....</li>
+<li><em>[1925]</em> ...—escuchen ústes. «buenos aires, la tierra de plata...» ¿tengo <strong class="ondas-color">voz</strong>?... ¿tengo estilo?...</li>
+<li><em>[1925]</em> ...por los obscuros pasillos de la comisaría se oía la <strong class="ondas-color">voz</strong> débil del señor damián, pidiendo otra copa al mozo del tango....</li>
+</ul>
+</div>
+<div class="conc-panel">
+<h4 class="elsol-color">El Sol</h4>
+<p class="conc-term">«melodía» (12 ex.)</p><ul>
+<li><em>[1930]</em> ...la flauta canta una <strong class="elsol-color">melodía</strong> apoyada en suaves sonoridades de la...</li>
+<li><em>[1930]</em> ...claro timbre del arpa. la <strong class="elsol-color">melodía</strong>...</li>
+<li><em>[1919]</em> ...un tiempo lento cuya <strong class="elsol-color">melodía</strong> no sea...</li>
+<li><em>[1919]</em> ...de empuje; pero en el gracioso "allegretto" fué destacada inteligentemente la <strong class="elsol-color">melodía</strong> popular en que se funda. se aplaudió mucho este tiempo y...</li>
+<li><em>[1919]</em> ...a. debussy; "<strong class="elsol-color">melodía</strong> polaca", niexviadowsky; "soir hanté", iv. m. rogozinsky; "korceuse", chopin; "g...</li>
+</ul>
+<p class="conc-term">«ritmo» (12 ex.)</p><ul>
+<li><em>[1930]</em> ...thoveniana, preludia el cuarteto de smetana, está reemplazada en janacek por un <strong class="elsol-color">ritmo</strong> característico que erwin felber, un comentarista suyo, denomina "<strong class="elsol-color">ritmo</strong> alla lom...</li>
+<li><em>[1930]</em> ...en el folklore eslavo dice ser grandes. más que "interrogación al destino", ese <strong class="elsol-color">ritmo</strong> es como una profesión de fe. profesión de fe manifiesta en años de florida veje...</li>
+<li><em>[1931]</em> ...generales: tonalidad, <strong class="elsol-color">ritmo</strong>..., si,...</li>
+<li><em>[1931]</em> ...signos neumáticos en cuanto a <strong class="elsol-color">ritmo</strong> y medida, forma una tercera...</li>
+<li><em>[1919]</em> ...su sencillo motivo, fundado en el <strong class="elsol-color">ritmo</strong>...</li>
+</ul>
+<p class="conc-term">«armonía» (12 ex.)</p><ul>
+<li><em>[1919]</em> ...del sonido, la pura belleza sonora. aspiran a que sus propias combinaciones—la <strong class="elsol-color">armonía</strong>—tenga un propio valor expresivo y una específica belleza....</li>
+<li><em>[1919]</em> ...plena es la <strong class="elsol-color">armonía</strong> del motivo entre las decoraciones de la edificación. todo el pozo, si se consid...</li>
+<li><em>[1919]</em> ...parajes del yacimiento, dos fotografías que supieran dar idea como plena es la <strong class="elsol-color">armonía</strong> del motivo...</li>
+<li><em>[1926]</em> ...és de adopción), para violonchelo, cuyo germanismo apenas oculto se envuelve en <strong class="elsol-color">armonía</strong> que no logran aliviar la falta de interés de su discurso....</li>
+<li><em>[1921]</em> ...que le parecía absurdo hablar de su <strong class="elsol-color">armonía</strong>, o de su...</li>
+</ul>
+<p class="conc-term">«voz» (12 ex.)</p><ul>
+<li><em>[1930]</em> ...<strong class="elsol-color">voz</strong> y se vió obligado a repetir la...</li>
+<li><em>[1930]</em> ...cantar y posee una <strong class="elsol-color">voz</strong> pura, de...</li>
+<li><em>[1930]</em> ...longitud, escrito para <strong class="elsol-color">voz</strong> de mujer (falla dedica su obra a madame alvar) y un grupo reducidísimo de eleme...</li>
+<li><em>[1931]</em> ...el tenor sr. lindi posee una <strong class="elsol-color">voz</strong> amplia, llena, bien timbrada y suficientemente robusta. si nos pareció algo des...</li>
+<li><em>[1919]</em> ...el acto primero de aquella ópera. excelente de <strong class="elsol-color">voz</strong>, con un estilo «grande»,...</li>
+</ul>
+</div>
+</div>
+
+</section>
+
+
+<!-- 10. CONCLUSIONES -->
+<section class="section" id="conclusiones">
+    <h2>10. Summary Table and Conclusions</h2>
+
+    <h3>Compared Relative Frequencies (per 10,000 words)</h3>
+    <table class="tabla-resumen">
+        <tr>
+            <th>Category</th>
+            <th class="num"><span class="legend-box" style="background:#800020"></span>ONDAS (‱)</th>
+            <th class="num"><span class="legend-box" style="background:#1a5276"></span>El Sol (‱)</th>
+            <th>Dominant</th>
+        </tr>
+        <tr>
+            <td>AUDITORY PERCEPTION</td>
+            <td class="num">17,1</td>
+            <td class="num">17,8</td>
+            <td class="domina-igual">= (balanced)</td>
+        </tr>
+        <tr>
+            <td>ACT OF LISTENING</td>
+            <td class="num">80,2</td>
+            <td class="num">54,5</td>
+            <td class="domina-ondas">ONDAS (+47%)</td>
+        </tr>
+        <tr>
+            <td>LISTENING DEVICES</td>
+            <td class="num">75,2</td>
+            <td class="num">12,6</td>
+            <td class="domina-ondas">ONDAS (+497%)</td>
+        </tr>
+        <tr>
+            <td>EMOTIONS AND SENSATIONS</td>
+            <td class="num">19,0</td>
+            <td class="num">26,1</td>
+            <td class="domina-elsol">El Sol (+37%)</td>
+        </tr>
+        <tr>
+            <td>AESTHETIC EVALUATION</td>
+            <td class="num">23,4</td>
+            <td class="num">23,4</td>
+            <td class="domina-igual">= (identical)</td>
+        </tr>
+        <tr>
+            <td>AUDIENCE RESPONSE</td>
+            <td class="num">15,5</td>
+            <td class="num">32,5</td>
+            <td class="domina-elsol">El Sol (+110%)</td>
+        </tr>
+        <tr>
+            <td>SOUND QUALITIES</td>
+            <td class="num">34,9</td>
+            <td class="num">31,3</td>
+            <td class="domina-igual">= (similar)</td>
+        </tr>
+    </table>
+
+    <h3>What the Data Reveals</h3>
+
+    <div class="hallazgo">
+        <h4 class="ondas-color">ONDAS dominates in technology</h4>
+        <p>Listening devices (+497%) and act of listening (+47%). The radio lexicon (emisión, transmisión, retransmisión, radio, emisora, antena, galena) is almost exclusive to ONDAS. This confirms the nature of the magazine as a transmedia device: its discourse not only talks about music, but constructs its own vocabulary for the act of listening through radio technology.</p>
+    </div>
+
+    <div class="hallazgo">
+        <h4 class="elsol-color">El Sol dominates in live criticism</h4>
+        <p>Audience response (+110%) and emotions and sensations (+37%). A newspaper covering live concerts speaks much more about applause, ovations, successes, triumphs and emotions than a radio programming magazine. El Sol reflects the concert experience as a social event: the physical presence of the audience, their collective reaction and the emotional judgement of the critic before the performance.</p>
+    </div>
+
+    <div class="hallazgo">
+        <h4 style="color:#2d6a4f;">Auditory perception, aesthetic evaluation, and sound qualities are shared</h4>
+        <p>The basic musical lexicon (belleza, melodía, armonía, ritmo, escuchar, oír) is common to both media with virtually identical densities. This suggests a shared discursive substrate: regardless of the media format, writing about music in early twentieth-century Spain shares a stable aesthetic and perceptive vocabulary, inherited from the tradition of nineteenth-century music criticism.</p>
+    </div>
+
+    <div class="nota">
+        <strong>Methodological note:</strong> Relative frequencies (‱) allow comparison of corpora of different sizes (ONDAS: 1,743,435 words; El Sol: 1,333,902 words) on a common base of 10,000 words. The 84 lemmas and their inflected variants are identical in both analyses.
+    </div>
+</section>
+
+<footer>
+    Comparative Analysis of the Musical Listening Lexicon — LexiMus Project / MUSLYME — University of Salamanca<br>
+    84 lemmas · 7 semantic categories · Automatically generated · January 2026
+</footer>
+
+<script>
+const ONDAS_C = '#800020';
+const ELSOL_C = '#1a5276';
+const ONDAS_BG = 'rgba(128, 0, 32, 0.65)';
+const ELSOL_BG = 'rgba(26, 82, 118, 0.65)';
+
+// Etiquetas cortas para los gráficos panorámicos
+const catLabels = ["Auditory\nperception", "Act of\nlistening", "Listening\ndevices", "Emotions and\nsensations", "Aesthetic\nevaluation", "Audience\nresponse", "Sound\nqualities"];
+
+// Radar
+new Chart(document.getElementById('chartRadar'), {
+    type: 'radar',
+    data: {
+        labels: catLabels,
+        datasets: [
+            { label: 'ONDAS (‱)', data: [17.1, 80.2, 75.2, 19.0, 23.4, 15.5, 34.9], borderColor: ONDAS_C, backgroundColor: 'rgba(128,0,32,0.15)', pointBackgroundColor: ONDAS_C, borderWidth: 2 },
+            { label: 'El Sol (‱)', data: [17.8, 54.5, 12.6, 26.1, 23.4, 32.5, 31.3], borderColor: ELSOL_C, backgroundColor: 'rgba(26,82,118,0.15)', pointBackgroundColor: ELSOL_C, borderWidth: 2 }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+            title: { display: true, text: 'Compared Profile (relative frequency ‱)', font: { size: 14 } },
+            legend: { labels: { font: { size: 13 } } }
+        },
+        scales: {
+            r: {
+                pointLabels: { font: { size: 12 } },
+                ticks: { font: { size: 10 } }
+            }
+        }
+    }
+});
+
+// Categorías absolutas
+new Chart(document.getElementById('chartCatAbs'), {
+    type: 'bar',
+    data: {
+        labels: catLabels,
+        datasets: [
+            { label: 'ONDAS', data: [2976, 13979, 13103, 3310, 4075, 2710, 6086], backgroundColor: ONDAS_BG, borderColor: ONDAS_C, borderWidth: 1 },
+            { label: 'El Sol', data: [2380, 7269, 1682, 3475, 3118, 4340, 4173], backgroundColor: ELSOL_BG, borderColor: ELSOL_C, borderWidth: 1 }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        indexAxis: 'y',
+        plugins: {
+            title: { display: true, text: 'Absolute Frequencies by Category', font: { size: 14 } },
+            legend: { labels: { font: { size: 12 } } }
+        },
+        scales: {
+            y: { ticks: { font: { size: 12 }, autoSkip: false } },
+            x: { ticks: { font: { size: 11 } } }
+        }
+    }
+});
+
+// Categorías relativas
+new Chart(document.getElementById('chartCatRel'), {
+    type: 'bar',
+    data: {
+        labels: catLabels,
+        datasets: [
+            { label: 'ONDAS (‱)', data: [17.1, 80.2, 75.2, 19.0, 23.4, 15.5, 34.9], backgroundColor: ONDAS_BG, borderColor: ONDAS_C, borderWidth: 1 },
+            { label: 'El Sol (‱)', data: [17.8, 54.5, 12.6, 26.1, 23.4, 32.5, 31.3], backgroundColor: ELSOL_BG, borderColor: ELSOL_C, borderWidth: 1 }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        indexAxis: 'y',
+        plugins: {
+            title: { display: true, text: 'Relative Frequencies (per 10,000 words)', font: { size: 14 } },
+            legend: { labels: { font: { size: 12 } } }
+        },
+        scales: {
+            y: { ticks: { font: { size: 12 }, autoSkip: false } },
+            x: { ticks: { font: { size: 11 } } }
+        }
+    }
+});
+
+// Evolución global
+new Chart(document.getElementById('chartEvolGlobal'), {
+    type: 'line',
+    data: {
+        labels: [1918, 1919, 1920, 1921, 1922, 1923, 1924, 1925, 1926, 1927, 1928, 1929, 1930, 1931, 1932, 1933, 1934, 1935, 1936],
+        datasets: [
+            { label: 'ONDAS', data: [0, 0, 0, 0, 0, 0, 0, 1698, 3634, 6126, 0, 5453, 5675, 2847, 3598, 3903, 7022, 6283, 0], borderColor: ONDAS_C, backgroundColor: 'rgba(128,0,32,0.1)', fill: true, tension: 0.3 },
+            { label: 'El Sol', data: [216, 751, 677, 807, 1347, 1922, 1534, 1722, 1628, 2016, 2657, 3153, 2972, 2920, 1786, 254, 8, 25, 42], borderColor: ELSOL_C, backgroundColor: 'rgba(26,82,118,0.1)', fill: true, tension: 0.3 }
+        ]
+    },
+    options: { responsive: true, plugins: { title: { display: true, text: 'Temporal Evolution: Total Listening Lexicon' } }, scales: { y: { beginAtZero: true } } }
+});
+
+// Charts por categoría
+
+new Chart(document.getElementById('chart_percepcion_abs'), {
+    type: 'bar',
+    data: { labels: ["escuchar", "o\u00edr", "oyente/s", "audici\u00f3n/es", "auditor/es", "auditorio", "radioyente/s", "radioescucha/s", "percibir"], datasets: [
+        { label: 'ONDAS', data: [259, 455, 410, 379, 178, 25, 1101, 100, 69], backgroundColor: ONDAS_BG, borderColor: ONDAS_C, borderWidth: 1 },
+        { label: 'El Sol', data: [338, 619, 29, 639, 455, 201, 13, 1, 85], backgroundColor: ELSOL_BG, borderColor: ELSOL_C, borderWidth: 1 }
+    ]},
+    options: { responsive: true, plugins: { title: { display: true, text: 'AUDITORY PERCEPTION — absolute frequencies' } }, scales: { y: { beginAtZero: true } } }
+});
+new Chart(document.getElementById('chart_percepcion_rel'), {
+    type: 'bar',
+    data: { labels: ["escuchar", "o\u00edr", "oyente/s", "audici\u00f3n/es", "auditor/es", "auditorio", "radioyente/s", "radioescucha/s", "percibir"], datasets: [
+        { label: 'ONDAS (‱)', data: [1.49, 2.61, 2.35, 2.17, 1.02, 0.14, 6.32, 0.57, 0.4], backgroundColor: ONDAS_BG, borderColor: ONDAS_C, borderWidth: 1 },
+        { label: 'El Sol (‱)', data: [2.53, 4.64, 0.22, 4.79, 3.41, 1.51, 0.1, 0.01, 0.64], backgroundColor: ELSOL_BG, borderColor: ELSOL_C, borderWidth: 1 }
+    ]},
+    options: { responsive: true, plugins: { title: { display: true, text: 'AUDITORY PERCEPTION — relative frequencies (‱)' } }, scales: { y: { beginAtZero: true } } }
+});
+
+new Chart(document.getElementById('chart_acto_abs'), {
+    type: 'bar',
+    data: { labels: ["concierto/s", "recital/es", "sesi\u00f3n/es", "emisi\u00f3n/es", "transmisi\u00f3n/es", "retransmisi\u00f3n/es", "programa/s", "programaci\u00f3n", "velada/s"], datasets: [
+        { label: 'ONDAS', data: [4040, 902, 431, 3474, 1202, 809, 2907, 157, 57], backgroundColor: ONDAS_BG, borderColor: ONDAS_C, borderWidth: 1 },
+        { label: 'El Sol', data: [3934, 556, 169, 49, 5, 3, 2520, 0, 33], backgroundColor: ELSOL_BG, borderColor: ELSOL_C, borderWidth: 1 }
+    ]},
+    options: { responsive: true, plugins: { title: { display: true, text: 'ACT OF LISTENING — absolute frequencies' } }, scales: { y: { beginAtZero: true } } }
+});
+new Chart(document.getElementById('chart_acto_rel'), {
+    type: 'bar',
+    data: { labels: ["concierto/s", "recital/es", "sesi\u00f3n/es", "emisi\u00f3n/es", "transmisi\u00f3n/es", "retransmisi\u00f3n/es", "programa/s", "programaci\u00f3n", "velada/s"], datasets: [
+        { label: 'ONDAS (‱)', data: [23.17, 5.17, 2.47, 19.93, 6.89, 4.64, 16.67, 0.9, 0.33], backgroundColor: ONDAS_BG, borderColor: ONDAS_C, borderWidth: 1 },
+        { label: 'El Sol (‱)', data: [29.49, 4.17, 1.27, 0.37, 0.04, 0.02, 18.89, 0.0, 0.25], backgroundColor: ELSOL_BG, borderColor: ELSOL_C, borderWidth: 1 }
+    ]},
+    options: { responsive: true, plugins: { title: { display: true, text: 'ACT OF LISTENING — relative frequencies (‱)' } }, scales: { y: { beginAtZero: true } } }
+});
+
+new Chart(document.getElementById('chart_dispositivos_abs'), {
+    type: 'bar',
+    data: { labels: ["radio", "radiodifusi\u00f3n", "radiotelefon\u00eda", "radiofon\u00eda", "altavoz/ces", "auricular/es", "cascos", "micr\u00f3fono/s", "aparato/s", "receptor/es", "antena/s", "v\u00e1lvula/s", "galena", "gram\u00f3fono/s", "fon\u00f3grafo/s", "disco/s", "estudio/s", "emisora/s"], datasets: [
+        { label: 'ONDAS', data: [8283, 202, 207, 66, 88, 22, 2, 722, 195, 74, 77, 29, 15, 93, 13, 1181, 785, 1049], backgroundColor: ONDAS_BG, borderColor: ONDAS_C, borderWidth: 1 },
+        { label: 'El Sol', data: [214, 4, 12, 1, 5, 4, 0, 17, 55, 0, 3, 1, 0, 61, 2, 602, 664, 37], backgroundColor: ELSOL_BG, borderColor: ELSOL_C, borderWidth: 1 }
+    ]},
+    options: { responsive: true, plugins: { title: { display: true, text: 'LISTENING DEVICES — absolute frequencies' } }, scales: { y: { beginAtZero: true } } }
+});
+new Chart(document.getElementById('chart_dispositivos_rel'), {
+    type: 'bar',
+    data: { labels: ["radio", "radiodifusi\u00f3n", "radiotelefon\u00eda", "radiofon\u00eda", "altavoz/ces", "auricular/es", "cascos", "micr\u00f3fono/s", "aparato/s", "receptor/es", "antena/s", "v\u00e1lvula/s", "galena", "gram\u00f3fono/s", "fon\u00f3grafo/s", "disco/s", "estudio/s", "emisora/s"], datasets: [
+        { label: 'ONDAS (‱)', data: [47.51, 1.16, 1.19, 0.38, 0.5, 0.13, 0.01, 4.14, 1.12, 0.42, 0.44, 0.17, 0.09, 0.53, 0.07, 6.77, 4.5, 6.02], backgroundColor: ONDAS_BG, borderColor: ONDAS_C, borderWidth: 1 },
+        { label: 'El Sol (‱)', data: [1.6, 0.03, 0.09, 0.01, 0.04, 0.03, 0.0, 0.13, 0.41, 0.0, 0.02, 0.01, 0.0, 0.46, 0.01, 4.51, 4.98, 0.28], backgroundColor: ELSOL_BG, borderColor: ELSOL_C, borderWidth: 1 }
+    ]},
+    options: { responsive: true, plugins: { title: { display: true, text: 'LISTENING DEVICES — relative frequencies (‱)' } }, scales: { y: { beginAtZero: true } } }
+});
+
+new Chart(document.getElementById('chart_emociones_abs'), {
+    type: 'bar',
+    data: { labels: ["emoci\u00f3n", "sentir", "impresi\u00f3n", "conmover", "entusiasmo", "admiraci\u00f3n", "deleite", "goce/gozo", "placer", "encanto", "fascinaci\u00f3n", "\u00e9xtasis"], datasets: [
+        { label: 'ONDAS', data: [303, 1251, 229, 26, 322, 659, 31, 56, 55, 338, 2, 38], backgroundColor: ONDAS_BG, borderColor: ONDAS_C, borderWidth: 1 },
+        { label: 'El Sol', data: [318, 1380, 245, 33, 619, 536, 30, 54, 117, 122, 4, 17], backgroundColor: ELSOL_BG, borderColor: ELSOL_C, borderWidth: 1 }
+    ]},
+    options: { responsive: true, plugins: { title: { display: true, text: 'EMOTIONS AND SENSATIONS — absolute frequencies' } }, scales: { y: { beginAtZero: true } } }
+});
+new Chart(document.getElementById('chart_emociones_rel'), {
+    type: 'bar',
+    data: { labels: ["emoci\u00f3n", "sentir", "impresi\u00f3n", "conmover", "entusiasmo", "admiraci\u00f3n", "deleite", "goce/gozo", "placer", "encanto", "fascinaci\u00f3n", "\u00e9xtasis"], datasets: [
+        { label: 'ONDAS (‱)', data: [1.74, 7.18, 1.31, 0.15, 1.85, 3.78, 0.18, 0.32, 0.32, 1.94, 0.01, 0.22], backgroundColor: ONDAS_BG, borderColor: ONDAS_C, borderWidth: 1 },
+        { label: 'El Sol (‱)', data: [2.38, 10.35, 1.84, 0.25, 4.64, 4.02, 0.22, 0.4, 0.88, 0.91, 0.03, 0.13], backgroundColor: ELSOL_BG, borderColor: ELSOL_C, borderWidth: 1 }
+    ]},
+    options: { responsive: true, plugins: { title: { display: true, text: 'EMOTIONS AND SENSATIONS — relative frequencies (‱)' } }, scales: { y: { beginAtZero: true } } }
+});
+
+new Chart(document.getElementById('chart_valoracion_abs'), {
+    type: 'bar',
+    data: { labels: ["belleza", "hermosura", "sublime", "grandioso/a", "exquisito/a", "magn\u00edfico/a", "espl\u00e9ndido/a", "maravilla", "prodigio", "genio", "soberbio/a", "extraordinario/a"], datasets: [
+        { label: 'ONDAS', data: [1526, 275, 84, 60, 170, 231, 116, 252, 128, 820, 45, 368], backgroundColor: ONDAS_BG, borderColor: ONDAS_C, borderWidth: 1 },
+        { label: 'El Sol', data: [1166, 154, 57, 57, 182, 276, 183, 180, 87, 433, 110, 233], backgroundColor: ELSOL_BG, borderColor: ELSOL_C, borderWidth: 1 }
+    ]},
+    options: { responsive: true, plugins: { title: { display: true, text: 'AESTHETIC EVALUATION — absolute frequencies' } }, scales: { y: { beginAtZero: true } } }
+});
+new Chart(document.getElementById('chart_valoracion_rel'), {
+    type: 'bar',
+    data: { labels: ["belleza", "hermosura", "sublime", "grandioso/a", "exquisito/a", "magn\u00edfico/a", "espl\u00e9ndido/a", "maravilla", "prodigio", "genio", "soberbio/a", "extraordinario/a"], datasets: [
+        { label: 'ONDAS (‱)', data: [8.75, 1.58, 0.48, 0.34, 0.98, 1.32, 0.67, 1.45, 0.73, 4.7, 0.26, 2.11], backgroundColor: ONDAS_BG, borderColor: ONDAS_C, borderWidth: 1 },
+        { label: 'El Sol (‱)', data: [8.74, 1.15, 0.43, 0.43, 1.36, 2.07, 1.37, 1.35, 0.65, 3.25, 0.82, 1.75], backgroundColor: ELSOL_BG, borderColor: ELSOL_C, borderWidth: 1 }
+    ]},
+    options: { responsive: true, plugins: { title: { display: true, text: 'AESTHETIC EVALUATION — relative frequencies (‱)' } }, scales: { y: { beginAtZero: true } } }
+});
+
+new Chart(document.getElementById('chart_respuesta_abs'), {
+    type: 'bar',
+    data: { labels: ["aplauso/s", "ovaci\u00f3n/es", "\u00e9xito/s", "triunfo/s", "aclamaci\u00f3n", "p\u00fablico/s", "audiencia", "estruendoso/a", "clamor", "bis", "repetici\u00f3n"], datasets: [
+        { label: 'ONDAS', data: [157, 12, 1015, 450, 3, 1018, 2, 0, 16, 3, 34], backgroundColor: ONDAS_BG, borderColor: ONDAS_C, borderWidth: 1 },
+        { label: 'El Sol', data: [881, 117, 939, 279, 12, 1908, 4, 1, 75, 30, 94], backgroundColor: ELSOL_BG, borderColor: ELSOL_C, borderWidth: 1 }
+    ]},
+    options: { responsive: true, plugins: { title: { display: true, text: 'AUDIENCE RESPONSE — absolute frequencies' } }, scales: { y: { beginAtZero: true } } }
+});
+new Chart(document.getElementById('chart_respuesta_rel'), {
+    type: 'bar',
+    data: { labels: ["aplauso/s", "ovaci\u00f3n/es", "\u00e9xito/s", "triunfo/s", "aclamaci\u00f3n", "p\u00fablico/s", "audiencia", "estruendoso/a", "clamor", "bis", "repetici\u00f3n"], datasets: [
+        { label: 'ONDAS (‱)', data: [0.9, 0.07, 5.82, 2.58, 0.02, 5.84, 0.01, 0.0, 0.09, 0.02, 0.2], backgroundColor: ONDAS_BG, borderColor: ONDAS_C, borderWidth: 1 },
+        { label: 'El Sol (‱)', data: [6.6, 0.88, 7.04, 2.09, 0.09, 14.3, 0.03, 0.01, 0.56, 0.22, 0.7], backgroundColor: ELSOL_BG, borderColor: ELSOL_C, borderWidth: 1 }
+    ]},
+    options: { responsive: true, plugins: { title: { display: true, text: 'AUDIENCE RESPONSE — relative frequencies (‱)' } }, scales: { y: { beginAtZero: true } } }
+});
+
+new Chart(document.getElementById('chart_cualidades_abs'), {
+    type: 'bar',
+    data: { labels: ["sonido/s", "voz/voces", "timbre/s", "tono/s", "armon\u00eda", "melod\u00eda", "ritmo", "acorde/s", "nota/s", "frase/s", "acento/s", "matiz/matices", "vibraci\u00f3n/es"], datasets: [
+        { label: 'ONDAS', data: [504, 785, 105, 312, 253, 1062, 277, 90, 1967, 130, 284, 229, 88], backgroundColor: ONDAS_BG, borderColor: ONDAS_C, borderWidth: 1 },
+        { label: 'El Sol', data: [747, 604, 206, 489, 256, 337, 319, 81, 342, 224, 155, 324, 89], backgroundColor: ELSOL_BG, borderColor: ELSOL_C, borderWidth: 1 }
+    ]},
+    options: { responsive: true, plugins: { title: { display: true, text: 'SOUND QUALITIES — absolute frequencies' } }, scales: { y: { beginAtZero: true } } }
+});
+new Chart(document.getElementById('chart_cualidades_rel'), {
+    type: 'bar',
+    data: { labels: ["sonido/s", "voz/voces", "timbre/s", "tono/s", "armon\u00eda", "melod\u00eda", "ritmo", "acorde/s", "nota/s", "frase/s", "acento/s", "matiz/matices", "vibraci\u00f3n/es"], datasets: [
+        { label: 'ONDAS (‱)', data: [2.89, 4.5, 0.6, 1.79, 1.45, 6.09, 1.59, 0.52, 11.28, 0.75, 1.63, 1.31, 0.5], backgroundColor: ONDAS_BG, borderColor: ONDAS_C, borderWidth: 1 },
+        { label: 'El Sol (‱)', data: [5.6, 4.53, 1.54, 3.67, 1.92, 2.53, 2.39, 0.61, 2.56, 1.68, 1.16, 2.43, 0.67], backgroundColor: ELSOL_BG, borderColor: ELSOL_C, borderWidth: 1 }
+    ]},
+    options: { responsive: true, plugins: { title: { display: true, text: 'SOUND QUALITIES — relative frequencies (‱)' } }, scales: { y: { beginAtZero: true } } }
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Criteria - Musical Genres · ONDAS (1925-1935)</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Crimson Text', serif; background: #faf9f6; color: #1a1a1a; line-height: 1.7; }
+        .header {
+            background: #1a1a2e; color: white; text-align: center; padding: 50px 20px;
+        }
+        .header h1 { font-family: 'EB Garamond', serif; font-size: 2.4rem; margin-bottom: 10px; }
+        .header p { font-size: 1.1rem; opacity: 0.8; }
+        .top-bar {
+            background: #0d0d1a; padding: 8px 20px; display: flex; justify-content: flex-end; gap: 10px;
+            font-family: 'Crimson Text', serif; flex-wrap: wrap;
+        }
+        .top-bar a {
+            color: #fff; text-decoration: none; padding: 5px 14px;
+            border: 1px solid #fff; border-radius: 20px; font-size: 0.85rem; transition: all 0.2s;
+        }
+        .top-bar a:hover { background: #fff; color: #0d0d1a; }
+        .top-bar a.gold { color: #d4a373; border-color: #d4a373; }
+        .top-bar a.gold:hover { background: #d4a373; color: #0d0d1a; }
+        .container { max-width: 960px; margin: 0 auto; padding: 30px 20px 60px; }
+        .section {
+            background: white; margin: 30px 0; padding: 30px 35px;
+            border-radius: 12px; box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        .section h2 {
+            font-family: 'EB Garamond', serif; font-size: 1.7rem;
+            color: #800020; margin-bottom: 15px;
+            border-bottom: 2px solid #800020; padding-bottom: 8px;
+        }
+        .section h3 {
+            font-family: 'EB Garamond', serif; font-size: 1.3rem;
+            color: #1a1a2e; margin: 25px 0 10px;
+        }
+        .genre-block {
+            background: #f8f5f0; border-left: 4px solid #800020;
+            padding: 20px 25px; margin: 20px 0; border-radius: 0 10px 10px 0;
+        }
+        .genre-block h3 {
+            font-family: 'EB Garamond', serif; font-size: 1.25rem;
+            color: #800020; margin: 0 0 8px;
+        }
+        .genre-block .criterio { font-style: italic; color: #555; margin-bottom: 12px; }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; }
+        th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+        td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+        td.num { text-align: right; font-weight: 600; }
+        tr:nth-child(even) { background: #fdf9f4; }
+        .warn {
+            background: #fff3cd; border-left: 4px solid #e6a817; padding: 14px 20px;
+            margin: 12px 0; border-radius: 0 8px 8px 0; font-size: 0.93rem;
+        }
+        .warn strong { color: #856404; }
+        .note {
+            background: #e8f4f8; border-left: 4px solid #457b9d; padding: 14px 20px;
+            margin: 12px 0; border-radius: 0 8px 8px 0; font-size: 0.93rem;
+        }
+        .excluded {
+            color: #666; font-size: 0.92rem; margin: 8px 0;
+        }
+        .ambiguity {
+            color: #555; font-size: 0.92rem; margin: 8px 0; font-style: italic;
+        }
+        ul { padding-left: 22px; margin: 8px 0; }
+        li { margin-bottom: 4px; }
+        footer {
+            background: #1a1a2e; color: white; text-align: center;
+            padding: 25px; font-size: 0.85rem; opacity: 0.8; margin-top: 40px;
+        }
+        .nav-toc {
+            position: sticky; top: 0; background: white; z-index: 100;
+            padding: 12px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+        }
+        .nav-toc a {
+            color: #800020; text-decoration: none; padding: 4px 12px;
+            border: 1px solid #800020; border-radius: 20px; font-size: 0.82rem;
+            transition: all 0.2s;
+        }
+        .nav-toc a:hover { background: #800020; color: white; }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.8rem; }
+            .section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <a class="gold" href="analisis_discurso_ondas_EN.html">Back to ONDAS Analysis</a>
+    <a href="criterios_generos.html">Versi&oacute;n en espa&ntilde;ol</a>
+</div>
+
+<div class="header">
+    <h1>Musical Genres: Classification Criteria</h1>
+    <p>ONDAS Corpus &middot; Madrid &middot; 1925-1935</p>
+    <p style="margin-top:10px; font-size:0.9rem; opacity:0.6;">LexiMus Project &middot; MUSLYME &middot; University of Salamanca &middot; 2026</p>
+</div>
+
+<nav class="nav-toc">
+    <a href="#metodo">Method</a>
+    <a href="#opera">Opera</a>
+    <a href="#zarzuela">Zarzuela</a>
+    <a href="#sinfonica">Symphonic</a>
+    <a href="#camara">Chamber</a>
+    <a href="#cancion">Song</a>
+    <a href="#flamenco">Flamenco</a>
+    <a href="#jazz">Jazz</a>
+    <a href="#coral">Choral</a>
+    <a href="#religiosa">Religious</a>
+    <a href="#ballet">Ballet</a>
+    <a href="#popular">Popular</a>
+    <a href="#opereta">Operetta</a>
+    <a href="#excluidos">Excluded</a>
+    <a href="#solapamientos">Overlaps</a>
+</nav>
+
+<div class="container">
+
+<!-- METHOD -->
+<section class="section" id="metodo">
+    <h2>1. Method</h2>
+    <p>The analysis of musical genres is based on the detection of key terms associated with each genre within the 472 TXT files of the corpus (1,743,435 words). For each genre, a set of representative words and expressions was defined. They were searched as whole words (delimited by <code>\b</code> in regular expression) in the full text of the corpus converted to lowercase.</p>
+    <p style="margin-top:12px;">Counts were carried out in two ways:</p>
+    <ul>
+        <li><strong>Global:</strong> total sum of occurrences across the entire corpus.</li>
+        <li><strong>By year:</strong> sum of occurrences per file, grouped by year of publication.</li>
+    </ul>
+    <div class="note">
+        <strong>Note:</strong> No semantic disambiguation was applied: each term was counted in all contexts in which it appears. Possible ambiguities are noted for each genre.
+    </div>
+</section>
+
+<!-- OPERA -->
+<section class="section" id="opera">
+    <h2>2. Genres and Terms: Complete Breakdown</h2>
+
+    <div class="genre-block">
+        <h3>2.1. Opera (total: 3,411 mentions)</h3>
+        <p class="criterio">Criterion: terms that directly designate the operatic genre or its grammatical variants.</p>
+        <table>
+            <tr><th>Term</th><th class="num">Occurrences</th></tr>
+            <tr><td>&oacute;pera</td><td class="num">2,372</td></tr>
+            <tr><td>opera (no accent)</td><td class="num">248</td></tr>
+            <tr><td>&oacute;peras</td><td class="num">739</td></tr>
+            <tr><td>operas (no accent)</td><td class="num">14</td></tr>
+            <tr><td>oper&iacute;stico</td><td class="num">19</td></tr>
+            <tr><td>oper&iacute;stica</td><td class="num">19</td></tr>
+        </table>
+        <div class="note">
+            <strong>Note:</strong> This count refers exclusively to the appearance of the word &laquo;&oacute;pera&raquo; and derivatives. It does not include titles of specific operas (Carmen, Aida, Rigoletto, etc.) nor vocal vocabulary (soprano, tenor, baritone), which are analysed in separate sections. The percentage of operatic content in the corpus (62.57% of sections) is calculated with broader criteria that include those other elements.
+        </div>
+    </div>
+</section>
+
+<!-- ZARZUELA -->
+<section class="section" id="zarzuela">
+    <div class="genre-block">
+        <h3>2.2. Zarzuela (total: 1,088 mentions)</h3>
+        <p class="criterio">Criterion: terms that designate the quintessential Spanish lyric genre, including historical names for its modalities.</p>
+        <table>
+            <tr><th>Term</th><th class="num">Occurrences</th></tr>
+            <tr><td>zarzuela</td><td class="num">727</td></tr>
+            <tr><td>zarzuelas</td><td class="num">340</td></tr>
+            <tr><td>g&eacute;nero chico</td><td class="num">21</td></tr>
+            <tr><td>g&eacute;nero grande</td><td class="num">0</td></tr>
+        </table>
+        <p class="excluded"><strong>Not included:</strong> &laquo;sainete&raquo; (more theatrical than musical usage), &laquo;revista&raquo; (ambiguous with the publication name), &laquo;tonadilla&raquo; (insufficient occurrences). Nor titles of specific zarzuelas.</p>
+        <p class="ambiguity">Ambiguity: none significant. &laquo;Zarzuela&raquo; is an unambiguous term in a musical context.</p>
+    </div>
+</section>
+
+<!-- SYMPHONIC -->
+<section class="section" id="sinfonica">
+    <div class="genre-block">
+        <h3>2.3. Symphonic Music (total: 2,444 mentions)</h3>
+        <p class="criterio">Criterion: terms referring to orchestral music in symphonic format, including the names of the main instrumental ensembles.</p>
+        <table>
+            <tr><th>Term</th><th class="num">Occurrences</th></tr>
+            <tr><td>sinfon&iacute;a</td><td class="num">1,247</td></tr>
+            <tr><td>sinf&oacute;nica</td><td class="num">422</td></tr>
+            <tr><td>sinf&oacute;nico</td><td class="num">448</td></tr>
+            <tr><td>orquesta sinf&oacute;nica</td><td class="num">221</td></tr>
+            <tr><td>orquesta filarm&oacute;nica</td><td class="num">106</td></tr>
+        </table>
+        <p class="excluded"><strong>Not included:</strong> &laquo;orquesta&raquo; alone (too generic: also refers to dance orchestras, radio orchestras, chamber orchestras), &laquo;obertura&raquo; (may belong to opera or symphonic music), &laquo;poema sinf&oacute;nico&raquo; (few appearances).</p>
+        <p class="ambiguity">Ambiguity: &laquo;sinfon&iacute;a&raquo; can be used figuratively (&laquo;a symphony of colours&raquo;), though marginal in a musical corpus. &laquo;Sinf&oacute;nica/o&raquo; may function as an adjective not linked to a specific orchestra.</p>
+    </div>
+</section>
+
+<!-- CHAMBER -->
+<section class="section" id="camara">
+    <div class="genre-block">
+        <h3>2.4. Chamber Music (total: 4,360 mentions)</h3>
+        <p class="criterio">Criterion: terms designating the main chamber ensembles and the generic name of the genre.</p>
+        <table>
+            <tr><th>Term</th><th class="num">Occurrences</th></tr>
+            <tr><td>cuarteto</td><td class="num">684</td></tr>
+            <tr><td>tr&iacute;o</td><td class="num">459</td></tr>
+            <tr><td>quinteto</td><td class="num">612</td></tr>
+            <tr><td>sexteto</td><td class="num">2,311</td></tr>
+            <tr><td>m&uacute;sica de c&aacute;mara</td><td class="num">294</td></tr>
+        </table>
+        <div class="warn">
+            <strong>WARNING &mdash; &laquo;sexteto&raquo; (2,311 mentions):</strong> This figure is anomalously high. In the context of Uni&oacute;n Radio, the &laquo;Sexteto de Uni&oacute;n Radio&raquo; or &laquo;Sexteto de la Estaci&oacute;n&raquo; was the resident musical ensemble that performed the daily programming. Most of the 2,311 occurrences probably refer to this permanent station ensemble, not to chamber music in the strict sense. Without &laquo;sexteto&raquo; mentions, the total would be <strong>2,049 mentions</strong>.
+        </div>
+        <p class="excluded"><strong>Not included:</strong> &laquo;d&uacute;o&raquo; (ambiguous: may refer to two singers or a vocal piece), &laquo;sonata&raquo; (belongs to both chamber and solo repertoire), &laquo;septeto&raquo;, &laquo;octeto&raquo;, &laquo;noneto&raquo; (insignificant presence).</p>
+        <p class="ambiguity">Ambiguity: &laquo;tr&iacute;o&raquo; may refer to the central section of a minuet or scherzo. &laquo;Cuarteto&raquo; may designate a vocal quartet as well as an instrumental one.</p>
+    </div>
+</section>
+
+<!-- SONG -->
+<section class="section" id="cancion">
+    <div class="genre-block">
+        <h3>2.5. Song / Cupl&eacute; (total: 3,137 mentions)</h3>
+        <p class="criterio">Criterion: terms designating short popular or salon vocal forms, including the cupl&eacute; as a genre specific to the period.</p>
+        <table>
+            <tr><th>Term</th><th class="num">Occurrences</th></tr>
+            <tr><td>canci&oacute;n</td><td class="num">2,024</td></tr>
+            <tr><td>canciones</td><td class="num">965</td></tr>
+            <tr><td>cupl&eacute;</td><td class="num">32</td></tr>
+            <tr><td>cupl&eacute;s</td><td class="num">52</td></tr>
+            <tr><td>cupletista</td><td class="num">7</td></tr>
+            <tr><td>cancionista</td><td class="num">57</td></tr>
+        </table>
+        <p class="excluded"><strong>Not included:</strong> &laquo;romanza&raquo; (may belong to opera or zarzuela), &laquo;copla&raquo; (usage later than the period), &laquo;tonadilla&raquo; (marginal), &laquo;aria&raquo; (belongs to opera).</p>
+        <p class="ambiguity">Ambiguity: &laquo;canci&oacute;n&raquo; is very generic. It is used for salon songs, folk songs, Lieder translated as &laquo;canciones&raquo;, and light song. The count reflects the overall presence of the concept &laquo;song&raquo; in the magazine's discourse.</p>
+    </div>
+</section>
+
+<!-- FLAMENCO -->
+<section class="section" id="flamenco">
+    <div class="genre-block">
+        <h3>2.6. Flamenco (total: 758 mentions)</h3>
+        <p class="criterio">Criterion: terms specific to the flamenco genre, including the names of its performers and its main aesthetic category.</p>
+        <table>
+            <tr><th>Term</th><th class="num">Occurrences</th></tr>
+            <tr><td>flamenco</td><td class="num">413</td></tr>
+            <tr><td>flamenca</td><td class="num">11</td></tr>
+            <tr><td>cante</td><td class="num">289</td></tr>
+            <tr><td>cantaor</td><td class="num">3</td></tr>
+            <tr><td>cantaora</td><td class="num">3</td></tr>
+            <tr><td>jondo</td><td class="num">39</td></tr>
+        </table>
+        <p class="excluded"><strong>Not included:</strong> &laquo;fandango&raquo; (also a generic dance), &laquo;sole&aacute;&raquo;, &laquo;seguiriya&raquo;, &laquo;buler&iacute;a&raquo; (flamenco styles that appear very rarely), &laquo;tablao&raquo; (anachronistic).</p>
+        <p class="ambiguity">Ambiguity: &laquo;cante&raquo; can be used in contexts not strictly flamenco, although in the press of the period it is mostly associated with flamenco. &laquo;Flamenco/flamenca&raquo; could be a demonym for Flanders, but this is extremely rare in this corpus.</p>
+    </div>
+</section>
+
+<!-- JAZZ -->
+<section class="section" id="jazz">
+    <div class="genre-block">
+        <h3>2.7. Jazz (total: 806 mentions)</h3>
+        <p class="criterio">Criterion: the term &laquo;jazz&raquo; and the names of the main dance forms and ensembles associated with jazz in 1920s-30s Spain.</p>
+        <table>
+            <tr><th>Term</th><th class="num">Occurrences</th></tr>
+            <tr><td>jazz</td><td class="num">309</td></tr>
+            <tr><td>jazz-band</td><td class="num">143</td></tr>
+            <tr><td>jazzband (joined)</td><td class="num">0</td></tr>
+            <tr><td>fox-trot</td><td class="num">139</td></tr>
+            <tr><td>foxtrot (joined)</td><td class="num">51</td></tr>
+            <tr><td>charleston</td><td class="num">162</td></tr>
+            <tr><td>swing</td><td class="num">2</td></tr>
+        </table>
+        <p class="excluded"><strong>Not included:</strong> &laquo;ragtime&raquo; (null or marginal presence), &laquo;blues&raquo; (very rare), &laquo;dixieland&raquo; (anachronistic), &laquo;shimmy&raquo; (to be verified).</p>
+        <p class="ambiguity">Ambiguity: &laquo;charleston&raquo; may refer to the dance or the American city, although in the corpus context its use as a dance is overwhelming. &laquo;Swing&raquo; (2 mentions): negligible impact.</p>
+    </div>
+</section>
+
+<!-- CHORAL -->
+<section class="section" id="coral">
+    <div class="genre-block">
+        <h3>2.8. Choral Music (total: 1,105 mentions)</h3>
+        <p class="criterio">Criterion: terms designating choral ensembles and their activity.</p>
+        <table>
+            <tr><th>Term</th><th class="num">Occurrences</th></tr>
+            <tr><td>coral</td><td class="num">144</td></tr>
+            <tr><td>coro</td><td class="num">548</td></tr>
+            <tr><td>coros</td><td class="num">280</td></tr>
+            <tr><td>orfe&oacute;n</td><td class="num">93</td></tr>
+            <tr><td>masa coral</td><td class="num">40</td></tr>
+        </table>
+        <p class="excluded"><strong>Not included:</strong> &laquo;voces&raquo; (generic), &laquo;polifon&iacute;a&raquo; (applicable to instrumental music), &laquo;cantata&raquo; (sacred/vocal music with orchestra), &laquo;madrigal&raquo; (marginal).</p>
+        <p class="ambiguity">Ambiguity: &laquo;coral&raquo; may refer to a choral ensemble, a Lutheran chorale, or the adjective relating to the choir. &laquo;Coro&raquo; in lyric theatre may designate the chorus of an opera or zarzuela, generating overlap with that category.</p>
+    </div>
+</section>
+
+<!-- RELIGIOUS -->
+<section class="section" id="religiosa">
+    <div class="genre-block">
+        <h3>2.9. Religious Music (total: 115 mentions)</h3>
+        <p class="criterio">Criterion: terms designating genres and contexts of sacred or liturgical music.</p>
+        <table>
+            <tr><th>Term</th><th class="num">Occurrences</th></tr>
+            <tr><td>misa</td><td class="num">80</td></tr>
+            <tr><td>r&eacute;quiem</td><td class="num">9</td></tr>
+            <tr><td>requiem (no accent)</td><td class="num">3</td></tr>
+            <tr><td>sacro</td><td class="num">11</td></tr>
+            <tr><td>sacra</td><td class="num">4</td></tr>
+            <tr><td>liturgia</td><td class="num">5</td></tr>
+            <tr><td>lit&uacute;rgica</td><td class="num">3</td></tr>
+        </table>
+        <p class="excluded"><strong>Not included:</strong> &laquo;motete&raquo; (marginal), &laquo;villancico&raquo; (popular/Christmas music), &laquo;oratorio&raquo; (may be confused with the place), &laquo;gregoriano&raquo; (not verified), &laquo;Te Deum&raquo;, &laquo;Magnificat&raquo; (specific works, not genres).</p>
+        <p class="ambiguity">Ambiguity: &laquo;misa&raquo; may refer to a musical composition (Mass in B minor) or to the liturgical service. In the musical corpus the first sense is likely to predominate.</p>
+    </div>
+</section>
+
+<!-- BALLET -->
+<section class="section" id="ballet">
+    <div class="genre-block">
+        <h3>2.10. Ballet / Dance (total: 4,315 mentions)</h3>
+        <p class="criterio">Criterion: terms designating the main forms of stage dance and their performers.</p>
+        <table>
+            <tr><th>Term</th><th class="num">Occurrences</th></tr>
+            <tr><td>ballet</td><td class="num">489</td></tr>
+            <tr><td>danza</td><td class="num">1,662</td></tr>
+            <tr><td>danzas</td><td class="num">568</td></tr>
+            <tr><td>bailarina</td><td class="num">31</td></tr>
+            <tr><td>bailar&iacute;n</td><td class="num">12</td></tr>
+            <tr><td>baile</td><td class="num">1,392</td></tr>
+            <tr><td>bailes</td><td class="num">161</td></tr>
+        </table>
+        <div class="warn">
+            <strong>WARNING &mdash; &laquo;danza&raquo; (1,662) and &laquo;baile&raquo; (1,392):</strong> These figures are high because both terms have very broad usage:
+            <ul>
+                <li>&laquo;Danza&raquo;: ballet or stage dance; dances within operas and zarzuelas; movements of instrumental suites; folk dances.</li>
+                <li>&laquo;Baile&raquo;: society dances; dance music (frequent blocks in radio programming); stage performances with dance.</li>
+            </ul>
+            The global figure does not exclusively reflect artistic stage dance, but the broad universe of bodily movement associated with music of the era.
+        </div>
+        <p class="excluded"><strong>Not included:</strong> &laquo;coreograf&iacute;a&raquo; (marginal), &laquo;pas de deux&raquo; (very specific), &laquo;tut&uacute;&raquo; (anachronistic).</p>
+    </div>
+</section>
+
+<!-- POPULAR -->
+<section class="section" id="popular">
+    <div class="genre-block">
+        <h3>2.11. Popular Music (total: 2,051 mentions)</h3>
+        <p class="criterio">Criterion: terms designating music of traditional roots or the aesthetic category of &laquo;popular&raquo; versus &laquo;art&raquo; music.</p>
+        <table>
+            <tr><th>Term</th><th class="num">Occurrences</th></tr>
+            <tr><td>popular</td><td class="num">1,474</td></tr>
+            <tr><td>populares</td><td class="num">505</td></tr>
+            <tr><td>folklore</td><td class="num">58</td></tr>
+            <tr><td>folclore</td><td class="num">0</td></tr>
+            <tr><td>folkl&oacute;rica</td><td class="num">14</td></tr>
+        </table>
+        <div class="warn">
+            <strong>WARNING &mdash; &laquo;popular&raquo; (1,474) and &laquo;populares&raquo; (505):</strong> These adjectives have very broad usage:
+            <ul>
+                <li>Popular/traditional music as a genre.</li>
+                <li>&laquo;Canciones populares&raquo;, &laquo;melod&iacute;as populares&raquo; (folkloric sense).</li>
+                <li>&laquo;Popular&raquo; as a synonym for &laquo;well-known/famous&raquo; (&laquo;the popular maestro&raquo;, &laquo;the popular zarzuela&raquo;).</li>
+                <li>&laquo;Teatro popular&raquo;, &laquo;fiesta popular&raquo;, etc.</li>
+            </ul>
+            The actual number of mentions of popular music as a genre is probably considerably lower than 2,051. Reliable disambiguation would require manual context analysis or NLP.
+        </div>
+        <p class="excluded"><strong>Not included:</strong> &laquo;tradicional&raquo; (may refer to any tradition), &laquo;cancionero&raquo; (may be a book), &laquo;jota&raquo; (may be the letter of the alphabet), &laquo;sardana&raquo;, &laquo;mu&ntilde;eira&raquo; (presence not verified).</p>
+    </div>
+</section>
+
+<!-- OPERETTA -->
+<section class="section" id="opereta">
+    <div class="genre-block">
+        <h3>2.12. Operetta (total: 272 mentions)</h3>
+        <p class="criterio">Criterion: terms designating the operetta genre.</p>
+        <table>
+            <tr><th>Term</th><th class="num">Occurrences</th></tr>
+            <tr><td>opereta</td><td class="num">158</td></tr>
+            <tr><td>operetas</td><td class="num">114</td></tr>
+        </table>
+        <p class="ambiguity">Ambiguity: none. &laquo;Opereta&raquo; is an unambiguous term.</p>
+        <p class="excluded"><strong>Not included:</strong> &laquo;vaudeville&raquo; (more theatrical usage), &laquo;revista musical&raquo; (ambiguous with the periodical publication).</p>
+    </div>
+</section>
+
+<!-- EXCLUDED -->
+<section class="section" id="excluidos">
+    <h2>3. Terms Not Assigned to Any Genre</h2>
+    <p>The following relevant musical terms were not included in any genre category because they are cross-cutting or ambiguous:</p>
+    <table>
+        <tr><th>Term</th><th>Reason for Exclusion</th></tr>
+        <tr><td>concierto / conciertos</td><td>May refer to the event or the musical form. Counted in the listening lexicon.</td></tr>
+        <tr><td>sonata / sonatas</td><td>Belongs to both chamber and solo repertoire.</td></tr>
+        <tr><td>suite / suites</td><td>Cross-cutting instrumental form.</td></tr>
+        <tr><td>obertura / oberturas</td><td>May be operatic or symphonic.</td></tr>
+        <tr><td>preludio / preludios</td><td>Cross-cutting form.</td></tr>
+        <tr><td>vals / valses</td><td>May be dance, salon piece, or orchestral fragment.</td></tr>
+        <tr><td>marcha / marchas</td><td>May be military, funeral, wedding, etc.</td></tr>
+        <tr><td>pasodoble / pasodobles</td><td>Cross-cutting between band music, dance, and bullfighting.</td></tr>
+        <tr><td>serenata / serenatas</td><td>Variable vocal or instrumental form.</td></tr>
+        <tr><td>rondalla</td><td>Instrumental ensemble, not a genre.</td></tr>
+        <tr><td>tango</td><td>Dance/song; could be its own category but presence not verified.</td></tr>
+        <tr><td>bolero</td><td>Ambiguous between Ravel's Bolero and the Cuban genre.</td></tr>
+    </table>
+</section>
+
+<!-- OVERLAPS -->
+<section class="section" id="solapamientos">
+    <h2>4. Overlaps Between Categories</h2>
+    <p>The categories are not mutually exclusive. A single text may contain terms from several genres simultaneously. Examples:</p>
+    <ul>
+        <li>An article about an opera broadcast may contain &laquo;&oacute;pera&raquo; + &laquo;coro&raquo; + &laquo;ballet&raquo; + &laquo;danza&raquo; (ballet scenes within operas).</li>
+        <li>Radio programming schedules mix genres in a single block: &laquo;Sexteto de la Estaci&oacute;n: [zarzuela] + [sinfon&iacute;a] + [canci&oacute;n]&raquo;.</li>
+        <li>&laquo;Popular&raquo; can qualify any other genre: &laquo;&oacute;pera popular&raquo;, &laquo;zarzuela popular&raquo;.</li>
+    </ul>
+    <div class="note">
+        <strong>Note:</strong> The analysis quantifies lexical mentions, it does not classify articles by genre. An article with 5 mentions of &laquo;&oacute;pera&raquo; and 2 of &laquo;baile&raquo; contributes to both categories.
+    </div>
+</section>
+
+</div>
+
+<footer>
+    Musical Genre Classification Criteria &mdash; LexiMus Project / MUSLYME &mdash; University of Salamanca<br>
+    12 genres &middot; 472 files &middot; 1,743,435 words &middot; January 2026
+</footer>
+
+</body>
+</html>

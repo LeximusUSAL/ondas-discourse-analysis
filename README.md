@@ -1,5 +1,7 @@
 # ONDAS Discourse Analysis
 
+*[Read this in English](README.en.md)*
+
 Análisis de discurso del corpus de la revista **ONDAS** (Madrid, 1925-1935) y
 comparación con el periódico **El Sol** (1918-1932): presencia de la ópera,
 autores e intérpretes más citados, y léxico de la escucha musical.

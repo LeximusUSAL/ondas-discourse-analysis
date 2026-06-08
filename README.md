@@ -1,54 +1,52 @@
 # ONDAS Discourse Analysis
 
-*[Read this in English](README.en.md)*
+Discourse analysis of the Spanish radio magazine **ONDAS** (Madrid, 1925-1935)
+and comparison with the newspaper **El Sol** (1918-1932): coverage of opera,
+most frequently cited composers and performers, and the lexicon of musical
+listening.
 
-Análisis de discurso del corpus de la revista **ONDAS** (Madrid, 1925-1935) y
-comparación con el periódico **El Sol** (1918-1932): presencia de la ópera,
-autores e intérpretes más citados, y léxico de la escucha musical.
-
-Proyecto **LexiMus** — Universidad de Salamanca
+**LexiMus** Project — Universidad de Salamanca
 ("LexiMus: Léxico y ontología de la música en español", PID2022-139589NB-C33).
 
-## Análisis publicados
+## Published analyses
 
-- [Página principal / análisis interactivos](https://leximususal.github.io/ondas-discourse-analysis/)
-- [Análisis de discurso ONDAS](analisis_discurso_ondas.html) ([EN](analisis_discurso_ondas_EN.html))
-- [Comparación del léxico de la escucha (ONDAS / El Sol)](comparacion_lexico_escucha.html) ([EN](comparacion_lexico_escucha_EN.html))
-- [Criterios de clasificación de géneros musicales](criterios_generos.html) ([EN](criterios_generos_EN.html))
+- [Main page / interactive analyses](https://leximususal.github.io/ondas-discourse-analysis/)
+- [ONDAS discourse analysis](analisis_discurso_ondas_EN.html) ([ES](analisis_discurso_ondas.html))
+- [Listening lexicon comparison (ONDAS / El Sol)](comparacion_lexico_escucha_EN.html) ([ES](comparacion_lexico_escucha.html))
+- [Musical genre classification criteria](criterios_generos_EN.html) ([ES](criterios_generos.html))
 
-## Estructura del repositorio
+## Repository structure
 
-- [`scripts/`](scripts/) — código Python empleado en los análisis (véase [`scripts/README.md`](scripts/README.md)).
-- [`datos/`](datos/) — datos en bruto (JSON), listados de referencia y metodología completa
-  (véase [`datos/README.md`](datos/README.md)).
+- [`scripts/`](scripts/) — Python code used for the analyses (see [`scripts/README.md`](scripts/README.md)).
+- [`datos/`](datos/) — raw data (JSON), reference lists and full methodology
+  (see [`datos/README.md`](datos/README.md), in Spanish).
 
-## Metodología: justificación del uso de expresiones regulares y diccionarios frente a modelos basados en BERT
+## Methodology: rationale for using regular expressions and dictionaries instead of BERT-based models
 
-Antes de la publicación de este análisis se evaluó si el empleo de modelos de
-lenguaje basados en *transformers* —u otras herramientas disponibles en el
-proyecto, como spaCy o el modelo propio `LexiMus-BETO-per-v1`— ofrecería
-ventajas frente al método aplicado, basado en expresiones regulares y listas
-de variantes léxicas.
+Before publishing this analysis, the team assessed whether using
+transformer-based language models — or other tools available within the
+project, such as spaCy or our own `LexiMus-BETO-per-v1` model — would offer
+any advantage over the method actually applied, which is based on regular
+expressions and lexical variant lists.
 
-La validación realizada muestra que ambos enfoques producen resultados
-estadísticamente equivalentes: en los 46 lemas analizados, ninguna conclusión
-del estudio varía al introducir un modelo de desambiguación basado en BERT.
-Dada esta equivalencia, el método basado en expresiones regulares y
-diccionarios resulta preferible para este caso de uso, por su replicabilidad,
-su posibilidad de auditoría manual completa y la ausencia de sesgos
-introducidos por modelos entrenados sobre dominios distintos al del corpus de
-trabajo (a modo de ejemplo, un modelo de propósito general clasifica
-incorrectamente el lema "auditor" al asociarlo al sentido de "auditor de
-cuentas", habitual en el español contemporáneo pero inexistente en este
-corpus). La razón estructural que explica estos resultados es que **el corpus
-analizado es exclusivamente musical**: al estar ya delimitado temáticamente,
-la ambigüedad léxica que justificaría el empleo de un método de
-desambiguación más complejo apenas llega a producirse.
+The validation carried out shows that both approaches produce statistically
+equivalent results: across the 46 lemmas analysed, no conclusion of the study
+changes when a BERT-based disambiguation model is introduced. Given this
+equivalence, the method based on regular expressions and dictionaries is
+preferable for this use case, owing to its replicability, its full manual
+auditability, and the absence of biases imported from models trained on
+domains other than the corpus under study (for example, a general-purpose
+model misclassifies the lemma "auditor" by associating it with the sense of
+"financial auditor," common in contemporary Spanish but absent from this
+corpus). The structural reason behind these results is that **the corpus
+analysed is exclusively musical**: since it is already thematically
+delimited, the lexical ambiguity that would justify a more complex
+disambiguation method barely arises.
 
-Véase la explicación completa, con tablas y resultados, en
-[`datos/README.md`](datos/README.md), así como los scripts y los resultados en
-formato JSON de las pruebas de validación en
+The full explanation, with tables and results (in Spanish), is available in
+[`datos/README.md`](datos/README.md), along with the scripts and JSON
+results of the validation tests in
 [`datos/pruebas_regex_vs_bert/`](datos/pruebas_regex_vs_bert/).
 
 ---
-Proyecto LexiMus — Universidad de Salamanca
+LexiMus Project — Universidad de Salamanca

@@ -4,7 +4,7 @@ Análisis de discurso del corpus de la revista **ONDAS** (Madrid, 1925-1935) y
 comparación con el periódico **El Sol** (1918-1932): presencia de la ópera,
 autores e intérpretes más citados, y léxico de la escucha musical.
 
-Proyecto **LexiMus / MUSLYME** — Universidad de Salamanca
+Proyecto **LexiMus** — Universidad de Salamanca
 ("LexiMus: Léxico y ontología de la música en español", PID2022-139589NB-C33).
 
 ## Análisis publicados
@@ -49,4 +49,4 @@ formato JSON de las pruebas de validación en
 [`datos/pruebas_regex_vs_bert/`](datos/pruebas_regex_vs_bert/).
 
 ---
-Proyecto LexiMus / MUSLYME — Universidad de Salamanca
+Proyecto LexiMus — Universidad de Salamanca

@@ -285,4 +285,4 @@ siguientes materiales:
 - [`bert_ner_validacion.py`](pruebas_regex_vs_bert/bert_ner_validacion.py) / [`bert_ner_resultados.json`](pruebas_regex_vs_bert/bert_ner_resultados.json) — validación cruzada de menciones de personas y agrupaciones con `LexiMus-BETO-per-v1` frente a los listados cerrados del script original.
 
 ---
-Proyecto LexiMus / MUSLYME — Universidad de Salamanca
+Proyecto LexiMus — Universidad de Salamanca

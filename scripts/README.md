@@ -38,4 +38,4 @@ Véase [`METODOLOGIA_ANALISIS_DISCURSO_ONDAS.txt`](../datos/METODOLOGIA_ANALISIS
 para la descripción completa de fuentes, criterios y proceso.
 
 ---
-Proyecto LexiMus / MUSLYME — Universidad de Salamanca
+Proyecto LexiMus — Universidad de Salamanca

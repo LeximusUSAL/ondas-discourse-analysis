@@ -1,0 +1,7093 @@
+{
+  "opera": {
+    "total_archivos": 472,
+    "archivos_con_opera": 469,
+    "archivos_sin_opera": 3,
+    "total_secciones": 1993,
+    "secciones_opera": 1247,
+    "secciones_no_opera": 746,
+    "porcentaje_secciones_opera": 62.57,
+    "porcentaje_archivos_con_opera": 99.36,
+    "opera_por_año": {
+      "1925": {
+        "opera": 67,
+        "no_opera": 70,
+        "total": 137
+      },
+      "1926": {
+        "opera": 86,
+        "no_opera": 63,
+        "total": 149
+      },
+      "1927": {
+        "opera": 124,
+        "no_opera": 57,
+        "total": 181
+      },
+      "0": {
+        "opera": 7,
+        "no_opera": 2,
+        "total": 9
+      },
+      "1929": {
+        "opera": 125,
+        "no_opera": 49,
+        "total": 174
+      },
+      "1930": {
+        "opera": 131,
+        "no_opera": 89,
+        "total": 220
+      },
+      "1931": {
+        "opera": 83,
+        "no_opera": 61,
+        "total": 144
+      },
+      "1932": {
+        "opera": 86,
+        "no_opera": 59,
+        "total": 145
+      },
+      "1933": {
+        "opera": 111,
+        "no_opera": 96,
+        "total": 207
+      },
+      "1934": {
+        "opera": 234,
+        "no_opera": 82,
+        "total": 316
+      },
+      "1935": {
+        "opera": 193,
+        "no_opera": 118,
+        "total": 311
+      }
+    },
+    "menciones_operas_individuales": [
+      [
+        "Carmen",
+        888
+      ],
+      [
+        "Fausto",
+        607
+      ],
+      [
+        "Rigoletto",
+        379
+      ],
+      [
+        "Tosca",
+        360
+      ],
+      [
+        "Aida",
+        307
+      ],
+      [
+        "Lohengrin",
+        295
+      ],
+      [
+        "Tannhauser",
+        244
+      ],
+      [
+        "Marina",
+        238
+      ],
+      [
+        "El barbero de Sevilla",
+        228
+      ],
+      [
+        "Werther",
+        219
+      ],
+      [
+        "La Dolores",
+        201
+      ],
+      [
+        "Parsifal",
+        189
+      ],
+      [
+        "Mefistófeles",
+        187
+      ],
+      [
+        "Doña Francisquita",
+        177
+      ],
+      [
+        "Leoncavallo",
+        174
+      ],
+      [
+        "La Africana",
+        168
+      ],
+      [
+        "El trovador",
+        167
+      ],
+      [
+        "Maestros cantores",
+        162
+      ],
+      [
+        "La Traviata",
+        160
+      ],
+      [
+        "Maruxa",
+        160
+      ],
+      [
+        "Las Golondrinas",
+        143
+      ],
+      [
+        "Los maestros cantores",
+        141
+      ],
+      [
+        "La Gioconda",
+        128
+      ],
+      [
+        "Madame Butterfly",
+        126
+      ],
+      [
+        "Thais",
+        116
+      ],
+      [
+        "Manon Lescaut",
+        106
+      ],
+      [
+        "Norma",
+        106
+      ],
+      [
+        "Las bodas de Fígaro",
+        75
+      ],
+      [
+        "La Boheme",
+        63
+      ],
+      [
+        "Los Hugonotes",
+        61
+      ],
+      [
+        "Curro Vargas",
+        53
+      ],
+      [
+        "El buque fantasma",
+        53
+      ],
+      [
+        "El ocaso de los dioses",
+        53
+      ],
+      [
+        "Fedora",
+        52
+      ],
+      [
+        "Los cuentos de Hoffmann",
+        51
+      ],
+      [
+        "Hernani",
+        36
+      ],
+      [
+        "Andrea Chenier",
+        35
+      ],
+      [
+        "Las walkyrias",
+        24
+      ],
+      [
+        "El Pinar",
+        23
+      ],
+      [
+        "Boris Godunof",
+        22
+      ],
+      [
+        "Don Pasquale",
+        22
+      ],
+      [
+        "Hansel und Gretel",
+        17
+      ],
+      [
+        "Otelo",
+        17
+      ],
+      [
+        "Judith",
+        15
+      ],
+      [
+        "El secreto de Susana",
+        13
+      ],
+      [
+        "Hansel y Gretel",
+        13
+      ],
+      [
+        "Sigfrido",
+        12
+      ],
+      [
+        "El cazador furtivo",
+        11
+      ],
+      [
+        "Tristán e Isolda",
+        11
+      ],
+      [
+        "La flauta mágica",
+        9
+      ],
+      [
+        "Ariadna en Naxos",
+        8
+      ],
+      [
+        "Pelleas y Melisenda",
+        8
+      ],
+      [
+        "La serva padrona",
+        7
+      ],
+      [
+        "Fantochines",
+        3
+      ],
+      [
+        "La Walkiria",
+        3
+      ],
+      [
+        "Los Cuaqueros",
+        2
+      ],
+      [
+        "Don Giovanni",
+        1
+      ],
+      [
+        "El anillo de los nibelungos",
+        1
+      ]
+    ],
+    "detalle_archivos": [
+      {
+        "archivo": "1925-08-30_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 7,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1925-09-27_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 6,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1925_05_23_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 7,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1925_06_01_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 6,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1925_06_28_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 4,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1925_07_05_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 4,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1925_07_19_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 6,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1925_07_26_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1925_08_09_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 4,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1925_08_16_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1925_08_23_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 4,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1925_09_06_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 4,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1925_09_13_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 6,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1925_09_20_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 4,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1925_10_04_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 7,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1925_10_11_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 8,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1925_10_18_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1925_10_25_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1925_11_01_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 4,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1925_11_08_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 2,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1925_11_15_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 3,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1925_11_22_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1925_11_29_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 10,
+        "secciones_opera": 9
+      },
+      {
+        "archivo": "1925_12_06_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1925_12_13_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1925_12_20_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 2,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1925_12_27_ONDAS.txt",
+        "year": 1925,
+        "secciones_totales": 30,
+        "secciones_opera": 17
+      },
+      {
+        "archivo": "1926-01-24_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 2,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926-06-20_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 9,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_01_03_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 4,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1926_01_10_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 2,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1926_01_17_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 2,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_01_31_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 4,
+        "secciones_opera": 0
+      },
+      {
+        "archivo": "1926_02_07_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 3,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_02_14_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 6,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_02_21_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 2,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_02_28_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 13,
+        "secciones_opera": 10
+      },
+      {
+        "archivo": "1926_03_07_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 3,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1926_03_14_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_03_21_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 5,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1926_03_28_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_04_04_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_04_11_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_04_18_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1926_04_25_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 5,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1926_05_02_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_05_09_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_05_16_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_05_30_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 5,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1926_06_06_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_06_13_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_06_20_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 15,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1926_07_04_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_07_18_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_07_25_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 4,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1926_08_01_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_08_08_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_08_15_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_08_22_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_08_22_ONDAS2.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_08_29_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_09_05_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_09_12_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 6,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1926_09_19_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_09_26_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_10_03_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_10_10_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_10_17_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_10_24_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_10_31_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 2,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_11_07_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 7,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1926_11_14_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_11_28_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_12_05_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_12_12_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 7,
+        "secciones_opera": 7
+      },
+      {
+        "archivo": "1926_12_19_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1926_12_26_ONDAS.txt",
+        "year": 1926,
+        "secciones_totales": 12,
+        "secciones_opera": 6
+      },
+      {
+        "archivo": "1927-01-01_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 4,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927-01-16_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927-01-30_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 3,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927-06-26_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927-07-24_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 5,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1927:05:29_ONDAS.txt",
+        "year": 0,
+        "secciones_totales": 9,
+        "secciones_opera": 7
+      },
+      {
+        "archivo": "1927_01_02_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 58,
+        "secciones_opera": 28
+      },
+      {
+        "archivo": "1927_01_09_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 7,
+        "secciones_opera": 7
+      },
+      {
+        "archivo": "1927_01_23_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_02_06_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_02_13_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_02_20_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_02_27_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 7,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1927_03_06_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_03_13_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_03_20_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_03_27_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 8,
+        "secciones_opera": 7
+      },
+      {
+        "archivo": "1927_04_03_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_04_10_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_04_17_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_04_24_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 11,
+        "secciones_opera": 6
+      },
+      {
+        "archivo": "1927_05_01_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_05_08_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_05_15_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_05_22_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_06_05_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_06_12_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_06_19_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 10,
+        "secciones_opera": 8
+      },
+      {
+        "archivo": "1927_07_03_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_07_10_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_07_17_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_07_31_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 8,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1927_08_07_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_08_14_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_08_21_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_08_28_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_09_04_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_09_11_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_09_18_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_09_25_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_10_02_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_10_09_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 9,
+        "secciones_opera": 8
+      },
+      {
+        "archivo": "1927_10_16_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_10_30_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_11_06_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_11_13_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_11_20_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_11_27_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 6,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1927_12_04_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_12_11_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 7,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1927_12_18_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1927_12_25_ONDAS.txt",
+        "year": 1927,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929-02-23_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 11,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1929-03-30_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929-05-04_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929-05-25_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929-10-19_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 4,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929-10-26_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929-11-23_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 2,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1929-11-30_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 28,
+        "secciones_opera": 23
+      },
+      {
+        "archivo": "1929_01_05_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_01_12_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_01_19_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_01_26_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_02_02_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 17,
+        "secciones_opera": 8
+      },
+      {
+        "archivo": "1929_02_09_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_02_16_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 10,
+        "secciones_opera": 6
+      },
+      {
+        "archivo": "1929_03_02_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 7,
+        "secciones_opera": 7
+      },
+      {
+        "archivo": "1929_03_16_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_04_06_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_04_13_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_04_27_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 6,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1929_05_11_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_05_18_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_06_01_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_06_06_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_06_08_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_06_15_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_06_22_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_06_29_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_07_13_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_07_20_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1929_07_27_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1929_08_03_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 10,
+        "secciones_opera": 8
+      },
+      {
+        "archivo": "1929_08_10_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 9,
+        "secciones_opera": 6
+      },
+      {
+        "archivo": "1929_08_17_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 3,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1929_08_24_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_08_31_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 4,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1929_09_07_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_09_14_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_09_21_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 10,
+        "secciones_opera": 8
+      },
+      {
+        "archivo": "1929_09_28_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_10_05_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 2,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1929_10_12_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 9,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1929_11_02_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_11_09_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_11_16_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 5,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_12_07_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_12_14_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_12_21_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1929_12_28_ONDAS.txt",
+        "year": 1929,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930-04-26_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930-06-21_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930-11-22_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 13,
+        "secciones_opera": 11
+      },
+      {
+        "archivo": "1930-11-29_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 9,
+        "secciones_opera": 7
+      },
+      {
+        "archivo": "1930-12-20_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 7,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1930_01_04_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 8,
+        "secciones_opera": 8
+      },
+      {
+        "archivo": "1930_01_11_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_01_18_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 7,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1930_01_25_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 3,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_02_01_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 3,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1930_02_08_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_02_15_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_02_22_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_03_01_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 11,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1930_03_08_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_03_15_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_03_22_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_03_29_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_04_05_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_04_12_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_04_19_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_05_03_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_05_10_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_05_17_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 8,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1930_05_24_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 2,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_05_31_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_06_07_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_06_14_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 7,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1930_06_28_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 7,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1930_07_05_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_07_12_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 17,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1930_07_19_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_07_26_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_08_09_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 7,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1930_08_16_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_08_23_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1930_08_30_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 7,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1930_09_06_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_09_13_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 4,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1930_09_20_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1930_09_27_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 7,
+        "secciones_opera": 7
+      },
+      {
+        "archivo": "1930_10_04_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 14,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1930_10_11_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 4,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1930_10_18_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 4,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1930_10_25_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 17,
+        "secciones_opera": 8
+      },
+      {
+        "archivo": "1930_11_01_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 5,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1930_11_08_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_11_15_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 8,
+        "secciones_opera": 7
+      },
+      {
+        "archivo": "1930_12_06_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_12_13_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1930_12_27_ONDAS.txt",
+        "year": 1930,
+        "secciones_totales": 10,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1931-04-25_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931-05-09_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 6,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1931-05-16_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 6,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931-12-12_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 6,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1931_01_03_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 9,
+        "secciones_opera": 6
+      },
+      {
+        "archivo": "1931_01_10_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_01_17_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 6,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1931_02_05_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_02_14_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_02_21_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 7,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1931_02_28_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 10,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1931_03_07_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 4,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1931_03_14_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1931_03_21_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 6,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1931_03_28_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 4,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1931_04_04_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 5,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1931_04_11_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 5,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1931_04_18_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_05_02_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_05_23_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 4,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1931_05_30_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 4,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1931_06_06_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_06_13_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_06_20_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_07_11_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_07_18_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_07_25_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 7,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1931_08_01_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 4,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1931_08_08_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_08_15_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 5,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1931_08_22_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_08_29_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_09_05_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_09_12_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_09_19_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_09_26_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_10_03_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 5,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_10_10_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_10_17_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_10_24_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_10_31_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 2,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_11_07_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_11_14_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_11_28_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_12_19_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1931_12_26_ONDAS.txt",
+        "year": 1931,
+        "secciones_totales": 11,
+        "secciones_opera": 6
+      },
+      {
+        "archivo": "1932_01_02_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 10,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1932_01_09_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_01_16_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_01_23_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 7,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1932_01_30_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_02_05_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_02_06_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 10,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1932_02_13_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_02_20_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_02_27_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_03_12_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_03_19_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_03_26_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_04_02_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_04_09_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_04_16_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 13,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1932_04_23_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 5,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1932_04_30_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1932_05_07_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 12,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1932_05_14_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_05_21_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 7,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1932_05_28_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 2,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1932_06_04_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_06_11_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_06_18_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_06_25_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_07_02_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_07_09_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_07_16_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_07_23_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_07_30_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 4,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1932_08_06_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_08_13_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 4,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1932_08_20_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_08_27_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 13,
+        "secciones_opera": 11
+      },
+      {
+        "archivo": "1932_09_03_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_09_10_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_09_17_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_09_24_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_10_01_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_10_08_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_10_15_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_10_29_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1932_11_05_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_11_12_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_11_19_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_11_26_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_12_03_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 4,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_12_10_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_12_17_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 7,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_12_24_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1932_12_31_ONDAS.txt",
+        "year": 1932,
+        "secciones_totales": 5,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1933-03-25_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 4,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1933-04-01_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 3,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933-04-22_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 5,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1933-06-24_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 6,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1933-07-29_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 2,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1933-08-26_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 5,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1933-09-30_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933-10-28_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1933-12-23_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_01_07_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 4,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1933_01_14_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 7,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1933_01_21_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 13,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1933_01_28_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 7,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1933_02_04_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 4,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1933_02_11_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_02_18_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 10,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1933_02_25_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 8,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1933_03_04_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 4,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_03_11_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 10,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1933_03_18_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 4,
+        "secciones_opera": 0
+      },
+      {
+        "archivo": "1933_04_08_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_04_15_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_04_29_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 6,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1933_05_06_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 4,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_05_13_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 5,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_05_20_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_05_27_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1933_06_03_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_06_10_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_06_17_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_07_01_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_07_08_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_07_15_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_07_22_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 3,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1933_08_05_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 4,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1933_08_12_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 7,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1933_08_19_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 5,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1933_09_02_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 4,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1933_09_09_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 5,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1933_09_16_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 5,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1933_09_23_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 4,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_10_07_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_10_14_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_10_21_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_11_04_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 9,
+        "secciones_opera": 7
+      },
+      {
+        "archivo": "1933_11_11_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 11,
+        "secciones_opera": 8
+      },
+      {
+        "archivo": "1933_11_18_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_11_25_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1933_12_02_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_12_09_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1933_12_16_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 7,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1933_12_30_ONDAS.txt",
+        "year": 1933,
+        "secciones_totales": 5,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1934-03-24_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 14,
+        "secciones_opera": 10
+      },
+      {
+        "archivo": "1934-04-28_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 5,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1934-07-28_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 16,
+        "secciones_opera": 13
+      },
+      {
+        "archivo": "1934-10-27_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1934_01_06_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 10,
+        "secciones_opera": 7
+      },
+      {
+        "archivo": "1934_01_13_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1934_01_20_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 9,
+        "secciones_opera": 8
+      },
+      {
+        "archivo": "1934_01_27_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 9,
+        "secciones_opera": 6
+      },
+      {
+        "archivo": "1934_02_03_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1934_02_10_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1934_02_17_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 9,
+        "secciones_opera": 8
+      },
+      {
+        "archivo": "1934_02_24_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 8,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1934_03_03_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1934_03_10_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 4,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1934_03_31_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 9,
+        "secciones_opera": 7
+      },
+      {
+        "archivo": "1934_04_07_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 12,
+        "secciones_opera": 9
+      },
+      {
+        "archivo": "1934_04_14_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 11,
+        "secciones_opera": 6
+      },
+      {
+        "archivo": "1934_04_21_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 10,
+        "secciones_opera": 7
+      },
+      {
+        "archivo": "1934_05_05_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 5,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1934_05_12_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 10,
+        "secciones_opera": 9
+      },
+      {
+        "archivo": "1934_05_19_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1934_05_26_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 7,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1934_06_02_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1934_06_09_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 10,
+        "secciones_opera": 8
+      },
+      {
+        "archivo": "1934_06_16_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 11,
+        "secciones_opera": 8
+      },
+      {
+        "archivo": "1934_06_23_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 9,
+        "secciones_opera": 9
+      },
+      {
+        "archivo": "1934_06_30_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1934_07_14_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1934_07_21_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 8,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1934_08_04_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1934_08_11_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 9,
+        "secciones_opera": 6
+      },
+      {
+        "archivo": "1934_08_18_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1934_08_25_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1934_09_01_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1934_09_15_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1934_09_29_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1934_10_06_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 34,
+        "secciones_opera": 23
+      },
+      {
+        "archivo": "1934_10_20_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 5,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1934_11_03_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 2,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1934_11_10_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 8,
+        "secciones_opera": 6
+      },
+      {
+        "archivo": "1934_11_17_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1934_11_24_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 8,
+        "secciones_opera": 6
+      },
+      {
+        "archivo": "1934_12_01_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 5,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1934_12_08_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 4,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1934_12_15_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 13,
+        "secciones_opera": 10
+      },
+      {
+        "archivo": "1934_12_22_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 15,
+        "secciones_opera": 14
+      },
+      {
+        "archivo": "1934_12_29_ONDAS.txt",
+        "year": 1934,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1935-08-24_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1935_01_05_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 3,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1935_01_12_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 2,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1935_01_19_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1935_01_26_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 3,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1935_02_02_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 4,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1935_02_09_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 1,
+        "secciones_opera": 0
+      },
+      {
+        "archivo": "1935_02_16_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1935_02_23_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 6,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1935_03_02_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 2,
+        "secciones_opera": 2
+      },
+      {
+        "archivo": "1935_03_09_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 7,
+        "secciones_opera": 6
+      },
+      {
+        "archivo": "1935_03_16_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 2,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1935_03_23_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 10,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1935_03_30_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1935_04_06_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 6,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1935_04_20_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 6,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1935_04_27_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 17,
+        "secciones_opera": 16
+      },
+      {
+        "archivo": "1935_05_04_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 27,
+        "secciones_opera": 20
+      },
+      {
+        "archivo": "1935_05_11_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 11,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1935_05_18_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 9,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1935_05_25_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 8,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1935_06_01_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1935_06_08_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 6,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1935_06_15_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1935_06_22_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 12,
+        "secciones_opera": 8
+      },
+      {
+        "archivo": "1935_06_29_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 15,
+        "secciones_opera": 11
+      },
+      {
+        "archivo": "1935_07_06_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 9,
+        "secciones_opera": 6
+      },
+      {
+        "archivo": "1935_07_13_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1935_07_20_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 16,
+        "secciones_opera": 8
+      },
+      {
+        "archivo": "1935_07_27_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 6,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1935_08_03_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 5,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1935_08_10_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 3,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1935_08_17_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1935_08_31_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 11,
+        "secciones_opera": 8
+      },
+      {
+        "archivo": "1935_09_07_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 7,
+        "secciones_opera": 5
+      },
+      {
+        "archivo": "1935_09_14_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 7,
+        "secciones_opera": 6
+      },
+      {
+        "archivo": "1935_09_21_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 6,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1935_09_28_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 2,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1935_10_05_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 6,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1935_10_12_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 10,
+        "secciones_opera": 4
+      },
+      {
+        "archivo": "1935_10_19_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 11,
+        "secciones_opera": 3
+      },
+      {
+        "archivo": "1935_10_26_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 15,
+        "secciones_opera": 7
+      },
+      {
+        "archivo": "1935_11_02_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 29,
+        "secciones_opera": 14
+      },
+      {
+        "archivo": "1935_12_14_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1935_12_21_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      },
+      {
+        "archivo": "1935_12_28_ONDAS.txt",
+        "year": 1935,
+        "secciones_totales": 1,
+        "secciones_opera": 1
+      }
+    ]
+  },
+  "personas": {
+    "compositores": {
+      "total_con_menciones": 131,
+      "total_listado": 142,
+      "ranking": [
+        [
+          "Ludwing van Beethoven",
+          1597
+        ],
+        [
+          "Richard Wagner",
+          1304
+        ],
+        [
+          "Giuseppe Verdi",
+          1212
+        ],
+        [
+          "Issac Albéniz",
+          946
+        ],
+        [
+          "Manuel Fernández Caballero",
+          934
+        ],
+        [
+          "Wolfgang Amadeus Mozart",
+          917
+        ],
+        [
+          "Amadeo Vives",
+          839
+        ],
+        [
+          "Franz Schubert",
+          821
+        ],
+        [
+          "Ruperto Chapí",
+          817
+        ],
+        [
+          "Jules Massenet",
+          774
+        ],
+        [
+          "Giacomo Puccini",
+          750
+        ],
+        [
+          "Francisco Alonso",
+          671
+        ],
+        [
+          "Claude Debussy",
+          662
+        ],
+        [
+          "Tomás Bretón",
+          599
+        ],
+        [
+          "Edvard Grieg",
+          576
+        ],
+        [
+          "Frederic Chopin",
+          565
+        ],
+        [
+          "Georges Bizet",
+          558
+        ],
+        [
+          "Enrique Granados",
+          539
+        ],
+        [
+          "Manuel de Falla",
+          526
+        ],
+        [
+          "Gioachino Rossini",
+          499
+        ],
+        [
+          "Felix Mendelssohn",
+          489
+        ],
+        [
+          "Francisco Asenjo Barbieri",
+          478
+        ],
+        [
+          "Franz Liszt",
+          455
+        ],
+        [
+          "Álvarez Cantos",
+          440
+        ],
+        [
+          "Johannes Brahms",
+          394
+        ],
+        [
+          "Charles Gounod",
+          369
+        ],
+        [
+          "Robert Schumann",
+          359
+        ],
+        [
+          "Joseph Haydn",
+          357
+        ],
+        [
+          "Jerónimo Giménez",
+          349
+        ],
+        [
+          "Carl María von Weber",
+          341
+        ],
+        [
+          "Camile Saint-Saëns",
+          337
+        ],
+        [
+          "Joaquín Turina",
+          323
+        ],
+        [
+          "Maurice Ravel",
+          321
+        ],
+        [
+          "Giacomo Meyerbeer",
+          292
+        ],
+        [
+          "Gaetano Donizetti",
+          289
+        ],
+        [
+          "Federico Moreno Torroba",
+          264
+        ],
+        [
+          "Franz Lehar",
+          241
+        ],
+        [
+          "Jesús Guridi",
+          230
+        ],
+        [
+          "Julio Gómez",
+          227
+        ],
+        [
+          "César Franck",
+          220
+        ],
+        [
+          "Pietro Mascagni",
+          212
+        ],
+        [
+          "Emilio Arrieta",
+          201
+        ],
+        [
+          "Christoph Willibald Gluck",
+          200
+        ],
+        [
+          "José María Usandizaga",
+          197
+        ],
+        [
+          "Leo Delibes",
+          186
+        ],
+        [
+          "Hector Berlioz",
+          179
+        ],
+        [
+          "Ruggero Leoncavallo",
+          174
+        ],
+        [
+          "Johann Sebastian Bach",
+          171
+        ],
+        [
+          "Franz von Suppé",
+          169
+        ],
+        [
+          "Salvador Bacarisse",
+          145
+        ],
+        [
+          "Amilcare Ponchielli",
+          140
+        ],
+        [
+          "Pablo Sorozábal",
+          112
+        ],
+        [
+          "Ernesto Pérez Rosillo",
+          105
+        ],
+        [
+          "Jaqués Offenbach",
+          103
+        ],
+        [
+          "Jean Sibelius",
+          99
+        ],
+        [
+          "Reveriano Soutullo",
+          95
+        ],
+        [
+          "Umberto Giordano",
+          95
+        ],
+        [
+          "Jean-Philippe Rameau",
+          94
+        ],
+        [
+          "Francois Couperin",
+          89
+        ],
+        [
+          "Alessandro Scarlatti",
+          87
+        ],
+        [
+          "Paolo Tosti",
+          86
+        ],
+        [
+          "David Popper",
+          83
+        ],
+        [
+          "Conrado del Campo",
+          82
+        ],
+        [
+          "Jerónimo Velasco",
+          80
+        ],
+        [
+          "Niccolo Paganini",
+          77
+        ],
+        [
+          "Emmerich Kalman",
+          75
+        ],
+        [
+          "Óscar Esplá",
+          75
+        ],
+        [
+          "Ottorino Respighi",
+          75
+        ],
+        [
+          "Leo Fall",
+          71
+        ],
+        [
+          "Julián Bautista",
+          64
+        ],
+        [
+          "Engelbert Humperdinck",
+          63
+        ],
+        [
+          "Jacinto Guerrero",
+          60
+        ],
+        [
+          "Ernesto Halffter",
+          59
+        ],
+        [
+          "Adolfo Salazar",
+          54
+        ],
+        [
+          "Modest Mussorgsky",
+          53
+        ],
+        [
+          "Benedetto Marcelo",
+          52
+        ],
+        [
+          "Paul Dukas",
+          52
+        ],
+        [
+          "Joachim Raff",
+          49
+        ],
+        [
+          "María Rodrigo",
+          48
+        ],
+        [
+          "Arthur Honegger",
+          46
+        ],
+        [
+          "Prior Ilyich Tchaikowsky",
+          43
+        ],
+        [
+          "Henri Rabaud",
+          42
+        ],
+        [
+          "Richard Strauss",
+          41
+        ],
+        [
+          "Darius Milhaud",
+          39
+        ],
+        [
+          "François-Adrien Boieldieu",
+          38
+        ],
+        [
+          "Gustavo Pittaluga",
+          37
+        ],
+        [
+          "Marc-Antoine Charpentier",
+          37
+        ],
+        [
+          "Arcangelo Corelli",
+          36
+        ],
+        [
+          "Rodolfo Halffter",
+          35
+        ],
+        [
+          "Arrigo Boito",
+          33
+        ],
+        [
+          "Giovanni Paisiello",
+          33
+        ],
+        [
+          "Domenico Cimarosa",
+          29
+        ],
+        [
+          "Rimsky Korsakov",
+          29
+        ],
+        [
+          "Sáez Ferrer",
+          28
+        ],
+        [
+          "Louis Aubert",
+          26
+        ],
+        [
+          "Christian Sinding",
+          25
+        ],
+        [
+          "Felipe Briones",
+          25
+        ],
+        [
+          "Giovani Battista Pergolesi",
+          25
+        ],
+        [
+          "Federico García Lorca",
+          24
+        ],
+        [
+          "Fernando Remacha",
+          23
+        ],
+        [
+          "Pablo Luna",
+          19
+        ],
+        [
+          "Saverio Mercadante",
+          18
+        ],
+        [
+          "Aleksandr Borodín",
+          16
+        ],
+        [
+          "Juan José Mantecón",
+          16
+        ],
+        [
+          "Ermanno Wolf-Ferrari",
+          14
+        ],
+        [
+          "Mª Luisa Chevalier",
+          12
+        ],
+        [
+          "Otto Nicolai",
+          12
+        ],
+        [
+          "Igor Stravinsky",
+          11
+        ],
+        [
+          "Rosa García Ascot",
+          10
+        ],
+        [
+          "Victor Jacobi",
+          10
+        ],
+        [
+          "Errico Petrella",
+          9
+        ],
+        [
+          "Foglietti",
+          9
+        ],
+        [
+          "Georg Friedrich Händel",
+          9
+        ],
+        [
+          "Leónidas Andreief",
+          9
+        ],
+        [
+          "Bela Bartok",
+          8
+        ],
+        [
+          "Gaspar de Aquino",
+          7
+        ],
+        [
+          "Lionel Monckton",
+          7
+        ],
+        [
+          "María de Pablos",
+          7
+        ],
+        [
+          "Rebollo",
+          7
+        ],
+        [
+          "Vincenzo Bellini",
+          6
+        ],
+        [
+          "Antonín Dvorack",
+          5
+        ],
+        [
+          "Gerardo Gombau",
+          5
+        ],
+        [
+          "Mateo H. Barroso",
+          5
+        ],
+        [
+          "Arnold Schoenberg",
+          4
+        ],
+        [
+          "Oscar Fetras",
+          4
+        ],
+        [
+          "Aleksandr Glazunow",
+          2
+        ],
+        [
+          "Francisco Guerrero",
+          2
+        ],
+        [
+          "Gabriel Faure",
+          2
+        ],
+        [
+          "Giovani Pacini",
+          2
+        ],
+        [
+          "José Forns",
+          2
+        ],
+        [
+          "Juan Manén",
+          1
+        ]
+      ]
+    },
+    "cantantes": {
+      "total_con_menciones": 128,
+      "total_listado": 291,
+      "ranking": [
+        [
+          "José Angerri",
+          41
+        ],
+        [
+          "Marcos Redondo",
+          40
+        ],
+        [
+          "Carlos del Pozo",
+          37
+        ],
+        [
+          "Juan García",
+          37
+        ],
+        [
+          "Isabel Soria",
+          36
+        ],
+        [
+          "Miguel Fleta",
+          34
+        ],
+        [
+          "Asunción Camps",
+          33
+        ],
+        [
+          "Angeles Ottein",
+          29
+        ],
+        [
+          "Ofelia Nieto",
+          25
+        ],
+        [
+          "Imperio Argentina",
+          23
+        ],
+        [
+          "Ricardo Blanco",
+          20
+        ],
+        [
+          "Graciela",
+          18
+        ],
+        [
+          "Gisy Kacor",
+          17
+        ],
+        [
+          "Ocaña",
+          16
+        ],
+        [
+          "Consuelo Rocamora",
+          15
+        ],
+        [
+          "Angelillo",
+          14
+        ],
+        [
+          "Joaquina Carreras",
+          14
+        ],
+        [
+          "Ramón Peña",
+          14
+        ],
+        [
+          "Dorini de Diso",
+          12
+        ],
+        [
+          "Emilia Iglesias",
+          12
+        ],
+        [
+          "Isabel Sánchez",
+          10
+        ],
+        [
+          "Isabel Sánchez Escribano",
+          10
+        ],
+        [
+          "Laura Nieto",
+          10
+        ],
+        [
+          "Manuel Llamas",
+          10
+        ],
+        [
+          "Celia Gámez",
+          9
+        ],
+        [
+          "Felisa Herrero",
+          9
+        ],
+        [
+          "Hipólito Lázaro",
+          9
+        ],
+        [
+          "La Argentinita",
+          9
+        ],
+        [
+          "Pastora Imperio",
+          9
+        ],
+        [
+          "Rosich",
+          9
+        ],
+        [
+          "Antonio Cortis",
+          8
+        ],
+        [
+          "Leopoldo Verdaguer",
+          8
+        ],
+        [
+          "Mireya",
+          8
+        ],
+        [
+          "Raquel Meller",
+          8
+        ],
+        [
+          "Cayetano Peñalver",
+          7
+        ],
+        [
+          "Lucio González",
+          7
+        ],
+        [
+          "Luisa Espinosa",
+          7
+        ],
+        [
+          "Mary Marini",
+          7
+        ],
+        [
+          "Román Zorzano",
+          7
+        ],
+        [
+          "Tino Folgar",
+          7
+        ],
+        [
+          "Esperanza Iris",
+          6
+        ],
+        [
+          "Esteban García Leoz",
+          6
+        ],
+        [
+          "Juan Rosich",
+          6
+        ],
+        [
+          "Margarita Soler",
+          6
+        ],
+        [
+          "Mercedes Dalvy",
+          6
+        ],
+        [
+          "Riaza",
+          6
+        ],
+        [
+          "Caridad Calderón",
+          5
+        ],
+        [
+          "Carlos Puchol",
+          5
+        ],
+        [
+          "Enrique de Rosas",
+          5
+        ],
+        [
+          "Juan Roldán",
+          5
+        ],
+        [
+          "Margarita Cueto",
+          5
+        ],
+        [
+          "Matilde Rivera",
+          5
+        ],
+        [
+          "Pepita Rollán",
+          5
+        ],
+        [
+          "Salud Ruiz",
+          5
+        ],
+        [
+          "Valeriano León",
+          5
+        ],
+        [
+          "Carmen Fernández",
+          4
+        ],
+        [
+          "Consuelo Obregón",
+          4
+        ],
+        [
+          "Crisena Galatti",
+          4
+        ],
+        [
+          "Dorros de Yassy",
+          4
+        ],
+        [
+          "Emilio Sagi-Barba",
+          4
+        ],
+        [
+          "José de Luna",
+          4
+        ],
+        [
+          "Juan Pulido",
+          4
+        ],
+        [
+          "Julia Fons",
+          4
+        ],
+        [
+          "Lola Gessa",
+          4
+        ],
+        [
+          "Luis Almodóvar",
+          4
+        ],
+        [
+          "Paquita Alfonso",
+          4
+        ],
+        [
+          "Antonio Picatoste",
+          3
+        ],
+        [
+          "Aurora Redondo",
+          3
+        ],
+        [
+          "Estrellita Castro",
+          3
+        ],
+        [
+          "Fidela Campiña",
+          3
+        ],
+        [
+          "Guerrita",
+          3
+        ],
+        [
+          "Lupe Rivas",
+          3
+        ],
+        [
+          "Mischa de la Motte",
+          3
+        ],
+        [
+          "Mona Lisa",
+          3
+        ],
+        [
+          "Pepita Samper",
+          3
+        ],
+        [
+          "Sélica Pérez",
+          3
+        ],
+        [
+          "Clarita Panach",
+          2
+        ],
+        [
+          "Consuelo Macho",
+          2
+        ],
+        [
+          "Dagmara Renina",
+          2
+        ],
+        [
+          "Elsa de Brabante",
+          2
+        ],
+        [
+          "Gaby Delba",
+          2
+        ],
+        [
+          "Gisa Bergmann",
+          2
+        ],
+        [
+          "Herminia Velasco",
+          2
+        ],
+        [
+          "Lotte Lehmann",
+          2
+        ],
+        [
+          "Marcos Cejudo",
+          2
+        ],
+        [
+          "Matilde Revenga",
+          2
+        ],
+        [
+          "Nita Guerri",
+          2
+        ],
+        [
+          "Purificación de la Torre",
+          2
+        ],
+        [
+          "Amalia Pardo",
+          1
+        ],
+        [
+          "Antonio Miras",
+          1
+        ],
+        [
+          "Basilio Torres Calvo",
+          1
+        ],
+        [
+          "Benito Toral",
+          1
+        ],
+        [
+          "Cándida Suárez",
+          1
+        ],
+        [
+          "Carmen Andújar",
+          1
+        ],
+        [
+          "Carmen Floria",
+          1
+        ],
+        [
+          "Carmen Muñoz Aliaño",
+          1
+        ],
+        [
+          "Celestino Aguirre Sarobe",
+          1
+        ],
+        [
+          "Constantin Sadko",
+          1
+        ],
+        [
+          "Cortajarena",
+          1
+        ],
+        [
+          "Delfina Fuentes",
+          1
+        ],
+        [
+          "Dusolina Giannini",
+          1
+        ],
+        [
+          "El niño de Valdepeñas",
+          1
+        ],
+        [
+          "Elias Pierre",
+          1
+        ],
+        [
+          "Encarnita Marzal",
+          1
+        ],
+        [
+          "Francisco Muniesa",
+          1
+        ],
+        [
+          "Hilario Azcona",
+          1
+        ],
+        [
+          "Isabel Clemente",
+          1
+        ],
+        [
+          "Jesús Freire",
+          1
+        ],
+        [
+          "Jesús García",
+          1
+        ],
+        [
+          "Jesús Gaviria",
+          1
+        ],
+        [
+          "José Antonio Rincón",
+          1
+        ],
+        [
+          "José Cors",
+          1
+        ],
+        [
+          "Juan Arnó",
+          1
+        ],
+        [
+          "Juan José Aguirreche",
+          1
+        ],
+        [
+          "Luisa Puchol",
+          1
+        ],
+        [
+          "Margarita Carleys",
+          1
+        ],
+        [
+          "Matilde Martín",
+          1
+        ],
+        [
+          "Miss Dolly",
+          1
+        ],
+        [
+          "Palmiro Matamoros",
+          1
+        ],
+        [
+          "Paquita Alcaraz",
+          1
+        ],
+        [
+          "Pedro Gil Marín",
+          1
+        ],
+        [
+          "Pilar Muñoz",
+          1
+        ],
+        [
+          "Rafael Lanes",
+          1
+        ],
+        [
+          "Rafael Nieto",
+          1
+        ],
+        [
+          "René Izquierdo",
+          1
+        ],
+        [
+          "Sancho Fuentes",
+          1
+        ],
+        [
+          "Sara Insúa",
+          1
+        ],
+        [
+          "Sofía Massalska",
+          1
+        ]
+      ]
+    },
+    "interpretes": {
+      "total_con_menciones": 122,
+      "total_listado": 207,
+      "ranking": [
+        [
+          "Artys",
+          725
+        ],
+        [
+          "Radio Barcelona",
+          324
+        ],
+        [
+          "Sexteto de Unión Radio",
+          194
+        ],
+        [
+          "Ricardo Villa",
+          116
+        ],
+        [
+          "Luis Villa",
+          53
+        ],
+        [
+          "Majerit",
+          43
+        ],
+        [
+          "Cumellas",
+          41
+        ],
+        [
+          "Fernández Arbós",
+          37
+        ],
+        [
+          "Telmo Vela",
+          34
+        ],
+        [
+          "Julio Francés",
+          33
+        ],
+        [
+          "Hispalense",
+          32
+        ],
+        [
+          "Álvarez Cantos",
+          28
+        ],
+        [
+          "Defauw",
+          28
+        ],
+        [
+          "Radio-París",
+          25
+        ],
+        [
+          "Salvatore",
+          24
+        ],
+        [
+          "Cano",
+          23
+        ],
+        [
+          "Ángel Barrios",
+          21
+        ],
+        [
+          "Gregorio Martínez Sierra",
+          21
+        ],
+        [
+          "Toscanini",
+          21
+        ],
+        [
+          "Ibarra",
+          20
+        ],
+        [
+          "Graciela",
+          18
+        ],
+        [
+          "Bartolomé Pérez Casas",
+          16
+        ],
+        [
+          "Enrique Iniesta",
+          16
+        ],
+        [
+          "José Cubiles",
+          16
+        ],
+        [
+          "Carlos Verdeal",
+          15
+        ],
+        [
+          "Angelillo",
+          14
+        ],
+        [
+          "Matilde Muñoz",
+          12
+        ],
+        [
+          "Gloria de Loizaga",
+          11
+        ],
+        [
+          "Henry Wood",
+          10
+        ],
+        [
+          "Moisés Simons",
+          10
+        ],
+        [
+          "Celia Gámez",
+          9
+        ],
+        [
+          "Enrique Aroca",
+          9
+        ],
+        [
+          "Joaquín Fuster",
+          9
+        ],
+        [
+          "Leopoldo Querol",
+          9
+        ],
+        [
+          "Rosaura Coma",
+          9
+        ],
+        [
+          "Castillian",
+          8
+        ],
+        [
+          "Concierto Sacro",
+          8
+        ],
+        [
+          "Eduardo Zamacois",
+          8
+        ],
+        [
+          "Fernández Bordas",
+          8
+        ],
+        [
+          "Fernando Ember",
+          8
+        ],
+        [
+          "Teresa González",
+          8
+        ],
+        [
+          "Trinidad García",
+          8
+        ],
+        [
+          "Elena Romero",
+          7
+        ],
+        [
+          "Lucio González",
+          7
+        ],
+        [
+          "Luis Antón",
+          7
+        ],
+        [
+          "Manuela Ballesteros",
+          7
+        ],
+        [
+          "Walter Damrosch",
+          7
+        ],
+        [
+          "Antonio Alvira",
+          5
+        ],
+        [
+          "Erich Kleiber",
+          5
+        ],
+        [
+          "Jesús Fernández Lorenzo",
+          5
+        ],
+        [
+          "José Franco",
+          5
+        ],
+        [
+          "María Victoria Iniesta",
+          5
+        ],
+        [
+          "Ofelia de Aragón",
+          5
+        ],
+        [
+          "Aquilino",
+          4
+        ],
+        [
+          "Barend Bos",
+          4
+        ],
+        [
+          "Juan Ruiz Casaux",
+          4
+        ],
+        [
+          "Rafael Benedito",
+          4
+        ],
+        [
+          "Tonie Noder",
+          4
+        ],
+        [
+          "Bruno Walter",
+          3
+        ],
+        [
+          "Carmen Flores",
+          3
+        ],
+        [
+          "Cuarteto Iberia",
+          3
+        ],
+        [
+          "Eduardo Hernández",
+          3
+        ],
+        [
+          "Emilio Grenet",
+          3
+        ],
+        [
+          "Enriqueta Laborde",
+          3
+        ],
+        [
+          "Eugenio Casals",
+          3
+        ],
+        [
+          "Federico Contreras",
+          3
+        ],
+        [
+          "Josefina Ribera",
+          3
+        ],
+        [
+          "Ludwig Funk",
+          3
+        ],
+        [
+          "Nicanor Zabaleta",
+          3
+        ],
+        [
+          "Osvaldo Fresedo",
+          3
+        ],
+        [
+          "Paul Whiteman",
+          3
+        ],
+        [
+          "Radio Bilbao",
+          3
+        ],
+        [
+          "Teresa Alonso",
+          3
+        ],
+        [
+          "Antonio Piedra",
+          2
+        ],
+        [
+          "Blanca Negri",
+          2
+        ],
+        [
+          "Emisora de Praga",
+          2
+        ],
+        [
+          "Gaby Delba",
+          2
+        ],
+        [
+          "Gálvez Bellido",
+          2
+        ],
+        [
+          "García Marco",
+          2
+        ],
+        [
+          "Gregorio Cruz",
+          2
+        ],
+        [
+          "Jorge del Moral",
+          2
+        ],
+        [
+          "José María Casanova",
+          2
+        ],
+        [
+          "Karl Muck",
+          2
+        ],
+        [
+          "Los Siboneyes",
+          2
+        ],
+        [
+          "Manuel Fuster",
+          2
+        ],
+        [
+          "Manuel Pérez",
+          2
+        ],
+        [
+          "Nita Guerri",
+          2
+        ],
+        [
+          "Ricardo Hernández",
+          2
+        ],
+        [
+          "Valentín Martín",
+          2
+        ],
+        [
+          "Amparo Fuster",
+          1
+        ],
+        [
+          "Ángel Currás",
+          1
+        ],
+        [
+          "Antonio Cuadra Román",
+          1
+        ],
+        [
+          "Argentina Pizarro",
+          1
+        ],
+        [
+          "Berki",
+          1
+        ],
+        [
+          "Daniel Fortea",
+          1
+        ],
+        [
+          "Eliseo Grenet",
+          1
+        ],
+        [
+          "Emilia Herking",
+          1
+        ],
+        [
+          "Esteban Martínez",
+          1
+        ],
+        [
+          "Fermín Fernández Ortíz",
+          1
+        ],
+        [
+          "Guardia Real",
+          1
+        ],
+        [
+          "Humorist-Jazz",
+          1
+        ],
+        [
+          "Inocencio Verdeal",
+          1
+        ],
+        [
+          "José Lasalle",
+          1
+        ],
+        [
+          "José Marcellán",
+          1
+        ],
+        [
+          "Juan Gorostidi",
+          1
+        ],
+        [
+          "Julia del Castillo",
+          1
+        ],
+        [
+          "June Rollar",
+          1
+        ],
+        [
+          "Lanes",
+          1
+        ],
+        [
+          "Lucienne Radisse",
+          1
+        ],
+        [
+          "Margarita Albert",
+          1
+        ],
+        [
+          "Maruja Meroño",
+          1
+        ],
+        [
+          "Mercedes L. Arizaga",
+          1
+        ],
+        [
+          "Pascual Camps",
+          1
+        ],
+        [
+          "Pedro de Lerma",
+          1
+        ],
+        [
+          "Pilar López",
+          1
+        ],
+        [
+          "Ricardo García Carrese",
+          1
+        ],
+        [
+          "Salvador Bartolozzi",
+          1
+        ],
+        [
+          "Santos Gandía",
+          1
+        ],
+        [
+          "Stokowski",
+          1
+        ],
+        [
+          "Teresa Alonso Posada",
+          1
+        ],
+        [
+          "The Saccavel-Jazz",
+          1
+        ],
+        [
+          "W. J. Clemens",
+          1
+        ]
+      ]
+    },
+    "evolucion_compositores_por_año": {
+      "Ludwing van Beethoven": {
+        "1925": 54,
+        "1926": 183,
+        "1927": 351,
+        "0": 4,
+        "1929": 205,
+        "1930": 137,
+        "1931": 64,
+        "1932": 124,
+        "1933": 116,
+        "1934": 188,
+        "1935": 171
+      },
+      "Richard Wagner": {
+        "1925": 15,
+        "1926": 105,
+        "1927": 205,
+        "0": 8,
+        "1929": 188,
+        "1930": 132,
+        "1931": 71,
+        "1932": 97,
+        "1933": 105,
+        "1934": 206,
+        "1935": 172
+      },
+      "Giuseppe Verdi": {
+        "1925": 48,
+        "1926": 89,
+        "1927": 188,
+        "0": 4,
+        "1929": 126,
+        "1930": 123,
+        "1931": 103,
+        "1932": 86,
+        "1933": 87,
+        "1934": 175,
+        "1935": 183
+      },
+      "Issac Albéniz": {
+        "1925": 28,
+        "1926": 70,
+        "1927": 138,
+        "0": 0,
+        "1929": 108,
+        "1930": 110,
+        "1931": 68,
+        "1932": 39,
+        "1933": 52,
+        "1934": 180,
+        "1935": 153
+      },
+      "Manuel Fernández Caballero": {
+        "1925": 18,
+        "1926": 89,
+        "1927": 165,
+        "0": 1,
+        "1929": 123,
+        "1930": 100,
+        "1931": 40,
+        "1932": 51,
+        "1933": 50,
+        "1934": 154,
+        "1935": 143
+      },
+      "Wolfgang Amadeus Mozart": {
+        "1925": 35,
+        "1926": 84,
+        "1927": 165,
+        "0": 5,
+        "1929": 142,
+        "1930": 103,
+        "1931": 46,
+        "1932": 67,
+        "1933": 47,
+        "1934": 113,
+        "1935": 110
+      },
+      "Amadeo Vives": {
+        "1925": 11,
+        "1926": 108,
+        "1927": 225,
+        "0": 5,
+        "1929": 105,
+        "1930": 79,
+        "1931": 39,
+        "1932": 20,
+        "1933": 34,
+        "1934": 112,
+        "1935": 101
+      },
+      "Franz Schubert": {
+        "1925": 12,
+        "1926": 86,
+        "1927": 159,
+        "0": 2,
+        "1929": 94,
+        "1930": 76,
+        "1931": 25,
+        "1932": 33,
+        "1933": 53,
+        "1934": 138,
+        "1935": 143
+      },
+      "Ruperto Chapí": {
+        "1925": 13,
+        "1926": 125,
+        "1927": 218,
+        "0": 4,
+        "1929": 88,
+        "1930": 62,
+        "1931": 41,
+        "1932": 41,
+        "1933": 37,
+        "1934": 80,
+        "1935": 108
+      },
+      "Jules Massenet": {
+        "1925": 22,
+        "1926": 67,
+        "1927": 169,
+        "0": 6,
+        "1929": 91,
+        "1930": 84,
+        "1931": 27,
+        "1932": 31,
+        "1933": 36,
+        "1934": 125,
+        "1935": 116
+      }
+    }
+  },
+  "escucha": {
+    "por_categoria": {
+      "PERCEPCIÓN AUDITIVA": {
+        "total_menciones": 2976,
+        "terminos_encontrados": 9,
+        "detalle": [
+          [
+            "radioyente/s",
+            1101
+          ],
+          [
+            "oír",
+            455
+          ],
+          [
+            "oyente/s",
+            410
+          ],
+          [
+            "audición/es",
+            379
+          ],
+          [
+            "escuchar",
+            259
+          ],
+          [
+            "auditor/es",
+            178
+          ],
+          [
+            "radioescucha/s",
+            100
+          ],
+          [
+            "percibir",
+            69
+          ],
+          [
+            "auditorio",
+            25
+          ]
+        ]
+      },
+      "ACTO DE ESCUCHA": {
+        "total_menciones": 13979,
+        "terminos_encontrados": 9,
+        "detalle": [
+          [
+            "concierto/s",
+            4040
+          ],
+          [
+            "emisión/es",
+            3474
+          ],
+          [
+            "programa/s",
+            2907
+          ],
+          [
+            "transmisión/es",
+            1202
+          ],
+          [
+            "recital/es",
+            902
+          ],
+          [
+            "retransmisión/es",
+            809
+          ],
+          [
+            "sesión/es",
+            431
+          ],
+          [
+            "programación",
+            157
+          ],
+          [
+            "velada/s",
+            57
+          ]
+        ]
+      },
+      "DISPOSITIVOS DE ESCUCHA": {
+        "total_menciones": 13103,
+        "terminos_encontrados": 18,
+        "detalle": [
+          [
+            "radio",
+            8283
+          ],
+          [
+            "disco/s",
+            1181
+          ],
+          [
+            "emisora/s",
+            1049
+          ],
+          [
+            "estudio/s",
+            785
+          ],
+          [
+            "micrófono/s",
+            722
+          ],
+          [
+            "radiotelefonía",
+            207
+          ],
+          [
+            "radiodifusión",
+            202
+          ],
+          [
+            "aparato/s",
+            195
+          ],
+          [
+            "gramófono/s",
+            93
+          ],
+          [
+            "altavoz/ces",
+            88
+          ],
+          [
+            "antena/s",
+            77
+          ],
+          [
+            "receptor/es",
+            74
+          ],
+          [
+            "radiofonía",
+            66
+          ],
+          [
+            "válvula/s",
+            29
+          ],
+          [
+            "auricular/es",
+            22
+          ],
+          [
+            "galena",
+            15
+          ],
+          [
+            "fonógrafo/s",
+            13
+          ],
+          [
+            "cascos",
+            2
+          ]
+        ]
+      },
+      "EMOCIONES Y SENSACIONES": {
+        "total_menciones": 3310,
+        "terminos_encontrados": 12,
+        "detalle": [
+          [
+            "sentir",
+            1251
+          ],
+          [
+            "admiración",
+            659
+          ],
+          [
+            "encanto",
+            338
+          ],
+          [
+            "entusiasmo",
+            322
+          ],
+          [
+            "emoción",
+            303
+          ],
+          [
+            "impresión",
+            229
+          ],
+          [
+            "goce/gozo",
+            56
+          ],
+          [
+            "placer",
+            55
+          ],
+          [
+            "éxtasis",
+            38
+          ],
+          [
+            "deleite",
+            31
+          ],
+          [
+            "conmover",
+            26
+          ],
+          [
+            "fascinación",
+            2
+          ]
+        ]
+      },
+      "VALORACIÓN ESTÉTICA": {
+        "total_menciones": 4075,
+        "terminos_encontrados": 12,
+        "detalle": [
+          [
+            "belleza",
+            1526
+          ],
+          [
+            "genio",
+            820
+          ],
+          [
+            "extraordinario/a",
+            368
+          ],
+          [
+            "hermosura",
+            275
+          ],
+          [
+            "maravilla",
+            252
+          ],
+          [
+            "magnífico/a",
+            231
+          ],
+          [
+            "exquisito/a",
+            170
+          ],
+          [
+            "prodigio",
+            128
+          ],
+          [
+            "espléndido/a",
+            116
+          ],
+          [
+            "sublime",
+            84
+          ],
+          [
+            "grandioso/a",
+            60
+          ],
+          [
+            "soberbio/a",
+            45
+          ]
+        ]
+      },
+      "RESPUESTA DEL PÚBLICO": {
+        "total_menciones": 2710,
+        "terminos_encontrados": 10,
+        "detalle": [
+          [
+            "público/s",
+            1018
+          ],
+          [
+            "éxito/s",
+            1015
+          ],
+          [
+            "triunfo/s",
+            450
+          ],
+          [
+            "aplauso/s",
+            157
+          ],
+          [
+            "repetición",
+            34
+          ],
+          [
+            "clamor",
+            16
+          ],
+          [
+            "ovación/es",
+            12
+          ],
+          [
+            "aclamación",
+            3
+          ],
+          [
+            "bis",
+            3
+          ],
+          [
+            "audiencia",
+            2
+          ]
+        ]
+      },
+      "CUALIDADES SONORAS": {
+        "total_menciones": 6086,
+        "terminos_encontrados": 13,
+        "detalle": [
+          [
+            "nota/s",
+            1967
+          ],
+          [
+            "melodía",
+            1062
+          ],
+          [
+            "voz/voces",
+            785
+          ],
+          [
+            "sonido/s",
+            504
+          ],
+          [
+            "tono/s",
+            312
+          ],
+          [
+            "acento/s",
+            284
+          ],
+          [
+            "ritmo",
+            277
+          ],
+          [
+            "armonía",
+            253
+          ],
+          [
+            "matiz/matices",
+            229
+          ],
+          [
+            "frase/s",
+            130
+          ],
+          [
+            "timbre/s",
+            105
+          ],
+          [
+            "acorde/s",
+            90
+          ],
+          [
+            "vibración/es",
+            88
+          ]
+        ]
+      }
+    },
+    "total_global": 46239,
+    "top_50_terminos": [
+      [
+        "radio",
+        8283
+      ],
+      [
+        "concierto/s",
+        4040
+      ],
+      [
+        "emisión/es",
+        3474
+      ],
+      [
+        "programa/s",
+        2907
+      ],
+      [
+        "nota/s",
+        1967
+      ],
+      [
+        "belleza",
+        1526
+      ],
+      [
+        "sentir",
+        1251
+      ],
+      [
+        "transmisión/es",
+        1202
+      ],
+      [
+        "disco/s",
+        1181
+      ],
+      [
+        "radioyente/s",
+        1101
+      ],
+      [
+        "melodía",
+        1062
+      ],
+      [
+        "emisora/s",
+        1049
+      ],
+      [
+        "público/s",
+        1018
+      ],
+      [
+        "éxito/s",
+        1015
+      ],
+      [
+        "recital/es",
+        902
+      ],
+      [
+        "genio",
+        820
+      ],
+      [
+        "retransmisión/es",
+        809
+      ],
+      [
+        "estudio/s",
+        785
+      ],
+      [
+        "voz/voces",
+        785
+      ],
+      [
+        "micrófono/s",
+        722
+      ],
+      [
+        "admiración",
+        659
+      ],
+      [
+        "sonido/s",
+        504
+      ],
+      [
+        "oír",
+        455
+      ],
+      [
+        "triunfo/s",
+        450
+      ],
+      [
+        "sesión/es",
+        431
+      ],
+      [
+        "oyente/s",
+        410
+      ],
+      [
+        "audición/es",
+        379
+      ],
+      [
+        "extraordinario/a",
+        368
+      ],
+      [
+        "encanto",
+        338
+      ],
+      [
+        "entusiasmo",
+        322
+      ],
+      [
+        "tono/s",
+        312
+      ],
+      [
+        "emoción",
+        303
+      ],
+      [
+        "acento/s",
+        284
+      ],
+      [
+        "ritmo",
+        277
+      ],
+      [
+        "hermosura",
+        275
+      ],
+      [
+        "escuchar",
+        259
+      ],
+      [
+        "armonía",
+        253
+      ],
+      [
+        "maravilla",
+        252
+      ],
+      [
+        "magnífico/a",
+        231
+      ],
+      [
+        "impresión",
+        229
+      ],
+      [
+        "matiz/matices",
+        229
+      ],
+      [
+        "radiotelefonía",
+        207
+      ],
+      [
+        "radiodifusión",
+        202
+      ],
+      [
+        "aparato/s",
+        195
+      ],
+      [
+        "auditor/es",
+        178
+      ],
+      [
+        "exquisito/a",
+        170
+      ],
+      [
+        "programación",
+        157
+      ],
+      [
+        "aplauso/s",
+        157
+      ],
+      [
+        "frase/s",
+        130
+      ],
+      [
+        "prodigio",
+        128
+      ]
+    ],
+    "evolucion_por_año": {
+      "0": {
+        "PERCEPCIÓN AUDITIVA": 3,
+        "ACTO DE ESCUCHA": 26,
+        "DISPOSITIVOS DE ESCUCHA": 6,
+        "EMOCIONES Y SENSACIONES": 13,
+        "VALORACIÓN ESTÉTICA": 9,
+        "RESPUESTA DEL PÚBLICO": 1,
+        "CUALIDADES SONORAS": 15
+      },
+      "1925": {
+        "PERCEPCIÓN AUDITIVA": 135,
+        "ACTO DE ESCUCHA": 425,
+        "DISPOSITIVOS DE ESCUCHA": 555,
+        "EMOCIONES Y SENSACIONES": 154,
+        "VALORACIÓN ESTÉTICA": 142,
+        "RESPUESTA DEL PÚBLICO": 110,
+        "CUALIDADES SONORAS": 177
+      },
+      "1926": {
+        "PERCEPCIÓN AUDITIVA": 233,
+        "ACTO DE ESCUCHA": 1204,
+        "DISPOSITIVOS DE ESCUCHA": 1096,
+        "EMOCIONES Y SENSACIONES": 230,
+        "VALORACIÓN ESTÉTICA": 267,
+        "RESPUESTA DEL PÚBLICO": 168,
+        "CUALIDADES SONORAS": 436
+      },
+      "1927": {
+        "PERCEPCIÓN AUDITIVA": 252,
+        "ACTO DE ESCUCHA": 2244,
+        "DISPOSITIVOS DE ESCUCHA": 1513,
+        "EMOCIONES Y SENSACIONES": 348,
+        "VALORACIÓN ESTÉTICA": 522,
+        "RESPUESTA DEL PÚBLICO": 257,
+        "CUALIDADES SONORAS": 917
+      },
+      "1929": {
+        "PERCEPCIÓN AUDITIVA": 292,
+        "ACTO DE ESCUCHA": 1967,
+        "DISPOSITIVOS DE ESCUCHA": 1097,
+        "EMOCIONES Y SENSACIONES": 419,
+        "VALORACIÓN ESTÉTICA": 567,
+        "RESPUESTA DEL PÚBLICO": 306,
+        "CUALIDADES SONORAS": 805
+      },
+      "1930": {
+        "PERCEPCIÓN AUDITIVA": 338,
+        "ACTO DE ESCUCHA": 1587,
+        "DISPOSITIVOS DE ESCUCHA": 1512,
+        "EMOCIONES Y SENSACIONES": 436,
+        "VALORACIÓN ESTÉTICA": 573,
+        "RESPUESTA DEL PÚBLICO": 438,
+        "CUALIDADES SONORAS": 791
+      },
+      "1931": {
+        "PERCEPCIÓN AUDITIVA": 216,
+        "ACTO DE ESCUCHA": 524,
+        "DISPOSITIVOS DE ESCUCHA": 527,
+        "EMOCIONES Y SENSACIONES": 349,
+        "VALORACIÓN ESTÉTICA": 436,
+        "RESPUESTA DEL PÚBLICO": 297,
+        "CUALIDADES SONORAS": 498
+      },
+      "1932": {
+        "PERCEPCIÓN AUDITIVA": 303,
+        "ACTO DE ESCUCHA": 735,
+        "DISPOSITIVOS DE ESCUCHA": 970,
+        "EMOCIONES Y SENSACIONES": 358,
+        "VALORACIÓN ESTÉTICA": 380,
+        "RESPUESTA DEL PÚBLICO": 285,
+        "CUALIDADES SONORAS": 567
+      },
+      "1933": {
+        "PERCEPCIÓN AUDITIVA": 372,
+        "ACTO DE ESCUCHA": 821,
+        "DISPOSITIVOS DE ESCUCHA": 1038,
+        "EMOCIONES Y SENSACIONES": 331,
+        "VALORACIÓN ESTÉTICA": 418,
+        "RESPUESTA DEL PÚBLICO": 355,
+        "CUALIDADES SONORAS": 568
+      },
+      "1934": {
+        "PERCEPCIÓN AUDITIVA": 525,
+        "ACTO DE ESCUCHA": 2189,
+        "DISPOSITIVOS DE ESCUCHA": 2560,
+        "EMOCIONES Y SENSACIONES": 368,
+        "VALORACIÓN ESTÉTICA": 404,
+        "RESPUESTA DEL PÚBLICO": 256,
+        "CUALIDADES SONORAS": 720
+      },
+      "1935": {
+        "PERCEPCIÓN AUDITIVA": 307,
+        "ACTO DE ESCUCHA": 2257,
+        "DISPOSITIVOS DE ESCUCHA": 2229,
+        "EMOCIONES Y SENSACIONES": 304,
+        "VALORACIÓN ESTÉTICA": 357,
+        "RESPUESTA DEL PÚBLICO": 237,
+        "CUALIDADES SONORAS": 592
+      }
+    },
+    "concordancias": {
+      "oyentes": [
+        {
+          "archivo": "1925-08-30_ONDAS.txt",
+          "contexto": "por menos de ser una fuente de los más puros goces espirituales para todos los oyentes. la radio sirve de mensajera de belleza para todos los hogares, ricos o humilde"
+        },
+        {
+          "archivo": "1925_05_23_ONDAS.txt",
+          "contexto": "o del público, al que modestamente hubimos de sumar nosotros nuestro aplauso de oyentes, que no tienen la autoridad más leve para meterse en honduras de técnica musica"
+        },
+        {
+          "archivo": "1925_06_01_ONDAS.txt",
+          "contexto": ". se han excluido los editoriales sobre temas técnicos de radio, testimonios de oyentes (aunque algunos mencionen conciertos), notas humorísticas y contenido exclusiva"
+        },
+        {
+          "archivo": "1925_09_13_ONDAS.txt",
+          "contexto": "s en los programas semanales, complaciendo en lo posible los deseos de nuestros oyentes. creemos que ésta es la verdadera colaboración entre emisoras y públicos."
+        },
+        {
+          "archivo": "1925_10_11_ONDAS.txt",
+          "contexto": "que el resultado llegara a ser tan perfecto. teníamos con nuestros entusiastas oyentes una deuda que diariamente nos pedían por carta, y era la de las retransmisiones"
+        },
+        {
+          "archivo": "1925_10_11_ONDAS.txt",
+          "contexto": "ya lo saben, pues, nuestros oyentes: union radio retransmitirá todos los domingos por la mañana los conciertos de l"
+        },
+        {
+          "archivo": "1925_10_11_ONDAS.txt",
+          "contexto": "licitaciones recibidas por los ensayos del domingo, que trasladamos a todos los oyentes, ya que nuestros esfuerzos sólo van dirigidos a la afición española, y por fome"
+        },
+        {
+          "archivo": "1925_10_11_ONDAS.txt",
+          "contexto": "esperanza iris dirigió a los oyentes un cordial saludo, narrando dos cuentos mejicanos, admirablemente bien dichos."
+        },
+        {
+          "archivo": "1925_10_25_ONDAS.txt",
+          "contexto": "que sería hacer desmerecer a nuestros oyentes el presentarles a este"
+        },
+        {
+          "archivo": "1925_11_15_ONDAS.txt",
+          "contexto": "la sorpresa que recibieron los oyentes fué grande al oír el domingo por la mañana el concierto inesperado de la notabl"
+        },
+        {
+          "archivo": "1925_11_15_ONDAS.txt",
+          "contexto": "entro dio la orquesta filarmónica de madrid ha merecido unánimes elogios de los oyentes."
+        },
+        {
+          "archivo": "1925_11_15_ONDAS.txt",
+          "contexto": "sr. pérez casas—fué retransmitido con toda su pureza musical, y los millares de oyentes se deleitaron con el programa tan seleccionado que interpretó la orquesta filar"
+        },
+        {
+          "archivo": "1925_11_15_ONDAS.txt",
+          "contexto": "el miércoles los oyentes disfrutaron de una novedad más: la retransmisión en la misma noche del \"jazz-ba"
+        },
+        {
+          "archivo": "1925_11_22_ONDAS.txt",
+          "contexto": "in preferencia por ninguna emisora, es cumplir estrictamente la voluntad de los oyentes. queremos hacer una labor que redunde en beneficio de la obra radiodifusora, ya"
+        },
+        {
+          "archivo": "1925_11_22_ONDAS.txt",
+          "contexto": "gunas obras de su selecto repertorio, que han merecido calurosos elogios de los oyentes."
+        },
+        {
+          "archivo": "1925_11_29_ONDAS.txt",
+          "contexto": "bolsa del comercio de parís.-- 16.45. concierto organizado por la asociación de oyentes franceses.— 17.45. noticias comerciales.—20.15. noticias de prensa y comerciale"
+        },
+        {
+          "archivo": "1925_11_29_ONDAS.txt",
+          "contexto": "bolsa del comercio de parís.— 16.45. concierto organizado por la asociación de oyentes franceses.— 17.45. noticias comerciales y de prensa.—20.15. noticias de prensa"
+        },
+        {
+          "archivo": "1925_11_29_ONDAS.txt",
+          "contexto": "bolsa del comercio de parís.— 16.45. concierto organizado por la asociación de oyentes franceses.— 17.45. noticias comerciales.—20.15. conferencia y noticias comercia"
+        },
+        {
+          "archivo": "1925_11_29_ONDAS.txt",
+          "contexto": "bolsa del comercio de parís.— 16.45. concierto organizado por la asociación de oyentes franceses.— 17.45. noticias comerciales.—20.15. conferencia y noticias comercia"
+        },
+        {
+          "archivo": "1925_12_06_ONDAS.txt",
+          "contexto": "la radiodifusión madrileña tiende a despejarse cada día más en beneficio de los oyentes."
+        }
+      ],
+      "radioyentes": [
+        {
+          "archivo": "1925-08-30_ONDAS.txt",
+          "contexto": "nosotros, furibundos radioyentes—ahora que se \"oye\", se dice radioyentes; antes, que sólo se \"escuchaba\", se decía radioescuchas—, hemos ido acostumbrán"
+        },
+        {
+          "archivo": "1925-09-27_ONDAS.txt",
+          "contexto": "que procuran organizar los programas complaciendo los gustos artísticos de los radioyentes. semanalmente se organizan conciertos de gala, que son dedicados a los suscript"
+        },
+        {
+          "archivo": "1925-09-27_ONDAS.txt",
+          "contexto": "esantísimos. pero todo esto lo ha conseguido radio-belgique por la ayuda de los radioyentes belgas, que en todo momento acudieron a las llamadas de la dirección artística:"
+        },
+        {
+          "archivo": "1925-09-27_ONDAS.txt",
+          "contexto": "la próxima temporada de otoño ha de ser interesante para los radioyentes, pues la dirección artística de radio-belgique prepara grandes sorpresas en sus"
+        },
+        {
+          "archivo": "1925-09-27_ONDAS.txt",
+          "contexto": "la emisora radio-belgique ha organizado entre los radioyentes belgas un plebiscito para conocer las preferencias que tienen sobre las audicio"
+        },
+        {
+          "archivo": "1925-09-27_ONDAS.txt",
+          "contexto": "los radioyentes belgas piden disminución de la música de \"jazz band\" y aumento de selecciones d"
+        },
+        {
+          "archivo": "1925_07_19_ONDAS.txt",
+          "contexto": "deberían tener la obligación de gastar el importe íntegro de las cuotas de los radioyentes (no el de los anuncios y demás servicios) en la mejora de la radiodifusión, pub"
+        },
+        {
+          "archivo": "1925_07_26_ONDAS.txt",
+          "contexto": "todos los radioyentes deben prestar su apoyo moral y material a la revista \"ondas\" porque ella aspira"
+        },
+        {
+          "archivo": "1925_08_16_ONDAS.txt",
+          "contexto": "música de jazz (americanismo), que tanto espacio ocupa en la atención de muchos radioyentes—pues suele ser plato obligado en todas las emisoras—, ha comenzado a derivar ha"
+        },
+        {
+          "archivo": "1925_08_16_ONDAS.txt",
+          "contexto": "chedumbres que tanto se solazan con la música de jazz, incluyendo a los señores radioyentes, tienen materia para reflexionar: el arte que ellos adoran se cree conducir a p"
+        },
+        {
+          "archivo": "1925_08_23_ONDAS.txt",
+          "contexto": "el sur no llegan a debilitar los \"oídos\" europeos, según los testimonios de los radioyentes españoles, alemanes y checoslovacos."
+        },
+        {
+          "archivo": "1925_09_13_ONDAS.txt",
+          "contexto": "diodifusora que satisfaga los gustos artísticos y los anhelos culturales de los radioyentes españoles."
+        },
+        {
+          "archivo": "1925_09_13_ONDAS.txt",
+          "contexto": "te españolas, precediéndolas de notas críticas y literarias que recuerden a los radioyentes el valor espiritual de nuestros maestros."
+        },
+        {
+          "archivo": "1925_09_13_ONDAS.txt",
+          "contexto": "el entusiasmo que los radioyentes españoles vienen demostrándonos ha de ser siempre correspondido en la medida de"
+        },
+        {
+          "archivo": "1925_10_04_ONDAS.txt",
+          "contexto": "des conciertos sinfónicos y bailes rusos, que pudieron oír en su integridad los radioyentes de la condal ciudad por vía e. a. j. 1."
+        },
+        {
+          "archivo": "1925_10_04_ONDAS.txt",
+          "contexto": "constituido por el plebiscito musical popular que e. a. j. 1 organizó entre sus radioyentes en junio último, cuyo extracto fué publicado en estas columnas ha poco."
+        },
+        {
+          "archivo": "1925_11_22_ONDAS.txt",
+          "contexto": "union de radioyentes"
+        },
+        {
+          "archivo": "1925_11_22_ONDAS.txt",
+          "contexto": "la primera radiación organizada por la unión de radioyentes.—lectura de unas cuartillas por su presidente, d. félix méndez abajo.—salud rui"
+        },
+        {
+          "archivo": "1925_11_22_ONDAS.txt",
+          "contexto": "ntos antes de empezar la emisión extraordinaria que, organizada por la unión de radioyentes, se verificó el lunes, día 16, tuvimos ocasión de hablar con uno de los miembro"
+        },
+        {
+          "archivo": "1925_11_22_ONDAS.txt",
+          "contexto": "igos del sinhilismo español, en el sentido de que la inscripción en la unión de radioyentes traería aparejada la obligación de la licencia oficial. los boletines es una cu"
+        }
+      ],
+      "audición": [
+        {
+          "archivo": "1925-08-30_ONDAS.txt",
+          "contexto": "creemos útil, complementar esa audición con algunas notas explicativas acerca de las obras que van a escucharse, por el"
+        },
+        {
+          "archivo": "1925-09-27_ONDAS.txt",
+          "contexto": "música seria, una audición semanal; música ligera, una audición semanal; selecciones literarias, una audición semanal; conferencias, cursos de"
+        },
+        {
+          "archivo": "1925-09-27_ONDAS.txt",
+          "contexto": "idioma, charlas, etc., una audición breve por semana."
+        },
+        {
+          "archivo": "1925-09-27_ONDAS.txt",
+          "contexto": "las que union radio transmitirá en su audición del lunes 28 están basadas en poemas del poeta indio rabindranath tagore, a tra"
+        },
+        {
+          "archivo": "1925_06_28_ONDAS.txt",
+          "contexto": "4.\" audición de gala ante s. m. el rey, con el concurso de prestigiosos artistas."
+        },
+        {
+          "archivo": "1925_10_04_ONDAS.txt",
+          "contexto": "la audición en madrid de su ópera \"la russalka\" no modificó decididamente esa impresión pri"
+        },
+        {
+          "archivo": "1925_10_11_ONDAS.txt",
+          "contexto": "en nuestra audición del martes ese bello y típico poema será recitado paralelamente al desarrollo d"
+        },
+        {
+          "archivo": "1925_10_18_ONDAS.txt",
+          "contexto": "a las 21.30.—audición dedicada a grieg, comentada por el profesor del conservatorio de madrid, d. con"
+        },
+        {
+          "archivo": "1925_10_25_ONDAS.txt",
+          "contexto": "un grupo muy importante de sus obras figura en nuestra audición del día"
+        },
+        {
+          "archivo": "1925_11_08_ONDAS.txt",
+          "contexto": "rió al comenzar el mes de octubre de 1893. días antes había dirigido la primera audición de su sinfonía patética. el espíritu de esta obra, su profundo sentido dramátic"
+        },
+        {
+          "archivo": "1925_11_29_ONDAS.txt",
+          "contexto": "se leerá una charla sobre la obra y sus autores escrita expresamente para esta audición por el eminente musicógrafo, profesor del conservatorio,"
+        },
+        {
+          "archivo": "1926-01-24_ONDAS.txt",
+          "contexto": "8, y, como tantos otros músicos de su país, se formó artísticamente mediante la audición de las óperas entonces en boga. sobresalió rápidamente en el estudio de algunos"
+        },
+        {
+          "archivo": "1926-06-20_ONDAS.txt",
+          "contexto": "ya una cierta popularidad entre nuestro público, que reclama frecuentemente su audición.\""
+        },
+        {
+          "archivo": "1926-06-20_ONDAS.txt",
+          "contexto": "nfónica de altos vuelos en bacarisse, alvarez cantos, de quien dimos la primera audición pública del poema que le fue premiado en su concurso de composición en el conse"
+        },
+        {
+          "archivo": "1926_03_14_ONDAS.txt",
+          "contexto": "adiados ante nuestro micrófono los cinco anteriores, continúa realizando con la audición presente el propósito cultural de union radio de dar a conocer a sus oyentes de"
+        },
+        {
+          "archivo": "1926_03_28_ONDAS.txt",
+          "contexto": "mbre, que, al darse cuenta de su presencia, le aplaudió enormemente. durante la audición, los agentes de la autoridad tuvieron que hacer grandes esfuerzos para que los"
+        },
+        {
+          "archivo": "1926_04_11_ONDAS.txt",
+          "contexto": "l hecho de estar viendo el movimiento de los dedos sobre el teclado durante una audición de piano contribuye a facilitar la interpretación de los sonidos, haciendo que"
+        },
+        {
+          "archivo": "1926_05_02_ONDAS.txt",
+          "contexto": "e doo, doo\" (fox-trot), kassel. \"pan y toros\" (fantasía), barbieri. intermedio. audición de tangos cantados por el señor ramalle. concierto de clarinete por el señor al"
+        },
+        {
+          "archivo": "1926_05_02_ONDAS.txt",
+          "contexto": "primera parte del concierto por la orquesta de la sociedad filarmónica. segunda audición de poesías selectas. \"el caminante\" (vals), planté, órgano. segunda parte del c"
+        },
+        {
+          "archivo": "1926_05_02_ONDAS.txt",
+          "contexto": "d. \"bohemios\" (coros), vives, por los coros de la sociedad filarmónica. tercera audición de poesías. hora oficial.—18.0. final del programa matinal. cierre de la estaci"
+        }
+      ],
+      "emoción": [
+        {
+          "archivo": "1925-08-30_ONDAS.txt",
+          "contexto": "o profana conservan todavía su maravillosa frescura y belleza, su intensidad de emoción."
+        },
+        {
+          "archivo": "1925_06_01_ONDAS.txt",
+          "contexto": "algo de la radiodifusión. explíqueme, si es posible, qué semejanza hay entre la emoción de su amor más temprano y la que experimentó la primera vez que cantó ante el m"
+        },
+        {
+          "archivo": "1925_06_01_ONDAS.txt",
+          "contexto": "la cual cualquiera de nuestras sensaciones sirve de llamador para convocar a la emoción otra porción de ellas no directamente solicitadas, pero que con ello se solidar"
+        },
+        {
+          "archivo": "1925_06_28_ONDAS.txt",
+          "contexto": "o de unos personajes que están observados y transcritos con una fidelidad y una emoción que son la mejor garantía para la eficacia de una obra y para que ésta pase a l"
+        },
+        {
+          "archivo": "1925_08_23_ONDAS.txt",
+          "contexto": "me place la imagen del teleoyente humilde, al cual le trae su receptor la doble emoción de la distancia vencida y del espectáculo entrevisto. el árbol del ocio ofrecía"
+        },
+        {
+          "archivo": "1925_08_23_ONDAS.txt",
+          "contexto": "¿quién le quita a la radio este matiz de fantasía? realmente hay en ella una emoción nueva, quizá un poco romántica, pues no en vano se radian también manojos de va"
+        },
+        {
+          "archivo": "1925_09_13_ONDAS.txt",
+          "contexto": "una honda huella de emoción dejaron en nuestro espíritu los versos bravos de julián sánchez prieto, el past"
+        },
+        {
+          "archivo": "1925_10_04_ONDAS.txt",
+          "contexto": "emoción"
+        },
+        {
+          "archivo": "1925_10_04_ONDAS.txt",
+          "contexto": "o el humo de un cigarrillo fumado en pipa de borkum riff; y como el quinteto de emoción ha tocado maravillosamente \"dentro de mi despacho\"; y como el speaker me dijo m"
+        },
+        {
+          "archivo": "1925_10_04_ONDAS.txt",
+          "contexto": "do deseos irresistibles de coger la pluma y a todo correr, con el vértigo de la emoción, trazar estas líneas de enhorabuena y de agradecimiento a la emisora que de día"
+        },
+        {
+          "archivo": "1925_11_01_ONDAS.txt",
+          "contexto": "tro de la cruz hace poco más de noventa. la gracia, la limpidez, la tersura, la emoción, el patetismo de esa música parecen hoy más claros, más profundos que nunca."
+        },
+        {
+          "archivo": "1925_12_06_ONDAS.txt",
+          "contexto": "no sin cierta emoción, teñida de poesía pretérita, se recuerda el gramófono familiar, ornato de comed"
+        },
+        {
+          "archivo": "1925_12_20_ONDAS.txt",
+          "contexto": "elio de navidad\" en un terreno en donde lo pintoresco se mezcla felizmente a la emoción del tema religioso-popular. ese poema es como un amplio friso decorativo en el"
+        },
+        {
+          "archivo": "1926-06-20_ONDAS.txt",
+          "contexto": "\"una emoción muy intensa, pues al pensar que tantísimas personas podían oírme, la tranquilid"
+        },
+        {
+          "archivo": "1926_03_14_ONDAS.txt",
+          "contexto": "a decirse, pero sí un sentimiento dominante e inspirador, que colorearía con su emoción el tono sentimental dominante en esa música, que así comenzaba, sin dejar de se"
+        },
+        {
+          "archivo": "1926_03_21_ONDAS.txt",
+          "contexto": "los que, imposibilitados por sus dolores físicos, no habían podido percibir la emoción de su maravilloso arte."
+        },
+        {
+          "archivo": "1926_03_28_ONDAS.txt",
+          "contexto": "o profana conservan todavía su maravillosa frescura y belleza, su intensidad de emoción."
+        },
+        {
+          "archivo": "1926_03_28_ONDAS.txt",
+          "contexto": "los asilos y hospitales, para que los enfermos y asilados pudiesen percibir la emoción del arte. en este día las ondas electromagnéticas hermanaron el arte y la pieda"
+        },
+        {
+          "archivo": "1926_03_28_ONDAS.txt",
+          "contexto": "los a gran número de radioyentes que no se conformaban únicamente con sentir la emoción de sus canciones, sino que necesitaban verle para convencerse de que de la garg"
+        },
+        {
+          "archivo": "1926_04_18_ONDAS.txt",
+          "contexto": "tro de la cruz hace poco más de noventa. la gracia, la limpidez, la tersura, la emoción, el patetismo de esa música parecen hoy más claros, más profundos que nunca."
+        }
+      ],
+      "sentir": [
+        {
+          "archivo": "1925-08-30_ONDAS.txt",
+          "contexto": "multitud de óperas, y trasladado a inglaterra, su patria de adopción, vuelve a sentir que su temperamento de alemán desea abrirse paso ante la contemplación de la mú"
+        },
+        {
+          "archivo": "1925_10_04_ONDAS.txt",
+          "contexto": "a bella molinera\", que se inspira en un ciclo de poesías de müller, que dejaron sentir a schúbert todo su encanto, fué asimismo una obra favorita del público que frec"
+        },
+        {
+          "archivo": "1925_11_01_ONDAS.txt",
+          "contexto": "a la del siglo xviii parece, generalmente, inocente y candorosa. mas discernir, sentir el profundo dramatismo de la música de mozart es una exigencia elemental y prim"
+        },
+        {
+          "archivo": "1925_11_08_ONDAS.txt",
+          "contexto": "nitud y su mayor fortaleza. un genio leonino, que desde las primeras notas deja sentir su poderosa garra. cántico jamás entonado con mayor valentía de quien se lanza"
+        },
+        {
+          "archivo": "1925_11_15_ONDAS.txt",
+          "contexto": "lar, adquiere cada día mayor ascendiente en españa, en donde su influjo se deja sentir con gran intensidad, precisamente en aquellos compositores que más vivamente si"
+        },
+        {
+          "archivo": "1926-06-20_ONDAS.txt",
+          "contexto": "solo en el estudio desapareció al abrir el conmutador el \"speaker\"; me parecía sentir un sinfín de ojos fijos en mis manos, y se me hizo más difícil acercarme a aque"
+        },
+        {
+          "archivo": "1926_03_28_ONDAS.txt",
+          "contexto": "multitud de óperas, y trasladado a inglaterra, su patria de adopción, vuelve a sentir que su temperamento de alemán desea abrirse paso ante la contemplación de la mú"
+        },
+        {
+          "archivo": "1926_03_28_ONDAS.txt",
+          "contexto": "los pasillos a gran número de radioyentes que no se conformaban únicamente con sentir la emoción de sus canciones, sino que necesitaban verle para convencerse de que"
+        },
+        {
+          "archivo": "1926_06_06_ONDAS.txt",
+          "contexto": "tal criterio estético apenas se deja sentir en la música de cámara de esos compositores, en la cual parecen provenir más di"
+        },
+        {
+          "archivo": "1926_06_20_ONDAS.txt",
+          "contexto": "mi impresión ante el micrófono por vez primera fué una cosa tan fácil de sentir como difícil de expresar. ¿temor? ¿asombro? ¿recelo? ¿apocamiento? un poco de t"
+        },
+        {
+          "archivo": "1926_06_20_ONDAS.txt",
+          "contexto": "artes se reciben posteriormente y que son, sin duda alguna, fiel testimonio del sentir del público que nos ha escuchado. los éxitos a través de la radiotelefonía tien"
+        },
+        {
+          "archivo": "1926_06_20_ONDAS.txt",
+          "contexto": "solo en el estudio desapareció al abrir el conmutador el \"speaker\"; me parecía sentir un sinfín de ojos fijos en mis manos, y se me hizo más difícil acercarme a aque"
+        },
+        {
+          "archivo": "1926_08_08_ONDAS.txt",
+          "contexto": "«la bella molinera», que se inspira en un ciclo de poesías que también dejaron sentir a schubert su rústico encanto, fué asimismo una obra favorita del público que f"
+        },
+        {
+          "archivo": "1926_08_22_ONDAS2.txt",
+          "contexto": "e que el famoso fenómeno del desvanecimiento de los sonidos, el fading, se deja sentir singularmente por la noche sobre las ondas de 150 a 400 metros. también las est"
+        },
+        {
+          "archivo": "1926_10_24_ONDAS.txt",
+          "contexto": "uiado por un despertar inconsciente de su amor juvenil hacia la cortesana, y al sentir su pérdida irremediable, una desesperación profunda le invade."
+        },
+        {
+          "archivo": "1927:05:29_ONDAS.txt",
+          "contexto": "ohemia, hoy incluida en la república checoslovaca, y en todas sus obras se deja sentir esa influencia popular más o menos discretamente."
+        },
+        {
+          "archivo": "1927_02_06_ONDAS.txt",
+          "contexto": "to? que no ha de herir nunca las susceptibilidades y ha de amoldarse siempre al sentir general de los que la escuchan, llevando el buen consejo y el amor a los corazo"
+        },
+        {
+          "archivo": "1927_05_08_ONDAS.txt",
+          "contexto": "s de ella la revolución en todos los órdenes artísticos, cuyas huellas se dejan sentir todavía después de haber estado en boga durante toda la década última."
+        },
+        {
+          "archivo": "1927_05_08_ONDAS.txt",
+          "contexto": "ner escribió su famosa ópera pasaba por una fuerte crisis nerviosa, que se deja sentir en tannhauser. en sus cartas dice que escribió su ópera con tal empeño, puso en"
+        },
+        {
+          "archivo": "1927_06_12_ONDAS.txt",
+          "contexto": "rivas (barítono): «la firma» (dúo). «la zapatilla» (dúo cómico). orquesta: «el sentir de misonía», perris. hipólito rivas (barítono): selección de fados. encarnación"
+        }
+      ],
+      "oír": [
+        {
+          "archivo": "1925-08-30_ONDAS.txt",
+          "contexto": "ientras la \"festgesang\" se cantaba en la plaza pública, la \"lobgesang\" se hacía oír en la iglesia de santo tomás, en la que durante tantos años juan sebastián bach"
+        },
+        {
+          "archivo": "1925_07_05_ONDAS.txt",
+          "contexto": "esa emisión nos ha hecho concebir la esperanza de oír algún día óperas de músicos españoles, que las empresas del teatro real no quie"
+        },
+        {
+          "archivo": "1925_07_26_ONDAS.txt",
+          "contexto": "ñor damián estaba concurridísimo. los transeúntes desocupados hacían corro para oír las peroraciones del «maestro» sobre el progreso de la radiotelefonía. a fuerza"
+        },
+        {
+          "archivo": "1925_08_09_ONDAS.txt",
+          "contexto": "res de personas se congregaron alrededor de los potentes altavoces western para oír el concierto de union radio, que en su afán de que la radiodifusión alcance su"
+        },
+        {
+          "archivo": "1925_09_20_ONDAS.txt",
+          "contexto": "ido, la radiotelefonía española ha disfrutado de excepcionales condiciones para oír vía éter una temporada entera de gran ópera, una de los grandes conciertos sinf"
+        },
+        {
+          "archivo": "1925_09_20_ONDAS.txt",
+          "contexto": "inas aquellas acotaciones que son imposibles de registrar de memoria después de oír las obras en el propio teatro."
+        },
+        {
+          "archivo": "1925_10_04_ONDAS.txt",
+          "contexto": "924-1925, sea ópera, grandes conciertos sinfónicos y bailes rusos, que pudieron oír en su integridad los radioyentes de la condal ciudad por vía e. a. j. 1."
+        },
+        {
+          "archivo": "1925_10_11_ONDAS.txt",
+          "contexto": "muchos cazadores de ondas nos han manifestado su sorpresa al oír el pasado domingo la retransmisión del concierto dado en el retiro por la brill"
+        },
+        {
+          "archivo": "1925_10_25_ONDAS.txt",
+          "contexto": "eteje con el de los instrumentos de arco, que de un modo velado y soñador dejan oír reminiscencias de músicas de un oriente tan lejano como imaginario."
+        },
+        {
+          "archivo": "1925_11_01_ONDAS.txt",
+          "contexto": "ca frágil y delicada, hasta la inmensa orquesta moderna, los pájaros han dejado oír su cantar, cuando éste es digno de tal nombre, como en el ruiseñor—un tema cons"
+        },
+        {
+          "archivo": "1925_11_15_ONDAS.txt",
+          "contexto": "la sorpresa que recibieron los oyentes fué grande al oír el domingo por la mañana el concierto inesperado de la notable agrupación madri"
+        },
+        {
+          "archivo": "1925_11_22_ONDAS.txt",
+          "contexto": "adiodifusión, inculcando en el ánimo de aquellos que no desperdician ocasión de oír cuantos conciertos son radiados, que es necesario, absolutamente preciso, dispe"
+        },
+        {
+          "archivo": "1925_12_06_ONDAS.txt",
+          "contexto": "gramófono traía las inflexiones y matices de las voces famosas que sólo podían oír en los teatros selectos las clases sociales más poderosas y brillantes. el gram"
+        },
+        {
+          "archivo": "1925_12_06_ONDAS.txt",
+          "contexto": "un rasgo instintivo del tiempo actual. las gentes que antes se conformaban con oír en gramola una aproximada versión de la voz de gayarre o de caruso, tienen hoy"
+        },
+        {
+          "archivo": "1926-06-20_ONDAS.txt",
+          "contexto": "uvo a bien dirigirse a los innumerables radioescuchas que se hallaban ávidos de oír sus elocuentes palabras. entre tanto don alfonso xiii pronunciaba su hermoso di"
+        },
+        {
+          "archivo": "1926_03_21_ONDAS.txt",
+          "contexto": "uedar inédita, pero consiguiendo, en cambio, que en el teatro del circo se haga oír su obertura zamé, que obtiene gran éxito."
+        },
+        {
+          "archivo": "1926_06_13_ONDAS.txt",
+          "contexto": "ieciocho años de una cruel dolencia, pedía en su lenta agonía que se la hiciese oír constantemente esa página de inspiración suave, perfumada de jazmines... los pa"
+        },
+        {
+          "archivo": "1926_06_20_ONDAS.txt",
+          "contexto": "y la voz del cantante célebre. muchos españoles que no pudieron ir al teatro a oír a fleta—y que probablemente no podrán ir nunca—lo han oído gracias a un aparato"
+        },
+        {
+          "archivo": "1926_06_20_ONDAS.txt",
+          "contexto": "uvo a bien dirigirse a los innumerables radioescuchas que se hallaban ávidos de oír sus elocuentes palabras. entre tanto don alfonso xiii pronunciaba su hermoso di"
+        },
+        {
+          "archivo": "1926_08_29_ONDAS.txt",
+          "contexto": "es muy natural que se pregunte al público lo que quiere oír, cuando lo que se trata es de complacerle y ofrecerle una buena audición de la"
+        }
+      ],
+      "radioyente": [
+        {
+          "archivo": "1925-09-27_ONDAS.txt",
+          "contexto": "ociados nunca escatimaron lo que era merecedor y justo. esta llamada al público radioyente en aquellos países donde se estima la obra radiodifusora ha encontrado siempre"
+        },
+        {
+          "archivo": "1925_07_26_ONDAS.txt",
+          "contexto": "legítimo portavoz de la radiodifusión. * muy pronto organizaremos la semana del radioyente, mediante un concurso de programas entre todos nuestros favorecedores. * tambié"
+        },
+        {
+          "archivo": "1925_08_16_ONDAS.txt",
+          "contexto": "r radiadas han de llevar forzosamente esa vigorosidad de frase, a fin de que el radioyente perciba las sensaciones de la palabra radiada."
+        },
+        {
+          "archivo": "1926-06-20_ONDAS.txt",
+          "contexto": ", teniendo en cuenta la diversidad de gustos en un público tan complejo como el radioyente, se procuró siempre darles variedad, y desde el género frívolo hasta el más pur"
+        },
+        {
+          "archivo": "1926_06_20_ONDAS.txt",
+          "contexto": ", teniendo en cuenta la diversidad de gustos en un público tan complejo como el radioyente, se procuró siempre darles variedad, y desde el género frívolo hasta el más pur"
+        },
+        {
+          "archivo": "1926_11_07_ONDAS.txt",
+          "contexto": "argentina), poggi. «canción peruana», gilez.—19,50. alocución dirigida al mundo radioyente, en nombre de la asociación nacional de radioyentes y de radio-barcelona, con m"
+        },
+        {
+          "archivo": "1927_01_02_ONDAS.txt",
+          "contexto": "0.0. festividad de los reyes magos de oriente, dedicada a nuestro pequeño mundo radioyente. impresión pintoresca de la llegada de los reyes magos melchor, gaspar y baltas"
+        },
+        {
+          "archivo": "1927_01_02_ONDAS.txt",
+          "contexto": "0.0. festividad de los reyes magos de oriente, dedicada a nuestro pequeño mundo radioyente. impresión pintoresca de la llegada de los reyes magos melchor, gaspar y baltas"
+        },
+        {
+          "archivo": "1927_02_06_ONDAS.txt",
+          "contexto": "nes diarias se prestan mucho a inyectar por pequeñas dosis, y sin cansancio del radioyente, las enseñanzas educativas que tanto contribuyen a la formación del carácter co"
+        },
+        {
+          "archivo": "1927_02_06_ONDAS.txt",
+          "contexto": "a emitida. palabra de prudencia y de persuasión, que ha de buscar la estima del radioyente."
+        },
+        {
+          "archivo": "1927_02_06_ONDAS.txt",
+          "contexto": "jante cosa afirmara. es más difícil dejar contento, absolutamente, a un público radioyente, que resucitar a un muerto y que inventar la inmortalidad. con todo, hay que re"
+        },
+        {
+          "archivo": "1927_11_13_ONDAS.txt",
+          "contexto": "el programa del radioyente"
+        },
+        {
+          "archivo": "1927_12_25_ONDAS.txt",
+          "contexto": "el programa del radioyente: banda de ingenieros, domingo, a las 22."
+        },
+        {
+          "archivo": "1927_12_25_ONDAS.txt",
+          "contexto": "el programa del radioyente"
+        },
+        {
+          "archivo": "1927_12_25_ONDAS.txt",
+          "contexto": "programa del radioyente"
+        },
+        {
+          "archivo": "1929_04_06_ONDAS.txt",
+          "contexto": "): concierto de mandolina.—16,30: discos de gramófono.—17,30: conferencia de un radioyente.—18,00: charla deportiva.—18,10: boletín deportivo.—18,20: boletín meteorológic"
+        },
+        {
+          "archivo": "1929_05_18_ONDAS.txt",
+          "contexto": "radece a la gran cancionista su generosa actuación, merced a la cual el público radioyente pudo participar de su maravilloso arte."
+        },
+        {
+          "archivo": "1929_06_15_ONDAS.txt",
+          "contexto": "su arte en las ondas hertzianas. todos ellos han llevado a la sensibilidad del radioyente intensas emociones y profundas enseñanzas. no queremos citar nombres, porque ca"
+        },
+        {
+          "archivo": "1929_06_15_ONDAS.txt",
+          "contexto": "uniendo su control con las salas de espectáculos públicos, ha proporcionado al radioyente muchas horas de gratísima delectación con las transmisiones de comedias, zarzue"
+        },
+        {
+          "archivo": "1929_10_05_ONDAS.txt",
+          "contexto": "s mucho los motivos de adhesión que nuestra labor musical tiene para el público radioyente, al que la emisora madrileña procura complacer en todo lo posible."
+        }
+      ],
+      "escuchar": [
+        {
+          "archivo": "1925_07_19_ONDAS.txt",
+          "contexto": "alejado y lejos de la ciudad, al terminar la cena enciende tu receptor, ponte a escuchar y, volviendo los mandos de la sintonía de tu aparato, aguarda hasta entrada la"
+        },
+        {
+          "archivo": "1925_08_23_ONDAS.txt",
+          "contexto": "\"aquello\" mató a \"esto\", y quizá para siempre. pero hoy día volvemos a escuchar con placer una melodía de bellini, una \"cavatina\" de rossini, una \"cabaletta\" d"
+        },
+        {
+          "archivo": "1925_10_04_ONDAS.txt",
+          "contexto": "ante todo, y en vista de este nuevo medio de escuchar música a distancia, convendría determinar qué clase o clases de música resultan"
+        },
+        {
+          "archivo": "1926_04_11_ONDAS.txt",
+          "contexto": "os desagradables, que a menudo guardan semejanza con los que uno experimenta al escuchar la música de una banda que pasa, mientras las filtraciones de otra distante ape"
+        },
+        {
+          "archivo": "1926_08_29_ONDAS.txt",
+          "contexto": "o en lo que oye. porque, a pesar de lo que corrientemente se dice y se cree, el escuchar constituye, a su vez, un arte, una disciplina. el escuchar no es una posición i"
+        },
+        {
+          "archivo": "1926_12_26_ONDAS.txt",
+          "contexto": "cualquier teleoyente sentiría cierta dramática curiosidad al escuchar esas cien voces disciplinadas y agradables. porque la prensa madrileña anunció"
+        },
+        {
+          "archivo": "1927-01-01_ONDAS.txt",
+          "contexto": "sensibilidad, se apaga, por fin. el más grande de los músicos se ve privado de escuchar la realización musical de sus pensamientos. su sordera constituye la tragedia d"
+        },
+        {
+          "archivo": "1927_02_06_ONDAS.txt",
+          "contexto": "scuchemos la voz de las emisoras, para deducir si ellas a su vez son capaces de escuchar la voz del buen consejo."
+        },
+        {
+          "archivo": "1927_03_20_ONDAS.txt",
+          "contexto": "rechos, y si pobre hombre, el pobre músico, a quien el destino iba a impedir el escuchar sus propias obras, sabe tener para consigo mismo una mentira heroica: se cree f"
+        },
+        {
+          "archivo": "1927_09_04_ONDAS.txt",
+          "contexto": ". joncières, partidario decidido de «la música del porvenir», marchó a munich a escuchar las primeras representaciones del gigantesco revolucionario... para volver a pa"
+        },
+        {
+          "archivo": "1927_12_18_ONDAS.txt",
+          "contexto": ". joncières, partidario decidido de la «música del porvenir», marchó a munich a escuchar las primeras representaciones del gigantesco revolucionario... para volver a pa"
+        },
+        {
+          "archivo": "1929-05-04_ONDAS.txt",
+          "contexto": "y la cosecha es mala. el alcalde promete contárselo al gobierno, pero tiene que escuchar primero los lamentos de su sobrino jeremías, que está enamorado de su prima ros"
+        },
+        {
+          "archivo": "1929_08_10_ONDAS.txt",
+          "contexto": "el baturro...; pero todo esto no son sino emociones reflejas que nos produjo el escuchar las danzas exóticas que emitió unión radio la noche del lunes."
+        },
+        {
+          "archivo": "1929_08_31_ONDAS.txt",
+          "contexto": "o la despertase después de haber atravesado la barrera de fuego. no se tarda en escuchar la trompa de sigfredo, que valientemente va sorteando las llamas y llega hasta"
+        },
+        {
+          "archivo": "1930-11-22_ONDAS.txt",
+          "contexto": "eciales no puedan asistir personalmente y cuya afición al arte musical les hace escuchar con verdadero interés cuantos conciertos transmite unión radio desde su estudio"
+        },
+        {
+          "archivo": "1930-12-20_ONDAS.txt",
+          "contexto": "elativamente cómodas, del teatro calderón y pensar con cierta fruición \"vamos a escuchar un rato de música\", no es cosa que pueda hacerse todos los días. escasearán las"
+        },
+        {
+          "archivo": "1930_01_18_ONDAS.txt",
+          "contexto": "e envía a la central y es corregido a través del aparato. no se trata, pues, de escuchar pasivamente, sino que hay que trabajar con intensidad."
+        },
+        {
+          "archivo": "1930_05_17_ONDAS.txt",
+          "contexto": "cua trama no triunfa, y el rey manda aparecer a la acusada. preséntase elsa. al escuchar la tremenda acusación que sostiene telramondo, eleva los ojos al cielo y expres"
+        },
+        {
+          "archivo": "1930_08_30_ONDAS.txt",
+          "contexto": "cie de diputados por la radiodifusión que aquí no hablan, sino que se limitan a escuchar, cámara ideal en la que no figura ni interviene la campanilla presidencial ni e"
+        },
+        {
+          "archivo": "1930_09_20_ONDAS.txt",
+          "contexto": ". jonciéres, partidario decidido de la \"música del porvenir\", marchó a munich a escuchar las primeras representaciones del gigantesco revolucionario... para volver a pa"
+        }
+      ],
+      "escuchando": [
+        {
+          "archivo": "1925_09_20_ONDAS.txt",
+          "contexto": "pequeña pléyade de los que tan lejos como en 1912 sentíase maravillado y feliz escuchando el rítmico ronquido horario de la torre eiffel para servicios de su observatori"
+        },
+        {
+          "archivo": "1925_09_20_ONDAS.txt",
+          "contexto": "esionales y a todas aquellas personas cultas en música que, además de recrearse escuchando con auriculares o altoparlante, gusten de fisgonear a fondo el trabajo de la or"
+        },
+        {
+          "archivo": "1926_06_13_ONDAS.txt",
+          "contexto": "to que el que, desde el otro lado de la vida, le enviaba aquella niña que murió escuchando sus melancólicos acordes..."
+        },
+        {
+          "archivo": "1926_09_12_ONDAS.txt",
+          "contexto": "to que el que, desde el otro lado de la vida, le enviaba aquella niña que murió escuchando sus melancólicos acordes..."
+        },
+        {
+          "archivo": "1926_10_24_ONDAS.txt",
+          "contexto": "to que el que, desde el otro lado de la vida, le enviaba aquella niña que murió escuchando sus melancólicos acordes..."
+        },
+        {
+          "archivo": "1927_01_02_ONDAS.txt",
+          "contexto": "e el otro lado de la vida, le llegaba en la eternidad de aquella niña que murió escuchando sus melodías, acordes."
+        },
+        {
+          "archivo": "1927_02_27_ONDAS.txt",
+          "contexto": "o, que el que, desde el otro lado de la vida, le enviaba aquella niña que murió escuchando sus melancólicos acordes..."
+        },
+        {
+          "archivo": "1929_06_01_ONDAS.txt",
+          "contexto": "ta de su camarada clodomiro v, rey en funciones de espartanopia y papá de olga, escuchando con fruición mal reprimida que olga está consumida de amor por pío, a quien con"
+        },
+        {
+          "archivo": "1929_06_08_ONDAS.txt",
+          "contexto": "to que el que, desde el otro lado de la vida, le enviaba aquella niña que murió escuchando sus melancólicos acordes..."
+        },
+        {
+          "archivo": "1930_06_28_ONDAS.txt",
+          "contexto": "se podría suponer que, escuchando así, con frecuencia, las composiciones de los grandes maestros, el oyente de t."
+        },
+        {
+          "archivo": "1930_07_12_ONDAS.txt",
+          "contexto": "es perdidas; pero leonor le ha seguido de cerca, refugiándose en el monasterio, escuchando cómo fernando pronuncia sus votos eternos. cuando éste sale del convento, leono"
+        },
+        {
+          "archivo": "1930_09_06_ONDAS.txt",
+          "contexto": "o, que el que, desde el otro lado de la vida, le enviaba aquella niña que murió escuchando sus melancólicos acordes..."
+        },
+        {
+          "archivo": "1931_03_28_ONDAS.txt",
+          "contexto": "tor fama universal. bellini escribió su ópera en un pueblecillo cerca de parís, escuchando los consejos de rossini, que le recomendaba mayor cuidado e interés en la técni"
+        },
+        {
+          "archivo": "1931_08_08_ONDAS.txt",
+          "contexto": "o, que el que, desde el otro lado de la vida, le enviaba aquella niña que murió escuchando sus melancólicos acordes..."
+        },
+        {
+          "archivo": "1933_04_29_ONDAS.txt",
+          "contexto": "o, que el que, desde el otro lado de la vida, le enviaba aquella niña que murió escuchando sus melancólicos acordes..."
+        },
+        {
+          "archivo": "1935_01_26_ONDAS.txt",
+          "contexto": "es perdidas; pero leonor le ha seguido de cerca, refugiándose en el monasterio, escuchando cómo fernando pronuncia sus votos eternos. cuando éste sale del convento, leono"
+        },
+        {
+          "archivo": "1935_10_05_ONDAS.txt",
+          "contexto": ". \"¡es el ruido de un arroyo que se oculta entre las hojas!\" pero el niño sigue escuchando la voz mágica del rey de los alisos, y cuando calla, el padre ve con terror que"
+        }
+      ],
+      "oyente": [
+        {
+          "archivo": "1926-06-20_ONDAS.txt",
+          "contexto": "tanto la del cisne como la del teatro de novedades consiguieron que el público oyente se interesara por dichas obras líricas y acudiera a las representaciones para g"
+        },
+        {
+          "archivo": "1926_01_31_ONDAS.txt",
+          "contexto": "ente vivas simpatías por la citada entidad, representativa de los intereses del oyente, presta siempre toda clase de facilidades para que su notable agrupación artíst"
+        },
+        {
+          "archivo": "1926_04_11_ONDAS.txt",
+          "contexto": "para el oyente directo, vale decir, para el que se halla en un mismo recinto con los artistas,"
+        },
+        {
+          "archivo": "1926_06_20_ONDAS.txt",
+          "contexto": "tanto la del cisne como la del teatro de novedades consiguieron que el público oyente se interesara por dichas obras líricas y acudiera a las representaciones para g"
+        },
+        {
+          "archivo": "1929_06_08_ONDAS.txt",
+          "contexto": "s, que suponen para unión radio un motivo de satisfacción al ofrecer al público oyente un servicio de tan elevada categoría lírica."
+        },
+        {
+          "archivo": "1929_06_08_ONDAS.txt",
+          "contexto": "e los acontecimientos radiotelefónicos que proporcionará unión radio al público oyente es la retransmisión, desde el palacio de la exposición de barcelona, de los mag"
+        },
+        {
+          "archivo": "1929_06_08_ONDAS.txt",
+          "contexto": "s, que suponen para unión radio un motivo de satisfacción al ofrecer al público oyente un servicio de tan elevada categoría lírica."
+        },
+        {
+          "archivo": "1929_06_08_ONDAS.txt",
+          "contexto": "e los acontecimientos radiotelefónicos que proporcionará unión radio al público oyente es la retransmisión, desde el palacio de la exposición de barcelona, de los mag"
+        },
+        {
+          "archivo": "1929_06_29_ONDAS.txt",
+          "contexto": "ese aspecto, una sensibilidad de real distinción y finura dicta la música, y el oyente queda complacido, a pesar de unos títulos que le previenen en contra."
+        },
+        {
+          "archivo": "1929_07_27_ONDAS.txt",
+          "contexto": "da en el paseo de rosales sigue siendo una de las emisiones que más agradan al oyente madrileño, que puede disfrutar de estas magníficas audiciones confortablemente"
+        },
+        {
+          "archivo": "1929_08_24_ONDAS.txt",
+          "contexto": "en el concierto sinfónico del martes por la noche se ofrecía al oyente una novedad de gran interés: la primera audición completa del \"ballet\" de straw"
+        },
+        {
+          "archivo": "1929_09_07_ONDAS.txt",
+          "contexto": "necesaria para conservar toda su frescura nativa y llegar con toda su poesía al oyente."
+        },
+        {
+          "archivo": "1930_06_28_ONDAS.txt",
+          "contexto": ", escuchando así, con frecuencia, las composiciones de los grandes maestros, el oyente de t. s. h. adquiere poco a poco una educación musical perfecta. no siempre es"
+        },
+        {
+          "archivo": "1930_10_18_ONDAS.txt",
+          "contexto": "para impresionar a la sensibilidad de la masa oyente, el reportaje radiado puede constituir el medio ideal, pero a condición de que"
+        },
+        {
+          "archivo": "1930_12_27_ONDAS.txt",
+          "contexto": "emos resaltar el entusiasmo que tanto el público habitual de conciertos como el oyente de la radio, ha demostrado en esta ocasión. y al resaltarlo, quisiéramos eludir"
+        },
+        {
+          "archivo": "1930_12_27_ONDAS.txt",
+          "contexto": "tos acontecimientos radiofónicos puedan superar a los mismos deseos del público oyente."
+        },
+        {
+          "archivo": "1931_10_10_ONDAS.txt",
+          "contexto": "moslo con propiedad: auditores—. es el tono menor por su intimidad, porque cada oyente está recluido en su hogar, en el ambiente reducido del saloncito. y la voz ha d"
+        },
+        {
+          "archivo": "1931_11_07_ONDAS.txt",
+          "contexto": "y admirable. acaso celebren verdaderos alardes, días extraordinarios en que al oyente se le brinda el deleite de un espectáculo inaudito por su grandiosidad. el desa"
+        },
+        {
+          "archivo": "1931_11_07_ONDAS.txt",
+          "contexto": "uestra personalidad se acusa como en ningún otro país. os lo dice de corazón un oyente de muchas noches ante un aparato que brindaba todas las posibilidades. ¡palabra"
+        },
+        {
+          "archivo": "1931_11_28_ONDAS.txt",
+          "contexto": "o de una noche de verano\". una música feliz que comunica su ligereza de alma al oyente, mientras que le encanta por la fina precisión de sus juegos sonoros. muy joven"
+        }
+      ]
+    }
+  },
+  "estadisticas": {
+    "corpus": {
+      "total_archivos": 472,
+      "total_palabras": 1743435,
+      "total_lineas": 117364,
+      "media_palabras_por_archivo": 3693.7,
+      "rango_temporal": "1925-1935"
+    },
+    "distribucion_por_año": {
+      "0": {
+        "archivos": 1,
+        "palabras": 3818
+      },
+      "1925": {
+        "archivos": 27,
+        "palabras": 65976
+      },
+      "1926": {
+        "archivos": 50,
+        "palabras": 137300
+      },
+      "1927": {
+        "archivos": 51,
+        "palabras": 240779
+      },
+      "1929": {
+        "archivos": 49,
+        "palabras": 219565
+      },
+      "1930": {
+        "archivos": 51,
+        "palabras": 209961
+      },
+      "1931": {
+        "archivos": 46,
+        "palabras": 141954
+      },
+      "1932": {
+        "archivos": 52,
+        "palabras": 152634
+      },
+      "1933": {
+        "archivos": 52,
+        "palabras": 154318
+      },
+      "1934": {
+        "archivos": 47,
+        "palabras": 215354
+      },
+      "1935": {
+        "archivos": 46,
+        "palabras": 201776
+      }
+    },
+    "generos_musicales": [
+      [
+        "música de cámara",
+        4360
+      ],
+      [
+        "ballet/danza",
+        4315
+      ],
+      [
+        "ópera",
+        3411
+      ],
+      [
+        "canción/cuplé",
+        3137
+      ],
+      [
+        "música sinfónica",
+        2444
+      ],
+      [
+        "música popular",
+        2051
+      ],
+      [
+        "música coral",
+        1105
+      ],
+      [
+        "zarzuela",
+        1088
+      ],
+      [
+        "jazz",
+        806
+      ],
+      [
+        "flamenco",
+        758
+      ],
+      [
+        "opereta",
+        272
+      ],
+      [
+        "música religiosa",
+        115
+      ]
+    ],
+    "generos_por_año": {
+      "0": {
+        "ópera": 6,
+        "zarzuela": 2,
+        "música sinfónica": 3,
+        "música de cámara": 9,
+        "canción/cuplé": 12,
+        "flamenco": 6,
+        "jazz": 1,
+        "música coral": 6,
+        "ballet/danza": 6,
+        "música popular": 11
+      },
+      "1925": {
+        "ópera": 104,
+        "música sinfónica": 78,
+        "música de cámara": 212,
+        "canción/cuplé": 96,
+        "flamenco": 52,
+        "jazz": 82,
+        "música coral": 29,
+        "música religiosa": 2,
+        "ballet/danza": 80,
+        "música popular": 57,
+        "opereta": 13,
+        "zarzuela": 9
+      },
+      "1926": {
+        "ópera": 208,
+        "música sinfónica": 150,
+        "ballet/danza": 265,
+        "zarzuela": 52,
+        "música de cámara": 682,
+        "canción/cuplé": 390,
+        "música coral": 98,
+        "música popular": 162,
+        "opereta": 9,
+        "jazz": 232,
+        "flamenco": 90,
+        "música religiosa": 6
+      },
+      "1927": {
+        "música sinfónica": 358,
+        "música de cámara": 1110,
+        "ópera": 481,
+        "zarzuela": 111,
+        "canción/cuplé": 540,
+        "flamenco": 180,
+        "jazz": 252,
+        "música coral": 201,
+        "ballet/danza": 547,
+        "música popular": 322,
+        "opereta": 63,
+        "música religiosa": 9
+      },
+      "1929": {
+        "ópera": 455,
+        "música sinfónica": 360,
+        "música de cámara": 428,
+        "canción/cuplé": 393,
+        "jazz": 73,
+        "música coral": 138,
+        "ballet/danza": 811,
+        "música popular": 292,
+        "opereta": 44,
+        "zarzuela": 140,
+        "flamenco": 90,
+        "música religiosa": 9
+      },
+      "1930": {
+        "ópera": 379,
+        "zarzuela": 166,
+        "música sinfónica": 355,
+        "canción/cuplé": 269,
+        "música coral": 123,
+        "ballet/danza": 560,
+        "música popular": 215,
+        "música de cámara": 231,
+        "flamenco": 76,
+        "jazz": 18,
+        "opereta": 19,
+        "música religiosa": 26
+      },
+      "1931": {
+        "ópera": 322,
+        "música sinfónica": 159,
+        "música de cámara": 116,
+        "canción/cuplé": 130,
+        "jazz": 17,
+        "ballet/danza": 200,
+        "música popular": 176,
+        "opereta": 20,
+        "zarzuela": 92,
+        "música coral": 66,
+        "flamenco": 55,
+        "música religiosa": 9
+      },
+      "1932": {
+        "ópera": 335,
+        "zarzuela": 123,
+        "música sinfónica": 184,
+        "música de cámara": 101,
+        "canción/cuplé": 154,
+        "flamenco": 28,
+        "música coral": 43,
+        "ballet/danza": 190,
+        "música popular": 166,
+        "opereta": 15,
+        "jazz": 26,
+        "música religiosa": 17
+      },
+      "1933": {
+        "ópera": 254,
+        "música sinfónica": 212,
+        "canción/cuplé": 172,
+        "flamenco": 16,
+        "ballet/danza": 256,
+        "música popular": 173,
+        "zarzuela": 72,
+        "música de cámara": 54,
+        "jazz": 17,
+        "música coral": 51,
+        "opereta": 16,
+        "música religiosa": 6
+      },
+      "1934": {
+        "ópera": 436,
+        "zarzuela": 163,
+        "música sinfónica": 302,
+        "música de cámara": 797,
+        "canción/cuplé": 465,
+        "música coral": 170,
+        "música religiosa": 15,
+        "ballet/danza": 644,
+        "música popular": 207,
+        "flamenco": 67,
+        "opereta": 40,
+        "jazz": 42
+      },
+      "1935": {
+        "ópera": 431,
+        "zarzuela": 158,
+        "música sinfónica": 283,
+        "música de cámara": 620,
+        "canción/cuplé": 516,
+        "música coral": 180,
+        "ballet/danza": 756,
+        "música popular": 270,
+        "flamenco": 98,
+        "opereta": 33,
+        "jazz": 46,
+        "música religiosa": 16
+      }
+    },
+    "instrumentos": [
+      [
+        "piano",
+        2343
+      ],
+      [
+        "violín",
+        1188
+      ],
+      [
+        "órgano",
+        565
+      ],
+      [
+        "guitarra",
+        505
+      ],
+      [
+        "violonchelo",
+        226
+      ],
+      [
+        "flauta",
+        211
+      ],
+      [
+        "viola",
+        89
+      ],
+      [
+        "arpa",
+        80
+      ],
+      [
+        "trompa",
+        75
+      ],
+      [
+        "bandurria",
+        69
+      ],
+      [
+        "trompeta",
+        64
+      ],
+      [
+        "clarinete",
+        45
+      ],
+      [
+        "saxofón",
+        42
+      ],
+      [
+        "gaita",
+        36
+      ],
+      [
+        "oboe",
+        34
+      ],
+      [
+        "bandoneón",
+        30
+      ],
+      [
+        "contrabajo",
+        23
+      ],
+      [
+        "fagot",
+        19
+      ],
+      [
+        "laúd",
+        18
+      ],
+      [
+        "pandereta",
+        16
+      ],
+      [
+        "acordeón",
+        14
+      ],
+      [
+        "trombón",
+        12
+      ],
+      [
+        "batería",
+        10
+      ],
+      [
+        "castañuelas",
+        10
+      ],
+      [
+        "tímpani",
+        9
+      ],
+      [
+        "tuba",
+        2
+      ]
+    ],
+    "espacios_musicales": [
+      [
+        "teatro",
+        2220
+      ],
+      [
+        "iglesia",
+        901
+      ],
+      [
+        "estudio",
+        785
+      ],
+      [
+        "conservatorio",
+        419
+      ],
+      [
+        "salón",
+        272
+      ],
+      [
+        "sala",
+        164
+      ],
+      [
+        "café",
+        121
+      ],
+      [
+        "casino",
+        27
+      ],
+      [
+        "ateneo",
+        20
+      ]
+    ],
+    "imagenes": {
+      "total_registros": 2231,
+      "por_categoria": [
+        [
+          "COMPOSITORES",
+          522
+        ],
+        [
+          "OTROS INTÉRPRETES Y PROTAGONISTAS",
+          407
+        ],
+        [
+          "CANTANTES",
+          352
+        ],
+        [
+          "ÓPERAS",
+          257
+        ],
+        [
+          "TIRAS CÓMICAS, CHISTES Y DIBUJOS",
+          145
+        ],
+        [
+          "ESTUDIOS DE RADIO Y OTRAS IMÁGENES GENERALES",
+          136
+        ],
+        [
+          "OTRAS OBRAS MUSICALES CONCRETAS",
+          111
+        ],
+        [
+          "ANUNCIOS",
+          63
+        ],
+        [
+          "PORTADAS MUSICALES (sin intérpretes o compositores concretos) y CABECERAS CON MÚSICA",
+          55
+        ],
+        [
+          "CARICATURAS y RETRATOS de Compositores e intérpretes",
+          44
+        ],
+        [
+          "INSTRUMENTOS, INVENTOS, EXPERIMENTOS RADIOFÓNICOS",
+          43
+        ]
+      ],
+      "por_genero_HM": [
+        [
+          "H",
+          1328
+        ],
+        [
+          "M",
+          351
+        ]
+      ],
+      "por_origen": [
+        [
+          "España",
+          791
+        ],
+        [
+          "Italia",
+          253
+        ],
+        [
+          "Alemania",
+          203
+        ],
+        [
+          "Francia",
+          173
+        ],
+        [
+          "Rusia",
+          85
+        ],
+        [
+          "EE.UU",
+          50
+        ],
+        [
+          "Extranjero",
+          28
+        ],
+        [
+          "Austria",
+          27
+        ],
+        [
+          "Húngara",
+          23
+        ],
+        [
+          "Checoslovaquia",
+          15
+        ],
+        [
+          "Noruega",
+          9
+        ],
+        [
+          "Argentina",
+          8
+        ],
+        [
+          "Inglaterra",
+          6
+        ],
+        [
+          "Bélgica",
+          6
+        ],
+        [
+          "Polonia",
+          6
+        ],
+        [
+          "Cuba",
+          6
+        ],
+        [
+          "Japón",
+          6
+        ],
+        [
+          "Suiza",
+          5
+        ],
+        [
+          "Finlandia",
+          5
+        ],
+        [
+          "México",
+          4
+        ],
+        [
+          "N/C",
+          3
+        ],
+        [
+          "Grecia",
+          3
+        ],
+        [
+          "Holanda",
+          2
+        ],
+        [
+          "Filipinas",
+          1
+        ],
+        [
+          "China",
+          1
+        ],
+        [
+          "Irlanda",
+          1
+        ],
+        [
+          "Bruselas",
+          1
+        ],
+        [
+          "Rumanía",
+          1
+        ],
+        [
+          "Hawai",
+          1
+        ],
+        [
+          "Java",
+          1
+        ],
+        [
+          "Uzbekistán",
+          1
+        ],
+        [
+          "Dinamarca",
+          1
+        ],
+        [
+          "Guatemala",
+          1
+        ],
+        [
+          "Groenlandia",
+          1
+        ]
+      ],
+      "por_tipo_musica": [
+        [
+          "Clásica",
+          696
+        ],
+        [
+          "Ópera",
+          259
+        ],
+        [
+          "Lírico",
+          163
+        ],
+        [
+          "Popular",
+          74
+        ],
+        [
+          "Zarzuela",
+          31
+        ],
+        [
+          "Flamenco",
+          25
+        ],
+        [
+          "Jazz",
+          15
+        ],
+        [
+          "Clásica/Sinfónica",
+          8
+        ],
+        [
+          "Cuplé",
+          6
+        ],
+        [
+          "Vals",
+          6
+        ],
+        [
+          "Varietés",
+          6
+        ],
+        [
+          "Clásica/Música de cámara",
+          5
+        ],
+        [
+          "Tango",
+          4
+        ],
+        [
+          "Música tradicional",
+          4
+        ],
+        [
+          "N/C",
+          2
+        ],
+        [
+          "Coral",
+          1
+        ],
+        [
+          "Music Hall",
+          1
+        ],
+        [
+          "Bandas de música",
+          1
+        ],
+        [
+          "Polonia",
+          1
+        ],
+        [
+          "Clásica/Ópera",
+          1
+        ]
+      ]
+    }
+  },
+  "geografia": [
+    [
+      "España",
+      4575
+    ],
+    [
+      "Madrid",
+      3210
+    ],
+    [
+      "Francia",
+      1925
+    ],
+    [
+      "Barcelona",
+      1868
+    ],
+    [
+      "Sevilla",
+      1248
+    ],
+    [
+      "París",
+      1059
+    ],
+    [
+      "Italia",
+      1056
+    ],
+    [
+      "Rusia",
+      916
+    ],
+    [
+      "Alemania",
+      896
+    ],
+    [
+      "Viena",
+      511
+    ],
+    [
+      "Bilbao",
+      475
+    ],
+    [
+      "San Sebastián",
+      413
+    ],
+    [
+      "Valencia",
+      369
+    ],
+    [
+      "Roma",
+      344
+    ],
+    [
+      "Hungría",
+      318
+    ],
+    [
+      "Londres",
+      257
+    ],
+    [
+      "Milán",
+      202
+    ],
+    [
+      "Berlín",
+      198
+    ],
+    [
+      "Estados Unidos",
+      166
+    ],
+    [
+      "Cuba",
+      151
+    ],
+    [
+      "Argentina",
+      141
+    ],
+    [
+      "Austria",
+      128
+    ],
+    [
+      "Nueva York",
+      75
+    ],
+    [
+      "Buenos Aires",
+      55
+    ],
+    [
+      "La Habana",
+      17
+    ],
+    [
+      "México",
+      13
+    ]
+  ]
+}

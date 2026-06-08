@@ -1,0 +1,412 @@
+METODOLOGÍA DEL ANÁLISIS DE DISCURSO - CORPUS ONDAS (1925-1935)
+================================================================
+Fecha de ejecución: 29 de enero de 2026
+Proyecto LexiMus / MUSLYME - Universidad de Salamanca
+
+
+1. FUENTES DE DATOS
+================================================================
+
+1.1. Corpus textual
+- Directorio: /ONDAS/ONDAS TXT PRIMERA TRANSCRIPCIÓN/
+- 472 archivos TXT correspondientes a transcripciones de noticias
+  musicales publicadas en la revista Ondas (Madrid, 1925-1935).
+- Incluyen noticias, críticas, reseñas y algunos programas radiofónicos
+  (no la totalidad de la programación).
+- Total procesado: 1.743.435 palabras.
+- Los archivos llevan como nombre la fecha de publicación del número
+  en formato AAAA_MM_DD_ONDAS.txt o AAAA-MM-DD_ONDAS.txt.
+
+1.2. Listados de referencia
+- listado_cantantes_ondas.txt: 291 cantantes distintos.
+- listado_compositores_ondas.txt: 142 compositores distintos.
+- listado_interpretes_instrumentos_ondas.txt: 207 intérpretes distintos.
+- listado_operas_ondas.txt: 66 óperas distintas.
+- Estos listados fueron compilados previamente a partir del índice de
+  imágenes y del vaciado sistemático de la revista.
+
+1.3. Índice de imágenes
+- Archivo: indice_imagenes_ondas_completo.csv
+- 2.231 registros con campos: Categoría, Fecha, Título, Nombres propios,
+  Instrumento/profesión, Obras concretas, Género (H/M/Mixto),
+  Origen (España/Extranjero), Tipo de música.
+
+
+2. PROCESAMIENTO DEL CORPUS
+================================================================
+
+2.1. Carga de archivos
+- Se leyeron los 472 archivos TXT con codificación UTF-8.
+- Se extrajo la fecha (año, mes, día) del nombre de cada archivo
+  mediante expresión regular.
+- Para cada archivo se almacenó: nombre, fecha, contenido íntegro,
+  contenido en minúsculas (para búsquedas), número de palabras y
+  número de líneas.
+
+2.2. Segmentación en secciones
+- Cada archivo se dividió en secciones utilizando el delimitador "==="
+  que aparece recurrentemente en las transcripciones para separar
+  artículos, notas y programaciones.
+- Se descartaron segmentos con menos de 50 caracteres (separadores
+  vacíos, líneas sueltas).
+- Si un archivo no contenía delimitadores, se trató como una sola sección.
+- Resultado: 1.993 secciones en total.
+
+
+3. ANÁLISIS 1: PORCENTAJE DE ÓPERA
+================================================================
+
+3.1. Criterios de clasificación
+Una sección se clasificó como "contenido operístico" si cumplía
+al menos una de estas condiciones:
+
+a) Mención directa: la sección contiene la palabra "ópera" u "óperas"
+   (con o sin tilde).
+
+b) Título de ópera: la sección contiene el nombre de alguna de las
+   66 óperas del listado de referencia, buscado como palabra completa
+   (delimitada por \b en regex) y con un mínimo de 4 caracteres para
+   evitar coincidencias accidentales.
+
+c) Densidad terminológica: la sección contiene 3 o más términos del
+   vocabulario operístico (soprano, tenor, barítono, bajo, contralto,
+   mezzosoprano, aria, cavatina, recitativo, libreto, Teatro Real,
+   Liceo, bel canto, diva, prima donna, etc.) sin que ninguno de
+   ellos sea la palabra "ópera" en sí.
+
+3.2. Conteo de menciones individuales de óperas
+- Para cada una de las 66 óperas del listado, se contaron las
+  ocurrencias en la totalidad del corpus unificado.
+- Se buscó cada título como palabra completa (\b) en minúsculas.
+
+3.3. Resultados
+- 1.247 secciones clasificadas como operísticas de 1.993 (62,57%).
+- 469 de 472 números contienen al menos una referencia a ópera (99,36%).
+
+
+4. ANÁLISIS 2: COMPOSITORES, CANTANTES E INTÉRPRETES
+================================================================
+
+4.1. Método general
+- Se concatenó todo el corpus en un único texto en minúsculas.
+- Se buscó cada nombre de los listados de referencia dentro de ese
+  texto, contando las ocurrencias.
+
+4.2. Diferencias en la estrategia de búsqueda según categoría
+
+  A) COMPOSITORES: búsqueda por nombre completo + apellido
+  --------------------------------------------------------
+  - Se busca primero el nombre completo (ej. "richard wagner").
+  - Además, se busca el apellido solo (ej. "wagner") porque en el
+    discurso periodístico de la época es muy frecuente referirse
+    a los compositores exclusivamente por el apellido.
+  - Se toma el valor mayor de las dos búsquedas.
+  - El apellido solo se usa únicamente si tiene 5 o más caracteres,
+    para evitar coincidencias con palabras comunes.
+  - Apellidos excluidos de la búsqueda aislada: "bach" (palabra
+    potencialmente ambigua), "fall" (palabra inglesa), "campo",
+    "forns", "boito" (demasiado cortos o ambiguos), y partículas
+    como "de", "del", "la", "von", "van", "di".
+
+  B) CANTANTES: búsqueda solo por nombre completo
+  ------------------------------------------------
+  - Se busca exclusivamente el nombre completo tal como aparece en
+    el listado (ej. "miguel fleta", "marcos redondo").
+  - NO se busca por apellido solo, porque los apellidos de cantantes
+    españoles generan falsos positivos masivos: "Sevilla" (ciudad),
+    "Martínez" (apellido ubicuo), "García", "Fernández", etc.
+
+  C) INTÉRPRETES: búsqueda solo por nombre completo
+  --------------------------------------------------
+  - Misma estrategia que cantantes, por las mismas razones.
+  - Para nombres con apodo entre comillas (ej. Manuel Rodríguez
+    "Niño de las Carolinas"), se busca también el apodo.
+  - Caso especial: Sexteto de Unión Radio. No aparece en el
+    listado de intérpretes, pero es la agrupación instrumental
+    propia de la emisora y una presencia constante en el corpus.
+    Se añade como entrada específica sumando dos búsquedas
+    exactas: "sexteto de unión radio" (196 menciones) y "nuestro
+    sexteto" (8 menciones), expresión con la que la revista se
+    refiere a su propio conjunto. Se evita deliberadamente buscar
+    "sexteto" aislado (2.311 ocurrencias en el corpus) porque
+    incluiría referencias a otras formaciones de cámara.
+
+4.3. Correcciones aplicadas durante el desarrollo
+- Primera ejecución: se usó búsqueda por apellido para todas las
+  categorías. Resultado: "Concha Sevilla" aparecía con 1.047
+  menciones, pero la verificación manual mostró 0 ocurrencias del
+  nombre completo; las 1.047 eran de la ciudad "Sevilla". Lo mismo
+  con "Concha Martínez" (245 = el apellido "Martínez"), "María
+  Valverde" (206 = "Valverde" como topónimo/apellido genérico),
+  "Simona Medina" (477 = "Medina" como topónimo), "Carmen
+  Fernández" (570 = "Fernández" ubicuo).
+- Segunda ejecución: se amplió la lista de apellidos excluidos,
+  pero el problema persistía con apellidos como "Martínez" que
+  superaban el umbral de longitud.
+- Solución final: se separó la estrategia por categoría. Los
+  compositores mantienen búsqueda por apellido (porque es la forma
+  habitual de referirse a ellos: "Beethoven", "Wagner", "Verdi")
+  mientras que cantantes e intérpretes usan exclusivamente nombre
+  completo.
+- Verificación adicional: Wagner (6 caracteres) y Verdi (5) quedaban
+  fuera con un umbral >6. Se bajó a >=5 y se verificó manualmente:
+  "wagner" = 1.076 ocurrencias (consistente con grep directo: 1.076),
+  "beethoven" = 1.185 por apellido + variantes con nombre = 1.597,
+  "verdi" = 966.
+- Apellidos compartidos: se detectó que 6 apellidos del listado de
+  compositores son compartidos por 2 o 3 personas: Bach (Johann
+  Sebastian / Johan Christian), Guerrero (Francisco / Jacinto / Juan),
+  Strauss (Richard / Óscar), Halffter (Ernesto / Rodolfo), Bellini
+  (Giovanni / Vincenzo), Nicolai (Carl Otto / Otto). La búsqueda por
+  apellido solo asignaba el mismo conteo a todos los que lo comparten
+  (ej. 539 para ambos Bach). Solución: el script detecta
+  automáticamente los apellidos compartidos a partir del listado y, para
+  esos compositores, usa exclusivamente la búsqueda por nombre completo
+  (incluyendo variantes españolas). Esto resuelve la desambiguación:
+  J.S. Bach = 171 (sumando "Juan Sebastián Bach", "Sebastián Bach",
+  "J. S. Bach", "S. Bach"), J.C. Bach = 0 (no aparece en el corpus).
+  Para Jacinto Guerrero se añadió "maestro Guerrero" como variante
+  (43 menciones en el corpus). Los apellidos no compartidos siguen
+  usando la búsqueda por apellido solo normalmente.
+- Nombres españolizados: el corpus usa sistemáticamente las formas
+  españolas de los nombres de pila de compositores extranjeros
+  ("Juan Sebastián Bach", "Ricardo Wagner", "José Verdi", "Federico
+  Chopin", "Claudio Debussy", etc.), mientras que los listados de
+  referencia usan las formas originales. Se añadió un diccionario de
+  variantes españolas para los compositores principales (45 entradas),
+  de modo que "Juan Sebastián Bach" se detecta además de "Johann
+  Sebastian Bach". El conteo final suma nombre completo original +
+  variantes españolas, y toma el máximo con el apellido solo (cuando
+  el apellido no es compartido).
+
+4.4. Limitaciones conocidas
+- Los cantantes que aparecen referidos solo por apellido en los textos
+  (ej. "Fleta" en vez de "Miguel Fleta") están infrarrepresentados.
+  La cifra de "Miguel Fleta" es 34 (nombre completo), mientras que
+  "Fleta" solo arroja 50. Se priorizó la precisión sobre la
+  exhaustividad para evitar falsos positivos.
+- Algunos nombres del listado de intérpretes son genéricos: "Radio"
+  aparece en la lista como nombre de orquesta ("Radio Barcelona",
+  "Radio Bilbao"), pero la entrada "Radio" sola genera 8.283
+  coincidencias que corresponden al término genérico. Este dato
+  se mantiene en el JSON y en los gráficos pero debe interpretarse
+  con precaución. Las entradas compuestas ("Radio Barcelona": 324)
+  sí son fiables.
+- "Juan García" en cantantes (37 menciones) podría incluir
+  coincidencias con otras personas del mismo nombre.
+
+
+5. ANÁLISIS 3: LÉXICO DE LA ESCUCHA MUSICAL
+================================================================
+
+5.1. Definición del vocabulario
+Se definieron 7 categorías semánticas. Cada categoría contiene un
+conjunto de lemas, y cada lema agrupa todas sus variantes flexivas
+(singular/plural, masculino/femenino, conjugaciones verbales,
+derivados de la misma familia léxica). Total: 84 lemas.
+
+a) PERCEPCIÓN AUDITIVA (9 lemas): escuchar (10 formas verbales),
+   oír (9 formas), oyente/s, audición/es, auditor/es, auditorio,
+   radioyente/s, radioescucha/s, percibir.
+
+b) ACTO DE ESCUCHA (9 lemas): concierto/s, recital/es, sesión/es,
+   emisión/es, transmisión/es, retransmisión/es, programa/s,
+   programación, velada/s.
+
+c) DISPOSITIVOS DE ESCUCHA (18 lemas): radio, radiodifusión,
+   radiotelefonía, radiofonía, altavoz/ces, auricular/es, cascos,
+   micrófono/s, aparato/s, receptor/es, antena/s, válvula/s,
+   galena, gramófono/s, fonógrafo/s, disco/s, estudio/s, emisora/s.
+
+d) EMOCIONES Y SENSACIONES (12 lemas): emoción (incluye emociones,
+   emocionante, emocionado, emocionar), sentir (sentimiento/s,
+   sentido), impresión (impresiones, impresionante, impresionar),
+   conmover (conmovedor, conmovido, conmoción), entusiasmo
+   (entusiasta, entusiasmado, entusiasmar), admiración (admirar,
+   admirable, admirado), deleite (deleitar, deleitarse),
+   goce/gozo (gozar), placer, encanto (encantador, encantar),
+   fascinación (fascinante, fascinar), éxtasis.
+
+e) VALORACIÓN ESTÉTICA (12 lemas): belleza (bello/a/s, bellísimo/a),
+   hermosura (hermoso/a, hermosísimo), sublime (sublimidad),
+   grandioso/a (grandiosidad), exquisito/a (exquisitez),
+   magnífico/a (magnificencia), espléndido/a (esplendor),
+   maravilla (maravilloso/a), prodigio (prodigioso/a),
+   genio (genial, genialidad), soberbio/a, extraordinario/a.
+
+f) RESPUESTA DEL PÚBLICO (11 lemas): aplauso/s (aplaudir, aplaudido,
+   aplaudieron), ovación/es (ovacionado, ovacionar), éxito/s
+   (exitoso), triunfo/s (triunfal, triunfar), aclamación (aclamar,
+   aclamado), público/s, audiencia, estruendoso/a, clamor
+   (clamoroso/a), bis, repetición.
+
+g) CUALIDADES SONORAS (13 lemas): sonido/s (sonar, sonoro/a,
+   sonoridad), voz/voces, timbre/s, tono/s (tonal, tonalidad),
+   armonía (armónico/a, armonioso), melodía (melódico/a, melodioso),
+   ritmo (rítmico/a), acorde/s, nota/s, frase/s, acento/s,
+   matiz/matices, vibración/es (vibrar, vibrante).
+
+5.2. Método de búsqueda y lematización
+- Cada variante de cada lema se buscó como palabra completa
+  (\b regex \b) en minúsculas en cada uno de los 472 archivos.
+- Las ocurrencias de todas las variantes de un mismo lema se
+  sumaron en un único conteo. Ejemplo: "concierto/s" = ocurrencias
+  de "concierto" + ocurrencias de "conciertos".
+- Se contabilizaron las ocurrencias por lema, por categoría
+  semántica, por año y globalmente.
+- Criterio de agrupación bajo un mismo lema:
+  · Sustantivos: singular + plural (concierto/conciertos).
+  · Adjetivos: masculino + femenino + superlativos
+    (bello/bella/bellos/bellas/bellísimo/bellísima).
+  · Verbos: todas las conjugaciones bajo el infinitivo
+    (escuchar/escuchando/escuchó/escuchaba/escuchamos/etc.).
+  · Familias derivativas: cuando sustantivo, verbo y adjetivo
+    comparten raíz y campo semántico, se agrupan bajo el lema
+    más representativo (ej. "emoción" agrupa emoción, emociones,
+    emocionante, emocionado, emocionar).
+
+5.3. Concordancias
+- Para 10 términos clave (escuchar, escuchando, oyente, oyentes,
+  radioyente, radioyentes, audición, emoción, sentir, oír) se
+  extrajeron fragmentos de contexto: 80 caracteres antes y después
+  de cada ocurrencia.
+- Se limitó a 5 concordancias por archivo y 20 por término para
+  mantener el volumen manejable.
+
+
+6. ANÁLISIS 4: ESTADÍSTICAS GENERALES
+================================================================
+
+6.1. Géneros musicales
+Se definieron 12 categorías de género con sus términos asociados:
+ópera, zarzuela, música sinfónica, música de cámara, canción/cuplé,
+flamenco, jazz, música coral, música religiosa, ballet/danza, música
+popular, opereta. Se contaron ocurrencias globales y por año.
+
+6.2. Instrumentos musicales
+Se definieron 26 familias instrumentales con variantes léxicas
+(instrumento + plural + profesional: "piano/pianos/pianista").
+
+6.3. Espacios musicales
+Se rastrearon 9 tipos de espacio: teatro, conservatorio, estudio,
+sala, salón, iglesia, casino, café, ateneo.
+
+6.4. Geografía musical
+Se definieron 26 lugares/países con gentilicios y variantes.
+
+6.5. Análisis del CSV de imágenes
+Se procesaron los 2.231 registros del índice de imágenes para
+obtener distribuciones por: categoría, género (H/M/Mixto), origen
+geográfico y tipo de música.
+
+
+7. SALIDAS GENERADAS
+================================================================
+
+Todos los archivos se guardaron en una carpeta de trabajo local
+("Listados y Datos ONDAS"):
+
+a) analisis_discurso_ondas.py
+   Script Python 3 completo y reproducible. Contiene todas las
+   funciones de carga, análisis y generación de resultados.
+   No requiere dependencias externas (solo biblioteca estándar).
+
+b) analisis_discurso_ondas.json (175 KB)
+   Datos completos estructurados:
+   - opera: porcentajes, secciones, evolución por año, ranking de óperas.
+   - personas: rankings de compositores, cantantes, intérpretes con
+     todas las menciones; evolución temporal de los 10 compositores
+     principales.
+   - escucha: conteos por categoría semántica, top 50 términos,
+     evolución por año, concordancias textuales.
+   - estadisticas: datos del corpus, géneros musicales, instrumentos,
+     espacios, análisis de imágenes.
+   - geografia: menciones de lugares y países.
+
+c) analisis_discurso_ondas.html (66 KB)
+   Informe visual interactivo con 18 gráficos Chart.js:
+   - Distribución temporal del corpus (archivos y palabras por año).
+   - Proporción de ópera (gráfico circular) y evolución anual (línea).
+   - Rankings horizontales: óperas, compositores, cantantes, intérpretes.
+   - Géneros musicales: distribución y evolución temporal.
+   - Instrumentos y espacios musicales.
+   - Léxico de escucha: categorías semánticas, evolución temporal,
+     top 50 términos.
+   - Concordancias textuales con contexto.
+   - Geografía musical.
+
+
+8. DECISIONES METODOLÓGICAS Y LIMITACIONES
+================================================================
+
+8.1. Búsqueda por patrones, no por NLP
+- Se optó por búsqueda de patrones (expresiones regulares) en lugar
+  de procesamiento de lenguaje natural (NER, lematización) porque:
+  a) Los listados de referencia ya proporcionan las formas exactas.
+  b) Se evita la dependencia de modelos entrenados para español
+     contemporáneo que podrían fallar con el lenguaje de los años 20.
+  c) La reproducibilidad es total: el mismo script produce siempre
+     los mismos resultados.
+
+8.2. Decisión sobre nombre completo vs. apellido
+- Es la decisión metodológica más significativa del análisis.
+- Compositores: se permite apellido solo porque la práctica
+  periodística musical usa sistemáticamente "Beethoven", "Wagner",
+  "Chopin" sin nombre de pila.
+- Cantantes e intérpretes: solo nombre completo porque sus apellidos
+  son frecuentemente comunes en español y generan ruido masivo.
+- Consecuencia: los cantantes están probablemente infrarrepresentados
+  en el conteo, pero los datos son fiables (sin falsos positivos).
+
+8.3. Clasificación de ópera
+- El criterio combina detección directa (la palabra "ópera") con
+  detección contextual (títulos de óperas conocidas + densidad de
+  vocabulario operístico). Esto permite captar secciones que hablan
+  de una ópera concreta sin usar la palabra "ópera".
+- El umbral de 3 términos operísticos simultáneos para la detección
+  contextual se estableció para evitar que una mención aislada de
+  "soprano" o "tenor" clasifique como operística una sección que
+  puede referirse a un recital o una zarzuela.
+
+8.4. Léxico de escucha: selección de términos y lematización
+- Los términos fueron seleccionados manualmente en 7 categorías
+  semánticas, no extraídos automáticamente.
+- Se aplicó lematización manual: las variantes flexivas de cada
+  palabra (singular/plural, masculino/femenino, conjugaciones
+  verbales, derivados de la misma familia léxica) se agrupan bajo
+  un único lema. Resultado: 84 lemas que agrupan todas las formas
+  buscadas. El conteo de cada lema es la suma de las ocurrencias
+  de todas sus variantes.
+- Se eliminaron duplicados que existían en la versión anterior
+  ("sublime"/"sublimidad" aparecía dos veces en VALORACIÓN ESTÉTICA;
+  "oyente" aparecía duplicado en PERCEPCIÓN AUDITIVA).
+
+8.5. Término "Radio" en intérpretes
+- El listado de intérpretes incluye entradas como "Radio Barcelona",
+  "Radio Bilbao", "Radio-París". La entrada "Radio-París" se parseaba
+  incorrectamente como "Radio" porque el guión interno de "Radio-París"
+  se confundía con el separador " - " (nombre - instrumento) del
+  formato del listado. Se corrigió la expresión regular para exigir
+  espacios alrededor del guión separador (\s+-\s+), de modo que
+  "Radio-París" se extrae completo. Adicionalmente, se añadió un
+  filtro explícito que descarta la palabra "Radio" aislada si llegara
+  a generarse, ya que no identifica a ninguna agrupación concreta
+  sino al término genérico de la radiodifusión (8.283 ocurrencias).
+
+8.6. Ópera "Carmen" y topónimo
+- "Carmen" (888 menciones) puede incluir usos como nombre de pila
+  (Carmen Flores, Carmen Amaya, etc.). Sin embargo, dado que el
+  nombre aparece mayoritariamente en contextos operísticos y que
+  la ópera de Bizet es la más programada del periodo, la cifra se
+  considera representativa aunque ligeramente inflada.
+
+8.7. "Fausto" y polisemia
+- "Fausto" (607 menciones) puede referirse tanto a la ópera de
+  Gounod como al adjetivo "fausto" (afortunado), de uso frecuente
+  en la prosa periodística de la época. La cifra real de la ópera
+  es probablemente inferior.
+
+8.8. Codificación y OCR
+- Los archivos TXT proceden de transcripciones manuales, no de OCR
+  automático. No se detectaron problemas sistemáticos de codificación.
+  Se usó UTF-8 con gestión de errores (replace) por precaución.

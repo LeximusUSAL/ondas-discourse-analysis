@@ -7,41 +7,46 @@ autores e intérpretes más citados, y léxico de la escucha musical.
 Proyecto **LexiMus / MUSLYME** — Universidad de Salamanca
 ("LexiMus: Léxico y ontología de la música en español", PID2022-139589NB-C33).
 
-## Ver los análisis (web)
+## Análisis publicados
 
-➡ **[Página principal / análisis interactivos](https://leximususal.github.io/ondas-discourse-analysis/)**
-
+- [Página principal / análisis interactivos](https://leximususal.github.io/ondas-discourse-analysis/)
 - [Análisis de discurso ONDAS](analisis_discurso_ondas.html) ([EN](analisis_discurso_ondas_EN.html))
 - [Comparación del léxico de la escucha (ONDAS / El Sol)](comparacion_lexico_escucha.html) ([EN](comparacion_lexico_escucha_EN.html))
 - [Criterios de clasificación de géneros musicales](criterios_generos.html) ([EN](criterios_generos_EN.html))
 
 ## Estructura del repositorio
 
-- [`scripts/`](scripts/) — código Python de los análisis (ver [`scripts/README.md`](scripts/README.md)).
-- [`datos/`](datos/) — datos en bruto (JSON), listados de referencia y **metodología completa**
-  (ver [`datos/README.md`](datos/README.md)).
+- [`scripts/`](scripts/) — código Python empleado en los análisis (véase [`scripts/README.md`](scripts/README.md)).
+- [`datos/`](datos/) — datos en bruto (JSON), listados de referencia y metodología completa
+  (véase [`datos/README.md`](datos/README.md)).
 
-## Metodología: ¿por qué expresiones regulares y diccionarios, y no BERT?
+## Metodología: justificación del uso de expresiones regulares y diccionarios frente a modelos basados en BERT
 
-Una pregunta que nos hicimos —y respondimos con pruebas, no de oídas— antes de
-publicar este análisis: ¿por qué seguir contando con expresiones regulares y
-listas de variantes en lugar de usar *transformers*, spaCy o nuestro propio
-modelo de lenguaje (`LexiMus-BETO-per-v1`)?
+Antes de la publicación de este análisis se evaluó si el empleo de modelos de
+lenguaje basados en *transformers* —u otras herramientas disponibles en el
+proyecto, como spaCy o el modelo propio `LexiMus-BETO-per-v1`— ofrecería
+ventajas frente al método aplicado, basado en expresiones regulares y listas
+de variantes léxicas.
 
-**Respuesta corta**: probamos BERT y nuestro propio modelo, y los resultados
-fueron estadísticamente equivalentes — sin que ninguna conclusión cambiara en
-46 lemas analizados. Siendo los resultados iguales, el método basado en regex y
-diccionarios es la opción *superior* para este caso, por ser totalmente
-replicable, auditable a mano y libre de sesgos importados de otros dominios
-(p. ej., un modelo general clasifica mal "auditor" porque en español
-contemporáneo asocia la palabra a "auditor de cuentas", un sentido que no
-existe en nuestro corpus). Y la razón estructural de que esto funcione tan bien
-es que **nuestro corpus es exclusivamente musical**: al estar ya curado para
-excluir cualquier otro tema, la ambigüedad léxica que justificaría un método
-de desambiguación más complejo apenas llega a producirse.
+La validación realizada muestra que ambos enfoques producen resultados
+estadísticamente equivalentes: en los 46 lemas analizados, ninguna conclusión
+del estudio varía al introducir un modelo de desambiguación basado en BERT.
+Dada esta equivalencia, el método basado en expresiones regulares y
+diccionarios resulta preferible para este caso de uso, por su replicabilidad,
+su posibilidad de auditoría manual completa y la ausencia de sesgos
+introducidos por modelos entrenados sobre dominios distintos al del corpus de
+trabajo (a modo de ejemplo, un modelo de propósito general clasifica
+incorrectamente el lema "auditor" al asociarlo al sentido de "auditor de
+cuentas", habitual en el español contemporáneo pero inexistente en este
+corpus). La razón estructural que explica estos resultados es que **el corpus
+analizado es exclusivamente musical**: al estar ya delimitado temáticamente,
+la ambigüedad léxica que justificaría el empleo de un método de
+desambiguación más complejo apenas llega a producirse.
 
-📄 **[Lectura completa, con tablas, datos y pruebas (`datos/README.md`)](datos/README.md)**
-🧪 **[Scripts y resultados JSON de las pruebas BERT vs. regex (`datos/pruebas_regex_vs_bert/`)](datos/pruebas_regex_vs_bert/)**
+Véase la explicación completa, con tablas y resultados, en
+[`datos/README.md`](datos/README.md), así como los scripts y los resultados en
+formato JSON de las pruebas de validación en
+[`datos/pruebas_regex_vs_bert/`](datos/pruebas_regex_vs_bert/).
 
 ---
 Proyecto LexiMus / MUSLYME — Universidad de Salamanca

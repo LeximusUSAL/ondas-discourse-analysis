@@ -2,102 +2,107 @@
 
 Esta carpeta reúne los materiales de apoyo de los análisis publicados en este
 repositorio: la metodología detallada, los listados de referencia, los datos
-en bruto (JSON) generados por los scripts, y — en
-[`pruebas_regex_vs_bert/`](pruebas_regex_vs_bert/) — las pruebas de validación
-que comparan nuestro método (expresiones regulares + diccionarios) con
+en bruto (JSON) generados por los scripts y, en
+[`pruebas_regex_vs_bert/`](pruebas_regex_vs_bert/), las pruebas de validación
+que comparan el método empleado (expresiones regulares y diccionarios) con
 modelos de lenguaje basados en *transformers* (BERT).
 
 - [`METODOLOGIA_ANALISIS_DISCURSO_ONDAS.txt`](METODOLOGIA_ANALISIS_DISCURSO_ONDAS.txt) — descripción completa de fuentes, criterios y proceso del análisis de discurso.
-- [`listado_operas_ondas.txt`](listado_operas_ondas.txt) — listado de referencia de óperas mencionadas en el corpus ONDAS.
+- [`listado_operas_ondas.txt`](listado_operas_ondas.txt) — listado de referencia de óperas mencionadas en el corpus de ONDAS.
 - [`analisis_discurso_ondas.json`](analisis_discurso_ondas.json) / [`comparacion_lexico_escucha.json`](comparacion_lexico_escucha.json) — resultados completos en bruto de ambos análisis.
-- [`pruebas_regex_vs_bert/`](pruebas_regex_vs_bert/) — **pruebas de validación: ¿da un modelo BERT resultados distintos a los de nuestro método basado en regex y diccionarios?** (ver explicación abajo).
+- [`pruebas_regex_vs_bert/`](pruebas_regex_vs_bert/) — pruebas de validación: comparación de los resultados obtenidos mediante un modelo BERT y mediante el método basado en expresiones regulares y diccionarios (véase la explicación a continuación).
 
 ---
 
-## ¿Por qué seguimos usando expresiones regulares y diccionarios, y no BERT ni nuestro propio modelo de lenguaje?
+## Justificación metodológica: expresiones regulares y diccionarios frente a BERT y modelos de lenguaje propios
 
-Esta es una pregunta legítima — y nos la hicimos nosotros mismos antes de
-publicar este análisis: trabajamos habitualmente con *transformers*, con
-spaCy y tenemos nuestro propio modelo NER afinado para prensa musical
-española ([`LexiMus-BETO-per-v1`](https://huggingface.co/LexiMusUSAL/LexiMus-BETO-per-v1)).
-¿Por qué entonces seguir contando palabras con `re.finditer` y listas de
-variantes escritas a mano, en lugar de usar herramientas de aprendizaje
-profundo más "modernas"?
+Se trata de una cuestión que el equipo se planteó antes de la publicación de
+este análisis: en el proyecto se emplean habitualmente modelos basados en
+*transformers*, así como spaCy y un modelo de reconocimiento de entidades
+propio, afinado para prensa musical española
+([`LexiMus-BETO-per-v1`](https://huggingface.co/LexiMusUSAL/LexiMus-BETO-per-v1)).
+Cabe preguntarse, por tanto, por qué se mantiene un método basado en
+`re.finditer` y listas de variantes elaboradas manualmente, en lugar de
+recurrir a herramientas de aprendizaje profundo más recientes.
 
-Hicimos la prueba — con rigor, no de oídas — y la respuesta tiene dos partes:
+Para responder a esta cuestión de forma empírica se llevó a cabo una
+validación, cuyos resultados pueden resumirse en dos puntos:
 
-1. **Empíricamente, los resultados son estadísticamente equivalentes**: un
-   modelo de desambiguación contextual basado en *embeddings* de oración no
-   cambia ninguna conclusión del análisis original (ver pruebas más abajo).
-2. **Y, siendo los resultados equivalentes, el método basado en regex y
-   diccionarios no es solo "suficientemente bueno": es la opción
-   *superior* para este caso de uso concreto.** No por nostalgia
-   metodológica, sino por razones técnicas concretas que detallamos a
-   continuación, con datos.
+1. Los resultados obtenidos son, desde un punto de vista estadístico,
+   equivalentes: la introducción de un modelo de desambiguación contextual
+   basado en *embeddings* de oración no modifica ninguna conclusión del
+   análisis original (véanse las pruebas más abajo).
+2. **Dada esta equivalencia, el método basado en expresiones regulares y
+   diccionarios no resulta simplemente "suficiente", sino preferible para
+   este caso de uso concreto**, por razones técnicas que se exponen a
+   continuación con los datos correspondientes.
 
-### La clave: nuestro corpus es monotemático — es **solo musical**
+### El factor determinante: un corpus monotemático, exclusivamente musical
 
-Este es el factor que lo explica casi todo, y conviene decirlo alto y claro:
-**ni ONDAS ni la selección de El Sol que usamos aquí son corpus de prensa
-generalista.** ONDAS es íntegramente una revista de radio y música; la
-selección de El Sol corresponde específicamente a sus secciones y crónicas
-musicales. Es decir: **el corpus ya ha sido curado para excluir el ruido
-temático** que es la verdadera fuente de los problemas de polisemia.
+Este factor explica, en gran medida, los resultados descritos: **ni el
+corpus de ONDAS ni la selección empleada de El Sol constituyen corpus de
+prensa generalista.** ONDAS es, en su totalidad, una revista de radio y
+música; la selección de El Sol corresponde específicamente a sus secciones y
+crónicas musicales. Es decir, **el corpus ha sido delimitado de antemano
+para excluir el ruido temático**, que constituye el origen real de los
+problemas de polisemia.
 
-¿Por qué importa esto? Porque la polisemia de una palabra no es un problema
-fijo del léxico — depende del *abanico de temas* que puede aparecer en el
-texto que se analiza:
+La razón es la siguiente: la polisemia de una palabra no constituye un
+problema inherente al léxico, sino que depende del *conjunto de temas*
+susceptibles de aparecer en el texto analizado:
 
-- En un corpus de prensa generalista (política + economía + sociedad +
-  deportes + cultura...), la palabra **"concierto"** aparecerá tanto en
-  reseñas musicales como en noticias sobre el "concierto económico vasco".
-  Ahí sí hace falta desambiguar.
-- En un corpus exclusivamente musical, "concierto" aparece prácticamente
-  siempre en su sentido musical — no porque la palabra haya dejado de ser
-  polisémica en español, sino porque **el otro sentido casi nunca tiene
-  ocasión de aparecer** en un texto que ya trata solo de música.
+- En un corpus de prensa generalista (política, economía, sociedad,
+  deportes, cultura...), la palabra **"concierto"** puede aparecer tanto en
+  reseñas musicales como en noticias relativas al "concierto económico
+  vasco". En ese contexto, la desambiguación resulta necesaria.
+- En un corpus exclusivamente musical, "concierto" aparece, en la práctica,
+  casi siempre en su sentido musical — no porque la palabra haya dejado de
+  ser polisémica en español, sino porque **el otro sentido apenas tiene
+  ocasión de aparecer** en un texto que versa únicamente sobre música.
 
-La prueba de validación lo confirma con números: de los lemas que
-identificamos *a priori* como de "alto riesgo" de polisemia en español
-general — "concierto", "auditor", "género/genio", "soberbio", "sesión",
-"impresión", "cascos", "aparato"... — la inmensa mayoría puntuó entre el
-**94 % y el 100 %** de uso en sentido musical/de escucha *dentro de este
-corpus* (ver tabla más abajo). El riesgo de polisemia que existe en el
-diccionario casi no se materializa aquí, precisamente porque **el contexto
-temático que lo activaría ha sido eliminado en el proceso de curación del
-corpus**, antes incluso de ejecutar un solo script.
+La prueba de validación confirma esta hipótesis con datos concretos: de los
+lemas identificados *a priori* como de riesgo elevado de polisemia en
+español general — "concierto", "auditor", "género/genio", "soberbio",
+"sesión", "impresión", "cascos", "aparato", entre otros —, la mayoría obtuvo
+entre el **94 % y el 100 %** de uso en sentido musical o de escucha *dentro
+de este corpus* (véase la tabla más abajo). El riesgo de polisemia presente
+en el diccionario apenas llega a materializarse, precisamente porque **el
+contexto temático que lo activaría fue eliminado durante la delimitación del
+corpus**, con anterioridad a la ejecución de cualquier script de análisis.
 
-Esto tiene una consecuencia metodológica importante: **un método de
-desambiguación sofisticado solo aporta valor cuando hay ambigüedad real que
-desambiguar.** Aplicarlo a un corpus que ya viene filtrado temáticamente es
-como llevar paraguas dentro de casa — no hace daño, pero tampoco soluciona
-nada que no estuviera ya resuelto.
+De ello se desprende una consecuencia metodológica relevante: **un método de
+desambiguación más complejo solo aporta valor cuando existe una ambigüedad
+real que resolver.** Su aplicación a un corpus ya delimitado temáticamente
+no introduce errores, pero tampoco resuelve ningún problema que no
+estuviera ya resuelto por la propia composición del corpus.
 
-### La prueba: ¿cambia algo si usamos BERT para desambiguar?
+### Diseño de la prueba de validación con BERT
 
-Para no quedarnos en la intuición, hicimos la prueba real. Construimos un
+Con el fin de contrastar empíricamente esta hipótesis, se construyó un
 sistema de desambiguación contextual (*word-sense disambiguation*) basado en
-*embeddings* de oración — comparando, para cada aparición de un lema, su
-similitud coseno con dos conjuntos de frases-ancla ("sentido musical/de
-escucha" vs. "otro sentido") usando un *sentence-transformer* multilingüe
-(`paraphrase-multilingual-MiniLM-L12-v2`).
+*embeddings* de oración: para cada aparición de un lema, se calculó su
+similitud coseno respecto a dos conjuntos de frases de referencia ("sentido
+musical/de escucha" frente a "otro sentido"), empleando un
+*sentence-transformer* multilingüe (`paraphrase-multilingual-MiniLM-L12-v2`).
 
-En lugar de aplicar la prueba indiscriminadamente a los 84 lemas del
-"léxico de la escucha", hicimos primero un **triaje lingüístico**: de los 84,
-seleccionamos los **31 lemas con riesgo real de polisemia** en español
-general de 1918-1935 (p. ej. *concierto* económico/musical, *cascos* de
-caballería/auriculares, *soberbia* como defecto/*soberbio* como elogio,
-*auditor* de cuentas/oyente, *impresión* tipográfica/emocional...) y les
-aplicamos un muestreo completo (200 contextos por lema y corpus). A otros 7
-lemas de bajo riesgo les aplicamos una validación puntual más pequeña
-(*spot-check*, 70 muestras) para confirmar que, en efecto, su sentido es
-prácticamente unívoco. En total: **46 de los 84 lemas** sometidos a prueba
-con BERT — sumando los 8 de la prueba piloto inicial.
+En lugar de aplicar la prueba de manera indiscriminada a los 84 lemas del
+"léxico de la escucha", se realizó previamente un **triaje lingüístico**: de
+los 84 lemas, se seleccionaron los **31 lemas con riesgo real de polisemia**
+en el español general de 1918-1935 (por ejemplo, *concierto* en su sentido
+económico o musical, *cascos* de caballería o auriculares, *soberbia* como
+defecto frente a *soberbio* como elogio, *auditor* de cuentas u oyente,
+*impresión* tipográfica o emocional, entre otros), a los que se aplicó un
+muestreo completo (200 contextos por lema y corpus). A otros 7 lemas de bajo
+riesgo se les aplicó una validación puntual de menor tamaño (*spot-check*,
+70 muestras), con el fin de confirmar que su sentido resulta, en la
+práctica, unívoco. En conjunto, **46 de los 84 lemas** fueron sometidos a la
+prueba con BERT, incluyendo los 8 de la prueba piloto inicial.
 
-**Resultado: en los 46 lemas probados, la conclusión comparativa entre ONDAS
-y El Sol no cambia ni una sola vez.** Las densidades relativas (‱) ajustadas
-por desambiguación BERT son, en la inmensa mayoría de los casos, casi
-idénticas a las obtenidas por conteo directo con regex:
+**Resultado: en los 46 lemas analizados, la conclusión comparativa entre
+ONDAS y El Sol no varía en ningún caso.** Las densidades relativas (‱)
+ajustadas mediante desambiguación con BERT resultan, en la gran mayoría de
+los casos, prácticamente idénticas a las obtenidas mediante conteo directo
+con expresiones regulares:
 
 | Lema | Corpus | % en sentido musical/escucha (BERT) | Densidad bruta → ajustada (‱) |
 |---|---|---:|---|
@@ -115,8 +120,8 @@ brutos, proporciones, densidades y muestreo: véanse
 [`bert_wsd_resultados.json`](pruebas_regex_vs_bert/bert_wsd_resultados.json)
 y [`bert_wsd_resultados_full.json`](pruebas_regex_vs_bert/bert_wsd_resultados_full.json).)
 
-Las mayores correcciones que encontró el modelo —y aun así, ninguna cambia
-ninguna conclusión— son:
+Las correcciones de mayor magnitud introducidas por el modelo —que, aun así,
+no alteran ninguna conclusión— son las siguientes:
 
 | Lema | Corpus | % sentido musical (BERT) | Densidad bruta → ajustada (‱) |
 |---|---|---:|---|
@@ -125,137 +130,159 @@ ninguna conclusión— son:
 | nota/s | El Sol | 86,8 % | 2,56 → 2,23 |
 | aparato/s | ONDAS | 83,0 % | 1,12 → 0,93 |
 
-Es decir: incluso en el peor de los casos, el ajuste por desambiguación
-mueve la densidad relativa entre un 13 % y un 24 % — y **nunca llega a
-invertir ninguna comparación entre corpus.** Las conclusiones publicadas
-("ONDAS menciona X con más frecuencia relativa que El Sol", etc.) son
-exactamente las mismas con o sin BERT.
+Es decir, incluso en el caso más desfavorable, el ajuste por desambiguación
+modifica la densidad relativa entre un 13 % y un 24 %, **sin llegar en
+ningún caso a invertir una comparación entre corpus.** Las conclusiones
+publicadas (por ejemplo, que ONDAS presenta una frecuencia relativa de un
+determinado lema superior a la de El Sol) son las mismas con independencia
+de si se aplica o no la desambiguación mediante BERT.
 
-### Cuando dos métodos dan el mismo resultado, gana el más simple — y aquí no es solo "igual de bueno", es mejor
+### Ante resultados equivalentes, razones para preferir el método más simple
 
-Llegados a este punto, la pregunta relevante no es "¿podríamos usar BERT?"
-(podemos, lo hemos probado) sino "¿deberíamos?". Y la respuesta es no, por
-varias razones que pesan a favor de regex + diccionarios — no en contra de
-los modelos de lenguaje en general, sino **para esta tarea concreta sobre
-este tipo de corpus concreto**:
+Llegados a este punto, la cuestión relevante no es si resulta posible
+emplear BERT — se ha comprobado que sí —, sino si resulta preferible
+hacerlo. Las razones que se exponen a continuación indican que no es así, y
+que el método basado en expresiones regulares y diccionarios resulta
+preferible. Esta conclusión no constituye un argumento contra los modelos de
+lenguaje en general, sino una valoración referida **a esta tarea concreta y
+a este tipo de corpus**:
 
-**1. Replicabilidad total y determinismo.**
-Un patrón `re.finditer(r'\bconcierto\b', texto)` da exactamente el mismo
-resultado hoy, dentro de cinco años y en cualquier ordenador, con Python de
-serie. Un resultado basado en *embeddings* depende de la versión exacta del
-modelo, de la versión de las librerías (`transformers`, `torch`, `spaCy`...),
-del hardware (CPU/GPU/Apple Silicon dan resultados ligeramente distintos por
-precisión numérica) y de semillas aleatorias de muestreo. Para un proyecto de
-Humanidades Digitales que aspira a que otros investigadores **repliquen
-exactamente** los recuentos publicados, esto no es un detalle menor: es la
-diferencia entre un método citable y reproducible y uno que, en la práctica,
-solo es repetible "más o menos".
+**1. Replicabilidad y determinismo.**
+Un patrón como `re.finditer(r'\bconcierto\b', texto)` produce exactamente el
+mismo resultado en el momento actual, dentro de varios años y en cualquier
+equipo, con una instalación estándar de Python. Un resultado basado en
+*embeddings*, en cambio, depende de la versión exacta del modelo empleado,
+de la versión de las bibliotecas utilizadas (`transformers`, `torch`,
+`spaCy`, etc.), del hardware (CPU, GPU o Apple Silicon producen resultados
+ligeramente distintos por motivos de precisión numérica) y de las semillas
+aleatorias empleadas en el muestreo. Para un proyecto de Humanidades
+Digitales que pretende que otros investigadores puedan **replicar con
+exactitud** los recuentos publicados, esta diferencia resulta significativa:
+separa un método citable y reproducible de otro que, en la práctica, solo
+resulta repetible de manera aproximada.
 
-**2. Trazabilidad y auditoría manual, palabra por palabra.**
-Cada recuento de nuestro método se puede verificar a mano: el patrón regex
-que generó cada coincidencia, la posición exacta en el texto, el contexto de
-±60 caracteres — todo es inspeccionable por un filólogo sin necesidad de
-confiar en una "caja negra". Un modelo de *embeddings* no ofrece esa
-trazabilidad: solo se puede preguntar "¿por qué ha clasificado esta frase
-así?" mediante más modelos o heurísticas adicionales, nunca con una
-respuesta exacta y verificable. En un campo —la Filología y las Humanidades
-Digitales— donde la verificabilidad del dato es la base de la credibilidad
-académica, esto inclina la balanza decisivamente.
+**2. Trazabilidad y posibilidad de auditoría manual.**
+Cada recuento obtenido mediante este método puede verificarse de forma
+manual: el patrón de expresión regular que generó cada coincidencia, la
+posición exacta en el texto y el contexto de ±60 caracteres son datos
+plenamente inspeccionables por un investigador, sin necesidad de recurrir a
+un sistema opaco. Un modelo basado en *embeddings* no ofrece ese mismo grado
+de trazabilidad: la pregunta de por qué una frase ha sido clasificada de una
+determinada manera solo puede abordarse mediante modelos o heurísticas
+adicionales, sin que ello proporcione una respuesta exacta y verificable. En
+un ámbito —la Filología y las Humanidades Digitales— en el que la
+verificabilidad del dato constituye la base de la credibilidad académica,
+esta consideración resulta determinante.
 
-**3. Coste computacional desproporcionado para el beneficio obtenido.**
-Contar las ~24.000 apariciones de los 84 lemas en 3,08 millones de palabras
-con regex tarda **segundos**, sin GPU, sin descargar nada. La prueba con
-BERT —limitada a 46 de los 84 lemas, con muestras de 200 contextos como
-máximo— necesitó cargar un modelo de *embeddings*, vectorizar más de 15.000
-fragmentos de texto y varios minutos de cómputo acelerado por GPU... para
-confirmar que el resultado es, en la práctica, el mismo. Multiplicar ese
-coste por los 84 lemas y por cada futura actualización del corpus no se
-traduce en ninguna ganancia real de precisión.
+**3. Coste computacional desproporcionado en relación con el beneficio obtenido.**
+El recuento de las aproximadamente 24.000 apariciones de los 84 lemas en
+3,08 millones de palabras mediante expresiones regulares requiere
+**segundos**, sin necesidad de GPU ni de descargar ningún modelo. La prueba
+con BERT —limitada a 46 de los 84 lemas, con un máximo de 200 contextos por
+lema— exigió cargar un modelo de *embeddings*, vectorizar más de 15.000
+fragmentos de texto y varios minutos de cómputo acelerado por GPU, con el
+fin de confirmar que el resultado es, en la práctica, el mismo. Extender
+este coste a los 84 lemas y a cada futura actualización del corpus no se
+traduciría en ninguna ganancia real de precisión.
 
-**4. Los modelos genéricos importan sesgos de fuera del dominio — y eso
-genera errores nuevos que el método simple no tiene.**
-Aquí no nos quedamos en la teoría: lo documentamos con un caso real. El lema
-**"auditor/es"** es el que peor parado sale en la prueba BERT (≈60-77 % de
-"sentido musical" estimado). Revisamos a mano una muestra de los contextos
-que el modelo clasificó como "no musicales" — y **son, casi todos, falsos
-negativos**: frases como *"la captación de auditores"* o *"el favor de los
-auditores [de Wagner]"* son inequívocamente del sentido "oyente/audiencia",
-pero el modelo —entrenado mayoritariamente con español contemporáneo, donde
-"auditor" significa casi siempre "auditor de cuentas"— las empuja hacia el
-cluster equivocado por una asociación que nada tiene que ver con nuestro
-corpus ni con 1925. **El modelo no solo no mejora el recuento: introduce un
-error sistemático que el método de regex, precisamente por no tener
-"intuiciones" semánticas heredadas de otros dominios, no comete.** El
-detalle completo de esta revisión manual, con los fragmentos de texto
-exactos, está documentado en la conversación de desarrollo y resumido en
+**4. Los modelos de propósito general incorporan sesgos procedentes de otros
+dominios, lo que genera errores que el método basado en expresiones
+regulares no presenta.**
+Esta cuestión se documenta aquí mediante un caso concreto. El lema
+**"auditor/es"** es el que obtiene los resultados menos favorables en la
+prueba con BERT (aproximadamente entre el 60 % y el 77 % de uso estimado en
+sentido musical). La revisión manual de una muestra de los contextos
+clasificados por el modelo como "no musicales" muestra que **se trata, en su
+mayoría, de falsos negativos**: expresiones como *"la captación de
+auditores"* o *"el favor de los auditores [de Wagner]"* corresponden
+inequívocamente al sentido de "oyente" o "audiencia", pero el modelo
+—entrenado mayoritariamente con español contemporáneo, donde "auditor" se
+emplea casi siempre con el sentido de "auditor de cuentas"— las asigna al
+grupo semántico incorrecto, por una asociación ajena tanto al corpus como al
+periodo histórico analizado (1925). **El modelo no solo no mejora el
+recuento, sino que introduce un error sistemático que el método basado en
+expresiones regulares, al no incorporar asociaciones semánticas procedentes
+de otros dominios, no presenta.** El detalle completo de esta revisión
+manual, con los fragmentos de texto correspondientes, se resume en
 [`bert_wsd_resultados_full.json`](pruebas_regex_vs_bert/bert_wsd_resultados_full.json).
 
-**5. Ni siquiera nuestro propio modelo afinado es la herramienta adecuada
-para esta tarea — y eso también lo comprobamos antes de descartarlo.**
-Antes de concluir, probamos también a usar
+**5. El modelo de lenguaje propio tampoco constituye una herramienta
+adecuada para esta tarea.**
+Se evaluó asimismo la posibilidad de emplear
 [`LexiMus-BETO-per-v1`](https://huggingface.co/LexiMusUSAL/LexiMus-BETO-per-v1)
-—nuestro propio BETO afinado sobre El Sol y ONDAS, con un 94,3 % de
-precisión validada manualmente en su tarea de origen— como motor de
-desambiguación. El resultado fue claramente negativo, y por una razón técnica
-de fondo: es un modelo de **clasificación de tokens** (NER de personas:
-COMPOSITOR/INTÉRPRETE/CANTANTE/AGRUPACIÓN), no un *sentence-encoder*. Sus
-representaciones internas, extraídas por *mean-pooling*, muestran la
-**anisotropía** típica de los modelos BERT que no se entrenan con un
-objetivo de similitud semántica: la similitud coseno entre *"Escuchamos un
-concierto por la radio anoche"* y *"El ciclista ganó la etapa de montaña"*
-—dos frases sin ninguna relación— es **0,977**, prácticamente idéntica a la
-de dos frases musicales entre sí (0,915). Usado así, el modelo clasificaba
-"escuchar" —¡en una revista de radio!— como sentido musical solo en un 2 % de
-los casos. Es decir: **ni siquiera disponiendo de un modelo propio,
-afinado en nuestro propio corpus, hay un atajo de aprendizaje profundo que
-mejore lo que ya hace una lista de variantes y una expresión regular bien
-construidas.** (Lo usamos, en cambio, correctamente, para la tarea para la
-que sí está entrenado: ver más abajo.)
+—modelo BETO afinado sobre los corpus de El Sol y ONDAS, con una precisión
+del 94,3 % validada manualmente en su tarea original— como motor de
+desambiguación. El resultado fue negativo, por una razón técnica de fondo:
+se trata de un modelo de **clasificación de tokens** (reconocimiento de
+entidades de tipo persona: COMPOSITOR, INTÉRPRETE, CANTANTE, AGRUPACIÓN), no
+de un *sentence-encoder*. Sus representaciones internas, obtenidas mediante
+*mean-pooling*, presentan la **anisotropía** característica de los modelos
+BERT que no han sido entrenados con un objetivo de similitud semántica: la
+similitud coseno entre las frases *"Escuchamos un concierto por la radio
+anoche"* y *"El ciclista ganó la etapa de montaña"* —sin relación semántica
+entre sí— alcanza un valor de **0,977**, prácticamente idéntico al obtenido
+entre dos frases de contenido musical (0,915). En estas condiciones, el
+modelo clasificaba la palabra "escuchar" —en una revista de radio— como uso
+de sentido musical en solo el 2 % de los casos. Es decir, **ni siquiera un
+modelo propio, afinado sobre el corpus de trabajo, ofrece una alternativa
+basada en aprendizaje profundo que mejore los resultados obtenidos mediante
+una lista de variantes y una expresión regular adecuadamente construidas.**
+El modelo se emplea, en cambio, de forma adecuada en la tarea para la que
+fue entrenado, como se describe a continuación.
 
-### Pero entonces, ¿para qué sirve nuestro modelo de lenguaje (LexiMus-BETO-per-v1)?
+### Aplicación del modelo de lenguaje propio (LexiMus-BETO-per-v1) en una tarea distinta
 
-Para lo que se entrenó: identificar personas y agrupaciones musicales con
-vocabulario abierto (no limitado a una lista cerrada). Lo aplicamos —de
-forma complementaria, no para sustituir el método de recuento del léxico de
-escucha— sobre una muestra de 400 párrafos del corpus ONDAS, y lo cruzamos
-con los listados cerrados que usa `analizar_autores_interpretes()`. Esto sí
-reveló información nueva y útil:
+El modelo resulta adecuado para la tarea para la que fue entrenado: la
+identificación de personas y agrupaciones musicales con vocabulario abierto,
+no limitado a una lista cerrada. Se aplicó —con carácter complementario, no
+como sustituto del método de recuento del léxico de la escucha— sobre una
+muestra de 400 párrafos del corpus de ONDAS, y se contrastó con los listados
+cerrados empleados por la función `analizar_autores_interpretes()`. Este
+análisis aportó información adicional de interés:
 
-| Categoría | Menciones detectadas | Coinciden con el listado cerrado | Fuera del listado (el regex original nunca las contaría) |
+| Categoría | Menciones detectadas | Coinciden con el listado cerrado | Fuera del listado (el método basado en regex no las contabilizaría) |
 |---|---:|---:|---:|
 | COMPOSITOR | 301 | 193 (60 nombres) | 108 (88 nombres) — incluye Stravinsky, Sibelius, Borodin, Elgar, Puccini, Lehár... |
 | CANTANTE | 46 | 5 (5 nombres) | 41 (39 nombres) |
 | INTÉRPRETE | 44 | 14 (14 nombres) | 30 (28 nombres) — incluye Fernández Arbós, José Cubiles... |
 | AGRUPACIÓN | 71 | 0 | 71 (39 nombres) — Trio Iberia, Cobla Barcelona, Banda Nacional Republicana... |
 
-Aquí el modelo **sí aporta**, porque identificar personas con vocabulario
-abierto es justo el problema para el que un NER entrenado supera a una lista
-cerrada: encontró compositores, intérpretes y, sobre todo, agrupaciones
-musicales con nombre propio que el listado de referencia original no recogía.
-(También detectamos un sesgo del propio NER que conviene anotar: confunde
-ocasionalmente personajes de ópera —Wotan, Brünnhilde, Sigfrido— con
-cantantes reales, al aparecer en resúmenes de argumento. Cualquier ampliación
-de los listados a partir de esta vía debería filtrar estos casos a mano.)
+En este caso, el modelo **aporta valor añadido**, dado que la identificación
+de personas con vocabulario abierto es precisamente el tipo de problema en
+el que un sistema de reconocimiento de entidades supera a una lista cerrada:
+se identificaron compositores, intérpretes y, en particular, agrupaciones
+musicales con nombre propio que el listado de referencia original no
+recogía. Cabe señalar asimismo un sesgo presente en el propio sistema de
+reconocimiento de entidades: en ocasiones confunde personajes de ópera
+—Wotan, Brünnhilde, Sigfrido— con intérpretes reales, al aparecer estos
+nombres en resúmenes de argumento. Cualquier ampliación de los listados de
+referencia a partir de estos resultados debería someterse a una revisión
+manual previa.
 
-Esto, lejos de contradecir lo anterior, lo confirma: **la elección de
-método no depende de la "modernidad" de la herramienta, sino de si el
-problema concreto necesita lo que esa herramienta resuelve.** Para
-"¿es este uso de 'concierto' musical o económico, en un corpus que ya
-solo habla de música?", regex + diccionarios + criterio filológico
-es la herramienta correcta, más rápida, más transparente y, como
-demuestra el caso de "auditor", más fiable. Para "¿qué personas con
-nombre propio aparecen en este texto, sin limitarnos a una lista
-cerrada?", el NER es la herramienta correcta. Usar BERT para lo
-primero no habría sido más "riguroso": habría sido usar un martillo
-de precisión para una tarea que ya resuelve, mejor, un destornillador.
+Este resultado no contradice lo expuesto anteriormente, sino que lo
+confirma: **la elección de método no depende de la actualidad de la
+herramienta empleada, sino de si el problema concreto requiere aquello que
+dicha herramienta resuelve.** Para determinar si un uso de "concierto"
+corresponde al ámbito musical o económico en un corpus que trata
+exclusivamente de música, el método basado en expresiones regulares,
+diccionarios y criterio filológico constituye la herramienta más adecuada:
+más rápida, más transparente y, como muestra el caso de "auditor", más
+fiable. Para identificar qué personas con nombre propio aparecen en un texto
+sin limitarse a una lista cerrada, el sistema de reconocimiento de entidades
+resulta la herramienta apropiada. El empleo de BERT para la primera tarea no
+habría supuesto un incremento del rigor metodológico, sino la aplicación de
+un procedimiento más complejo a un problema que un método más simple
+resuelve de forma adecuada.
 
 ### Pruebas y datos disponibles para su verificación
 
-Todo lo descrito aquí es reproducible. En [`pruebas_regex_vs_bert/`](pruebas_regex_vs_bert/):
+Los resultados descritos en este documento son reproducibles. En
+[`pruebas_regex_vs_bert/`](pruebas_regex_vs_bert/) se incluyen los
+siguientes materiales:
 
 - [`bert_wsd_test.py`](pruebas_regex_vs_bert/bert_wsd_test.py) / [`bert_wsd_resultados.json`](pruebas_regex_vs_bert/bert_wsd_resultados.json) — prueba piloto de desambiguación (8 lemas).
-- [`bert_wsd_test_full.py`](pruebas_regex_vs_bert/bert_wsd_test_full.py) / [`bert_wsd_resultados_full.json`](pruebas_regex_vs_bert/bert_wsd_resultados_full.json) — prueba extendida a las 7 categorías del léxico de la escucha (38 lemas adicionales, con triaje de riesgo de polisemia documentado en el propio script).
-- [`bert_ner_validacion.py`](pruebas_regex_vs_bert/bert_ner_validacion.py) / [`bert_ner_resultados.json`](pruebas_regex_vs_bert/bert_ner_resultados.json) — validación cruzada de menciones de personas/agrupaciones con `LexiMus-BETO-per-v1` frente a los listados cerrados del script original.
+- [`bert_wsd_test_full.py`](pruebas_regex_vs_bert/bert_wsd_test_full.py) / [`bert_wsd_resultados_full.json`](pruebas_regex_vs_bert/bert_wsd_resultados_full.json) — prueba extendida a las 7 categorías del léxico de la escucha (38 lemas adicionales, con el triaje de riesgo de polisemia documentado en el propio script).
+- [`bert_ner_validacion.py`](pruebas_regex_vs_bert/bert_ner_validacion.py) / [`bert_ner_resultados.json`](pruebas_regex_vs_bert/bert_ner_resultados.json) — validación cruzada de menciones de personas y agrupaciones con `LexiMus-BETO-per-v1` frente a los listados cerrados del script original.
 
 ---
 Proyecto LexiMus / MUSLYME — Universidad de Salamanca

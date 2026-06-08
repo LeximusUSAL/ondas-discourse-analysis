@@ -1,0 +1,724 @@
+{
+  "escuchar": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 73,
+      "muestra": 73,
+      "prop_sentido_musical": 0.973,
+      "n_ajustado_estimado": 71,
+      "densidad_bruta_o/ooo": 0.42,
+      "densidad_ajustada_o/ooo": 0.41
+    },
+    "El Sol": {
+      "n_bruto": 160,
+      "muestra": 160,
+      "prop_sentido_musical": 0.981,
+      "n_ajustado_estimado": 157,
+      "densidad_bruta_o/ooo": 1.2,
+      "densidad_ajustada_o/ooo": 1.18
+    }
+  },
+  "oír": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 196,
+      "muestra": 196,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 196,
+      "densidad_bruta_o/ooo": 1.12,
+      "densidad_ajustada_o/ooo": 1.12
+    },
+    "El Sol": {
+      "n_bruto": 364,
+      "muestra": 200,
+      "prop_sentido_musical": 0.99,
+      "n_ajustado_estimado": 360,
+      "densidad_bruta_o/ooo": 2.73,
+      "densidad_ajustada_o/ooo": 2.7
+    }
+  },
+  "percibir": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 40,
+      "muestra": 40,
+      "prop_sentido_musical": 0.975,
+      "n_ajustado_estimado": 39,
+      "densidad_bruta_o/ooo": 0.23,
+      "densidad_ajustada_o/ooo": 0.22
+    },
+    "El Sol": {
+      "n_bruto": 56,
+      "muestra": 56,
+      "prop_sentido_musical": 0.929,
+      "n_ajustado_estimado": 52,
+      "densidad_bruta_o/ooo": 0.42,
+      "densidad_ajustada_o/ooo": 0.39
+    }
+  },
+  "auditor/es": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 178,
+      "muestra": 178,
+      "prop_sentido_musical": 0.77,
+      "n_ajustado_estimado": 137,
+      "densidad_bruta_o/ooo": 1.02,
+      "densidad_ajustada_o/ooo": 0.79
+    },
+    "El Sol": {
+      "n_bruto": 455,
+      "muestra": 200,
+      "prop_sentido_musical": 0.605,
+      "n_ajustado_estimado": 275,
+      "densidad_bruta_o/ooo": 3.41,
+      "densidad_ajustada_o/ooo": 2.06
+    }
+  },
+  "concierto/s": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 4040,
+      "muestra": 200,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 4040,
+      "densidad_bruta_o/ooo": 23.17,
+      "densidad_ajustada_o/ooo": 23.17
+    },
+    "El Sol": {
+      "n_bruto": 3934,
+      "muestra": 200,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 3934,
+      "densidad_bruta_o/ooo": 29.49,
+      "densidad_ajustada_o/ooo": 29.49
+    }
+  },
+  "sesión/es": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 431,
+      "muestra": 200,
+      "prop_sentido_musical": 0.945,
+      "n_ajustado_estimado": 407,
+      "densidad_bruta_o/ooo": 2.47,
+      "densidad_ajustada_o/ooo": 2.33
+    },
+    "El Sol": {
+      "n_bruto": 169,
+      "muestra": 169,
+      "prop_sentido_musical": 0.97,
+      "n_ajustado_estimado": 164,
+      "densidad_bruta_o/ooo": 1.27,
+      "densidad_ajustada_o/ooo": 1.23
+    }
+  },
+  "emisión/es": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 3480,
+      "muestra": 200,
+      "prop_sentido_musical": 0.98,
+      "n_ajustado_estimado": 3410,
+      "densidad_bruta_o/ooo": 19.96,
+      "densidad_ajustada_o/ooo": 19.56
+    },
+    "El Sol": {
+      "n_bruto": 49,
+      "muestra": 49,
+      "prop_sentido_musical": 0.959,
+      "n_ajustado_estimado": 47,
+      "densidad_bruta_o/ooo": 0.37,
+      "densidad_ajustada_o/ooo": 0.35
+    }
+  },
+  "transmisión/es": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 1232,
+      "muestra": 200,
+      "prop_sentido_musical": 0.99,
+      "n_ajustado_estimado": 1220,
+      "densidad_bruta_o/ooo": 7.07,
+      "densidad_ajustada_o/ooo": 7.0
+    },
+    "El Sol": {
+      "n_bruto": 5,
+      "muestra": 5,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 5,
+      "densidad_bruta_o/ooo": 0.04,
+      "densidad_ajustada_o/ooo": 0.04
+    }
+  },
+  "velada/s": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 57,
+      "muestra": 57,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 57,
+      "densidad_bruta_o/ooo": 0.33,
+      "densidad_ajustada_o/ooo": 0.33
+    },
+    "El Sol": {
+      "n_bruto": 33,
+      "muestra": 33,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 33,
+      "densidad_bruta_o/ooo": 0.25,
+      "densidad_ajustada_o/ooo": 0.25
+    }
+  },
+  "programación": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 163,
+      "muestra": 163,
+      "prop_sentido_musical": 0.982,
+      "n_ajustado_estimado": 160,
+      "densidad_bruta_o/ooo": 0.93,
+      "densidad_ajustada_o/ooo": 0.92
+    },
+    "El Sol": {
+      "n_bruto": 0,
+      "muestra": 0,
+      "prop_sentido_musical": 0.0,
+      "n_ajustado_estimado": 0,
+      "densidad_bruta_o/ooo": 0.0,
+      "densidad_ajustada_o/ooo": 0.0
+    }
+  },
+  "cascos": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 2,
+      "muestra": 2,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 2,
+      "densidad_bruta_o/ooo": 0.01,
+      "densidad_ajustada_o/ooo": 0.01
+    },
+    "El Sol": {
+      "n_bruto": 0,
+      "muestra": 0,
+      "prop_sentido_musical": 0.0,
+      "n_ajustado_estimado": 0,
+      "densidad_bruta_o/ooo": 0.0,
+      "densidad_ajustada_o/ooo": 0.0
+    }
+  },
+  "aparato/s": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 195,
+      "muestra": 195,
+      "prop_sentido_musical": 0.831,
+      "n_ajustado_estimado": 162,
+      "densidad_bruta_o/ooo": 1.12,
+      "densidad_ajustada_o/ooo": 0.93
+    },
+    "El Sol": {
+      "n_bruto": 55,
+      "muestra": 55,
+      "prop_sentido_musical": 0.873,
+      "n_ajustado_estimado": 48,
+      "densidad_bruta_o/ooo": 0.41,
+      "densidad_ajustada_o/ooo": 0.36
+    }
+  },
+  "disco/s": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 1181,
+      "muestra": 200,
+      "prop_sentido_musical": 0.995,
+      "n_ajustado_estimado": 1175,
+      "densidad_bruta_o/ooo": 6.77,
+      "densidad_ajustada_o/ooo": 6.74
+    },
+    "El Sol": {
+      "n_bruto": 602,
+      "muestra": 200,
+      "prop_sentido_musical": 0.99,
+      "n_ajustado_estimado": 596,
+      "densidad_bruta_o/ooo": 4.51,
+      "densidad_ajustada_o/ooo": 4.47
+    }
+  },
+  "auricular/es": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 22,
+      "muestra": 22,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 22,
+      "densidad_bruta_o/ooo": 0.13,
+      "densidad_ajustada_o/ooo": 0.13
+    },
+    "El Sol": {
+      "n_bruto": 4,
+      "muestra": 4,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 4,
+      "densidad_bruta_o/ooo": 0.03,
+      "densidad_ajustada_o/ooo": 0.03
+    }
+  },
+  "receptor/es": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 74,
+      "muestra": 74,
+      "prop_sentido_musical": 0.784,
+      "n_ajustado_estimado": 58,
+      "densidad_bruta_o/ooo": 0.42,
+      "densidad_ajustada_o/ooo": 0.33
+    },
+    "El Sol": {
+      "n_bruto": 0,
+      "muestra": 0,
+      "prop_sentido_musical": 0.0,
+      "n_ajustado_estimado": 0,
+      "densidad_bruta_o/ooo": 0.0,
+      "densidad_ajustada_o/ooo": 0.0
+    }
+  },
+  "antena/s": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 77,
+      "muestra": 77,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 77,
+      "densidad_bruta_o/ooo": 0.44,
+      "densidad_ajustada_o/ooo": 0.44
+    },
+    "El Sol": {
+      "n_bruto": 3,
+      "muestra": 3,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 3,
+      "densidad_bruta_o/ooo": 0.02,
+      "densidad_ajustada_o/ooo": 0.02
+    }
+  },
+  "válvula/s": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 29,
+      "muestra": 29,
+      "prop_sentido_musical": 0.966,
+      "n_ajustado_estimado": 28,
+      "densidad_bruta_o/ooo": 0.17,
+      "densidad_ajustada_o/ooo": 0.16
+    },
+    "El Sol": {
+      "n_bruto": 1,
+      "muestra": 1,
+      "prop_sentido_musical": 0.0,
+      "n_ajustado_estimado": 0,
+      "densidad_bruta_o/ooo": 0.01,
+      "densidad_ajustada_o/ooo": 0.0
+    }
+  },
+  "galena": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 15,
+      "muestra": 15,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 15,
+      "densidad_bruta_o/ooo": 0.09,
+      "densidad_ajustada_o/ooo": 0.09
+    },
+    "El Sol": {
+      "n_bruto": 0,
+      "muestra": 0,
+      "prop_sentido_musical": 0.0,
+      "n_ajustado_estimado": 0,
+      "densidad_bruta_o/ooo": 0.0,
+      "densidad_ajustada_o/ooo": 0.0
+    }
+  },
+  "sentir": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 442,
+      "muestra": 200,
+      "prop_sentido_musical": 0.96,
+      "n_ajustado_estimado": 424,
+      "densidad_bruta_o/ooo": 2.54,
+      "densidad_ajustada_o/ooo": 2.43
+    },
+    "El Sol": {
+      "n_bruto": 295,
+      "muestra": 200,
+      "prop_sentido_musical": 0.945,
+      "n_ajustado_estimado": 279,
+      "densidad_bruta_o/ooo": 2.21,
+      "densidad_ajustada_o/ooo": 2.09
+    }
+  },
+  "impresión": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 223,
+      "muestra": 200,
+      "prop_sentido_musical": 0.985,
+      "n_ajustado_estimado": 220,
+      "densidad_bruta_o/ooo": 1.28,
+      "densidad_ajustada_o/ooo": 1.26
+    },
+    "El Sol": {
+      "n_bruto": 234,
+      "muestra": 200,
+      "prop_sentido_musical": 0.96,
+      "n_ajustado_estimado": 225,
+      "densidad_bruta_o/ooo": 1.75,
+      "densidad_ajustada_o/ooo": 1.69
+    }
+  },
+  "encanto": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 386,
+      "muestra": 200,
+      "prop_sentido_musical": 0.985,
+      "n_ajustado_estimado": 380,
+      "densidad_bruta_o/ooo": 2.21,
+      "densidad_ajustada_o/ooo": 2.18
+    },
+    "El Sol": {
+      "n_bruto": 128,
+      "muestra": 128,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 128,
+      "densidad_bruta_o/ooo": 0.96,
+      "densidad_ajustada_o/ooo": 0.96
+    }
+  },
+  "placer": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 97,
+      "muestra": 97,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 97,
+      "densidad_bruta_o/ooo": 0.56,
+      "densidad_ajustada_o/ooo": 0.56
+    },
+    "El Sol": {
+      "n_bruto": 127,
+      "muestra": 127,
+      "prop_sentido_musical": 0.992,
+      "n_ajustado_estimado": 126,
+      "densidad_bruta_o/ooo": 0.95,
+      "densidad_ajustada_o/ooo": 0.94
+    }
+  },
+  "genio": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 605,
+      "muestra": 200,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 605,
+      "densidad_bruta_o/ooo": 3.47,
+      "densidad_ajustada_o/ooo": 3.47
+    },
+    "El Sol": {
+      "n_bruto": 266,
+      "muestra": 200,
+      "prop_sentido_musical": 0.975,
+      "n_ajustado_estimado": 259,
+      "densidad_bruta_o/ooo": 1.99,
+      "densidad_ajustada_o/ooo": 1.94
+    }
+  },
+  "soberbio/a": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 53,
+      "muestra": 53,
+      "prop_sentido_musical": 0.962,
+      "n_ajustado_estimado": 51,
+      "densidad_bruta_o/ooo": 0.3,
+      "densidad_ajustada_o/ooo": 0.29
+    },
+    "El Sol": {
+      "n_bruto": 131,
+      "muestra": 131,
+      "prop_sentido_musical": 0.977,
+      "n_ajustado_estimado": 128,
+      "densidad_bruta_o/ooo": 0.98,
+      "densidad_ajustada_o/ooo": 0.96
+    }
+  },
+  "maravilla": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 57,
+      "muestra": 57,
+      "prop_sentido_musical": 0.982,
+      "n_ajustado_estimado": 56,
+      "densidad_bruta_o/ooo": 0.33,
+      "densidad_ajustada_o/ooo": 0.32
+    },
+    "El Sol": {
+      "n_bruto": 100,
+      "muestra": 100,
+      "prop_sentido_musical": 0.99,
+      "n_ajustado_estimado": 99,
+      "densidad_bruta_o/ooo": 0.75,
+      "densidad_ajustada_o/ooo": 0.74
+    }
+  },
+  "prodigio": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 56,
+      "muestra": 56,
+      "prop_sentido_musical": 0.946,
+      "n_ajustado_estimado": 53,
+      "densidad_bruta_o/ooo": 0.32,
+      "densidad_ajustada_o/ooo": 0.3
+    },
+    "El Sol": {
+      "n_bruto": 56,
+      "muestra": 56,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 56,
+      "densidad_bruta_o/ooo": 0.42,
+      "densidad_ajustada_o/ooo": 0.42
+    }
+  },
+  "bis": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 3,
+      "muestra": 3,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 3,
+      "densidad_bruta_o/ooo": 0.02,
+      "densidad_ajustada_o/ooo": 0.02
+    },
+    "El Sol": {
+      "n_bruto": 30,
+      "muestra": 30,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 30,
+      "densidad_bruta_o/ooo": 0.22,
+      "densidad_ajustada_o/ooo": 0.22
+    }
+  },
+  "clamor": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 1,
+      "muestra": 1,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 1,
+      "densidad_bruta_o/ooo": 0.01,
+      "densidad_ajustada_o/ooo": 0.01
+    },
+    "El Sol": {
+      "n_bruto": 8,
+      "muestra": 8,
+      "prop_sentido_musical": 0.875,
+      "n_ajustado_estimado": 7,
+      "densidad_bruta_o/ooo": 0.06,
+      "densidad_ajustada_o/ooo": 0.05
+    }
+  },
+  "éxito/s": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 1015,
+      "muestra": 200,
+      "prop_sentido_musical": 0.99,
+      "n_ajustado_estimado": 1005,
+      "densidad_bruta_o/ooo": 5.82,
+      "densidad_ajustada_o/ooo": 5.76
+    },
+    "El Sol": {
+      "n_bruto": 941,
+      "muestra": 200,
+      "prop_sentido_musical": 0.985,
+      "n_ajustado_estimado": 927,
+      "densidad_bruta_o/ooo": 7.05,
+      "densidad_ajustada_o/ooo": 6.95
+    }
+  },
+  "acento/s": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 284,
+      "muestra": 200,
+      "prop_sentido_musical": 0.995,
+      "n_ajustado_estimado": 283,
+      "densidad_bruta_o/ooo": 1.63,
+      "densidad_ajustada_o/ooo": 1.62
+    },
+    "El Sol": {
+      "n_bruto": 155,
+      "muestra": 155,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 155,
+      "densidad_bruta_o/ooo": 1.16,
+      "densidad_ajustada_o/ooo": 1.16
+    }
+  },
+  "matiz/matices": {
+    "grupo": "riesgo",
+    "ONDAS": {
+      "n_bruto": 229,
+      "muestra": 200,
+      "prop_sentido_musical": 0.985,
+      "n_ajustado_estimado": 226,
+      "densidad_bruta_o/ooo": 1.31,
+      "densidad_ajustada_o/ooo": 1.3
+    },
+    "El Sol": {
+      "n_bruto": 324,
+      "muestra": 200,
+      "prop_sentido_musical": 0.965,
+      "n_ajustado_estimado": 313,
+      "densidad_bruta_o/ooo": 2.43,
+      "densidad_ajustada_o/ooo": 2.35
+    }
+  },
+  "oyente/s": {
+    "grupo": "spot-check",
+    "ONDAS": {
+      "n_bruto": 410,
+      "muestra": 70,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 410,
+      "densidad_bruta_o/ooo": 2.35,
+      "densidad_ajustada_o/ooo": 2.35
+    },
+    "El Sol": {
+      "n_bruto": 29,
+      "muestra": 29,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 29,
+      "densidad_bruta_o/ooo": 0.22,
+      "densidad_ajustada_o/ooo": 0.22
+    }
+  },
+  "retransmisión/es": {
+    "grupo": "spot-check",
+    "ONDAS": {
+      "n_bruto": 811,
+      "muestra": 70,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 811,
+      "densidad_bruta_o/ooo": 4.65,
+      "densidad_ajustada_o/ooo": 4.65
+    },
+    "El Sol": {
+      "n_bruto": 3,
+      "muestra": 3,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 3,
+      "densidad_bruta_o/ooo": 0.02,
+      "densidad_ajustada_o/ooo": 0.02
+    }
+  },
+  "micrófono/s": {
+    "grupo": "spot-check",
+    "ONDAS": {
+      "n_bruto": 726,
+      "muestra": 70,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 726,
+      "densidad_bruta_o/ooo": 4.16,
+      "densidad_ajustada_o/ooo": 4.16
+    },
+    "El Sol": {
+      "n_bruto": 17,
+      "muestra": 17,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 17,
+      "densidad_bruta_o/ooo": 0.13,
+      "densidad_ajustada_o/ooo": 0.13
+    }
+  },
+  "entusiasmo": {
+    "grupo": "spot-check",
+    "ONDAS": {
+      "n_bruto": 231,
+      "muestra": 70,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 231,
+      "densidad_bruta_o/ooo": 1.32,
+      "densidad_ajustada_o/ooo": 1.32
+    },
+    "El Sol": {
+      "n_bruto": 422,
+      "muestra": 70,
+      "prop_sentido_musical": 0.986,
+      "n_ajustado_estimado": 416,
+      "densidad_bruta_o/ooo": 3.16,
+      "densidad_ajustada_o/ooo": 3.12
+    }
+  },
+  "belleza": {
+    "grupo": "spot-check",
+    "ONDAS": {
+      "n_bruto": 743,
+      "muestra": 70,
+      "prop_sentido_musical": 0.986,
+      "n_ajustado_estimado": 732,
+      "densidad_bruta_o/ooo": 4.26,
+      "densidad_ajustada_o/ooo": 4.2
+    },
+    "El Sol": {
+      "n_bruto": 443,
+      "muestra": 70,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 443,
+      "densidad_bruta_o/ooo": 3.32,
+      "densidad_ajustada_o/ooo": 3.32
+    }
+  },
+  "aplauso/s": {
+    "grupo": "spot-check",
+    "ONDAS": {
+      "n_bruto": 136,
+      "muestra": 70,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 136,
+      "densidad_bruta_o/ooo": 0.78,
+      "densidad_ajustada_o/ooo": 0.78
+    },
+    "El Sol": {
+      "n_bruto": 652,
+      "muestra": 70,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 652,
+      "densidad_bruta_o/ooo": 4.89,
+      "densidad_ajustada_o/ooo": 4.89
+    }
+  },
+  "melodía": {
+    "grupo": "spot-check",
+    "ONDAS": {
+      "n_bruto": 1026,
+      "muestra": 70,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 1026,
+      "densidad_bruta_o/ooo": 5.88,
+      "densidad_ajustada_o/ooo": 5.88
+    },
+    "El Sol": {
+      "n_bruto": 290,
+      "muestra": 70,
+      "prop_sentido_musical": 1.0,
+      "n_ajustado_estimado": 290,
+      "densidad_bruta_o/ooo": 2.17,
+      "densidad_ajustada_o/ooo": 2.17
+    }
+  }
+}
